@@ -1,0 +1,14 @@
+Changes
+-------------------
+ 0.8: Fixed import to remove 5k import limit.  Added ability to select
+      different addressbook backends.
+
+ 0.7: Major changes to the import function. Can now import from Outlook as
+      long as it has a "First Name", "Last Name", and "E-mail Address"
+      feild specified somewhere in the first row. Also changed
+      reordering functionality after the file has been uploaded and 
+      before the changes to the address book
+
+ 0.6: Fixes a bug with the export feature.  The username variable was not
+      being exported to that procedure and the download stream was not
+      opening correctly. 

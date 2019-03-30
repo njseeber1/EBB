@@ -1,0 +1,51 @@
+
+<!-- WinLIKE (c) 1998-2003 by CEITON technologies GmbH - www.winlike.net -->
+
+<!-- Change this source for older browsers! --><SCRIPT>WinLIKEerrorpage='winlike/winman/hlp-error.html';</SCRIPT>
+<SCRIPT SRC="winlike/winman/wininit.js"></SCRIPT><SCRIPT SRC="winlike/winman/winman.js"></SCRIPT>
+<!-- Delete this line, if the editor should not be used anymore. --><SCRIPT SRC="winlike/winedit/winedit.js"></SCRIPT>
+
+<SCRIPT>
+WinLIKE.definewindows=mydefs;
+function mydefs() {
+
+	var j=new WinLIKE.window('',150,160,350,100,6);
+	j.Adr='samples/access/test.html';
+	j.Nam='testwin';	
+	WinLIKE.addwindow(j);
+}
+</SCRIPT>
+
+<BODY onLoad=WinLIKE.init() onResize=WinLIKE.resizewindows()>
+	<!-- Don't remove this line! --><IMG ID=ih_ SRC="skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+	<!-- You can change this loading picture! --><IMG ID=ig_ SRC="winlike/winman/load.gif" STYLE="position:absolute;left:35%;top:40%;z-Index:4001">
+	
+	<!-- Insert your page-content here! -->
+	
+	
+	
+	<SCRIPT>
+		function myChanger() {
+			xnr=WinLIKE.searchwindow('testwin'); // search our window
+			WinLIKE.windows[xnr].innerdoc().getElementById('mytag').innerHTML+='Hello '; // change the font tag with name 'mytag'
+		}
+	
+		function myWinCall() {
+			xnr=WinLIKE.searchwindow('testwin'); // search our window
+			WinLIKE.windows[xnr].innerframe().myAlert(); // call the function within the window
+		}
+	</SCRIPT>
+	
+	
+	<DIV STYLE="position:absolute;left:110;top:15">
+		<FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+			Shows how to access a window content by the WinLIKE.windows[].innerdoc() function and how to call a function
+			within a window by using WinLIKE.windows[].innerframe().
+			<BR><BR>
+			<A HREF="samples/access/test.html" TARGET=testwin>open window testwin</A>
+			<BR><BR>
+			<A HREF="javascript:myChanger()">write into the font tag of the window</A>
+			<BR><BR>
+			<A HREF="javascript:myWinCall()">call a function within the window</A>
+		</FONT>
+	</DIV>

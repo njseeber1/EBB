@@ -1,0 +1,91 @@
+/*Sliding menu*/
+
+.menu
+
+  {
+
+   position:absolute;
+
+   background-color:gold;
+
+   border:1px solid darkblue;
+
+   width:90;
+
+   font-size:11px;
+
+   font-family:verdana;
+
+   font:bold;
+
+   position:absolute;
+
+   cursor:hand;
+
+  }
+
+  .item_panel
+
+  {
+
+    width:90;
+
+    border-left:1px solid darkblue;
+
+    border-right:1px solid darkblue;
+
+    clip:rect(0,90,0,0);
+
+    position:absolute;
+
+
+
+  }
+
+  .item_panel a
+
+  {
+
+   text-decoration:none;
+
+   color:black;
+
+   cursor:hand;
+
+  }
+
+  .item
+
+  {
+
+   background-color:lightyellow;
+
+   width:88;
+
+   font-size:10px;
+
+   font-family:verdana;
+
+   
+
+  }
+  
+
+/* FORMAT THE BUTTON YOU INTEND TO USE */
+.sql_button {
+/* The blank button inage that will be shown behind your menu text */
+	background-image: url(<?php echo $config['template_url'] ?>/images/blank_button.gif);
+	cursor:pointer;	
+	height: 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+}
+/* FORMAT THE TEXT YOU INTEND TO USE */
+.sql_text {
+	font-size: 11px; 
+	font-weight: 900; 
+	color: Black;
+	letter-spacing: 2px;
+	text-decoration: none;
+}

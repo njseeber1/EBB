@@ -1,0 +1,316 @@
+
+<SCRIPT>
+
+//flags to mark previous function
+var opFlag_WPQ_=false;        //indicates previous entry was an operator
+var eqFlag_WPQ_=false;        //indicates previous function was a calculation
+
+
+function checkDec_WPQ_() {
+//prevents multiple decimal points in entry
+        if (document.calc_WPQ_.screen.value.indexOf('.') == -1){
+                enterVal_WPQ_('.');
+                return;
+        }
+
+                if ((document.calc_WPQ_.screen.value.indexOf('.') >= 0) && ((eqFlag_WPQ_) || (opFlag_WPQ_))){
+                enterVal_WPQ_('.');
+                return;
+        }
+        
+}
+
+function enterVal_WPQ_(num){         
+//determine how to handle entry based on previous function
+                
+        if (eqFlag_WPQ_) {
+        //last entry gave a total, no operators entered, so replace both stores
+                document.calc_WPQ_.input.value=num;
+                document.calc_WPQ_.screen.value=num;
+                eqFlag_WPQ_=false;
+                return;
+        }
+        
+        if ((!opFlag_WPQ_) && (!eqFlag_WPQ_)){
+        //no operators or totals entered, still entering numbers
+                document.calc_WPQ_.input.value += num;
+                document.calc_WPQ_.screen.value += num;
+                return;
+        }
+
+        if (opFlag_WPQ_) {
+        //operator entered, change screen value, build on input
+                document.calc_WPQ_.screen.value =num;
+                document.calc_WPQ_.input.value += num;
+                opFlag_WPQ_=false;
+                return;
+        }       
+
+}
+
+function compute_WPQ_() {
+//if last entry is an operator, input is not complete so do nothing
+
+        len=document.calc_WPQ_.input.value.length;
+        var oneChar=document.calc_WPQ_.input.value.charAt(len-1);
+        if ((oneChar == '+') || (oneChar == '-') || (oneChar == '*') ||
+                (oneChar == '/')) {     
+                return;
+        }
+
+        document.calc_WPQ_.screen.value = fixIt_WPQ_(eval(document.calc_WPQ_.input.value));
+        document.calc_WPQ_.input.value = fixIt_WPQ_(eval(document.calc_WPQ_.input.value));
+
+        eqFlag_WPQ_=true;
+        
+        
+}
+
+//a fix for JavaScript's math handling
+function fixIt_WPQ_(num) {
+	return(Math.round(num*10000000)/10000000);
+}
+
+
+function operator_WPQ_(op) {
+        //can't enter operator before entering a value
+        if (document.calc_WPQ_.screen.value == '') {
+                return;
+        }
+
+        //if last entry is not an operator, use the one just entered
+        eqFlag_WPQ_=false;
+        len=document.calc_WPQ_.input.value.length;
+        var oneChar=document.calc_WPQ_.input.value.charAt(len-1);
+        if ((oneChar != '+') && (oneChar != '-') && (oneChar != '*') && (oneChar != '/') && (oneChar != '.')) {
+                        document.calc_WPQ_.screen.value = eval(document.calc_WPQ_.input.value);
+                        document.calc_WPQ_.input.value = eval(document.calc_WPQ_.input.value);
+                        document.calc_WPQ_.input.value += op;
+        }
+        else {          
+        //if last entry is an operator, replace it with this one
+        //this returns input store less operator
+                document.calc_WPQ_.input.value=parseFloat(document.calc_WPQ_.input.value);
+                document.calc_WPQ_.input.value+=op;
+        }
+        opFlag_WPQ_=true;
+}
+
+function clearAll_WPQ_() {
+        document.calc_WPQ_.input.value = '';
+        document.calc_WPQ_.screen.value='';
+        
+}
+
+function clearEntry_WPQ_() {
+        //don't do anything if the last entry is not a number
+        len=document.calc_WPQ_.input.value.length;
+        var oneChar=document.calc_WPQ_.input.value.charAt(len-1);
+        if ((oneChar == '+') || (oneChar == '-') || (oneChar == '*') ||
+                (oneChar == '/')) {     
+                return;
+        }
+        
+        if (document.calc_WPQ_.screen.value == '') {
+        //nothing here to clear
+                return;
+        }
+        
+        if (document.calc_WPQ_.screen.value==document.calc_WPQ_.input.value) {  
+        //only one entry, so clear it
+                document.calc_WPQ_.screen.value='';
+                document.calc_WPQ_.input.value='';
+                return;
+        }
+
+	//get last number entered and clear it, return previous value to screen
+        str1=document.calc_WPQ_.screen.value;
+	str2=document.calc_WPQ_.input.value;
+	ind=str2.lastIndexOf(str1);
+	document.calc_WPQ_.input.value=document.calc_WPQ_.input.value.substring(0,ind);
+	document.calc_WPQ_.screen.value=parseFloat(document.calc_WPQ_.input.value);
+                
+}
+
+function sqrRT_WPQ_() {
+        if (document.calc_WPQ_.input.value == '') {
+        //nothing entered, do nothing
+                return;
+        }
+
+        document.calc_WPQ_.screen.value=Math.sqrt(document.calc_WPQ_.screen.value);
+        document.calc_WPQ_.input.value=document.calc_WPQ_.screen.value;
+        eqFlag_WPQ_=true;
+}
+
+function sqr_WPQ_() {
+        if (document.calc_WPQ_.input.value == ''){
+                return;
+        }
+        
+        document.calc_WPQ_.screen.value=(document.calc_WPQ_.screen.value)*(document.calc_WPQ_.screen.value);
+        document.calc_WPQ_.input.value=document.calc_WPQ_.screen.value;
+        eqFlag_WPQ_=true;
+}
+
+function neg_WPQ_() {//get last entry and negate it
+        str1=document.calc_WPQ_.screen.value;
+        str2=document.calc_WPQ_.input.value;
+        ind=str2.lastIndexOf(str1);
+
+        document.calc_WPQ_.input.value=document.calc_WPQ_.input.value.substring(0,ind);
+        document.calc_WPQ_.screen.value=(document.calc_WPQ_.screen.value)*-1;
+        document.calc_WPQ_.input.value += document.calc_WPQ_.screen.value;
+}
+       
+
+function pcnt_WPQ_() {
+
+        if (document.calc_WPQ_.input.value == ''){ //nothing here
+                return;
+        }
+        //if last entry is an operator, do nothing
+        len=document.calc_WPQ_.input.value.length;
+        var oneChar=document.calc_WPQ_.input.value.charAt(len-1);
+        if ((oneChar == '+') || (oneChar == '-') || (oneChar == '*') ||
+                (oneChar == '/')) {     
+                return;
+        }
+        //check that there are two numbers entered
+        if ((document.calc_WPQ_.input.value.indexOf('+') == -1)&& 
+        (document.calc_WPQ_.input.value.indexOf('-') == -1)&&
+        (document.calc_WPQ_.input.value.indexOf('*') == -1)&&
+        (document.calc_WPQ_.input.value.indexOf('/') == -1)){
+                return;
+        }
+        //calculate percentage
+
+        if ((document.calc_WPQ_.input.value.indexOf('+') != -1) || 
+        (document.calc_WPQ_.input.value.indexOf('-') != -1)) {
+                percent=((document.calc_WPQ_.screen.value)/100)*parseFloat(document.calc_WPQ_.input.value);
+        }
+
+        else {
+                percent=((document.calc_WPQ_.screen.value)/100);
+        }
+        
+        //replace last entry with percentage and evaluate expression
+        str1=document.calc_WPQ_.screen.value;
+        str2=document.calc_WPQ_.input.value;
+        ind=str2.lastIndexOf(str1);
+
+        document.calc_WPQ_.input.value=document.calc_WPQ_.input.value.substring(0,ind);
+        document.calc_WPQ_.input.value+=percent;
+        document.calc_WPQ_.screen.value = eval(document.calc_WPQ_.input.value);
+        document.calc_WPQ_.input.value = eval(document.calc_WPQ_.input.value);
+        
+
+        eqFlag_WPQ_=true;
+}
+
+function memory_p_WPQ_() {
+        if (document.calc_WPQ_.screen.value =='') {
+                return;
+        }
+        //add screen value to memory store
+        document.calc_WPQ_.memory.value+= "+" + document.calc_WPQ_.screen.value;
+        document.calc_WPQ_.memory.value=eval(document.calc_WPQ_.memory.value);
+        eqFlag_WPQ_=true;
+        document.calc_WPQ_.mem_win.value='M'; //indicator of something in memory        
+}
+
+function memory_s_WPQ_() {
+        if (document.calc_WPQ_.screen.value =='') {
+                return;
+        }
+
+        document.calc_WPQ_.memory.value += "-(" + (document.calc_WPQ_.screen.value) +")";
+        document.calc_WPQ_.memory.value=eval(document.calc_WPQ_.memory.value);
+
+        eqFlag_WPQ_=1;
+        document.calc_WPQ_.mem_win.value='M';
+}
+
+function memory_r_WPQ_() {
+        //recall memory store to screen
+        document.calc_WPQ_.screen.value='';
+        enterVal_WPQ_(document.calc_WPQ_.memory.value);
+        eqFlag_WPQ_=true;
+}
+
+function memory_c_WPQ_() {
+        //clear memory indicator
+        document.calc_WPQ_.memory.value=0;
+        document.calc_WPQ_.mem_win.value='';
+}
+
+function constant_WPQ_(what) {
+        if (what == 'pi') {
+                document.calc_WPQ_.screen.value='';
+                enterVal_WPQ_(Math.PI);
+                eqFlag_WPQ_=true;       
+        }
+}
+                        
+</SCRIPT>
+
+<CENTER>
+<FORM NAME="calc_WPQ_">
+<table border=5><tr valign=center align=center><td class="usercaption">
+
+<INPUT TYPE="text" NAME="mem_win" SIZE=1 VALUE=''>
+<INPUT TYPE="text" NAME="screen" SIZE="20"></td></tr>
+<tr><td class="usershadedregion">
+<TABLE BORDER=1>
+
+<TR ALIGN="center">
+<TD><INPUT TYPE="button" NAME="mem_p"  VALUE="  M+  " OnClick="memory_p_WPQ_()"></TD>
+<TD><INPUT TYPE="button" NAME="mem_s"  VALUE="  M-  " OnClick="memory_s_WPQ_()"></TD>
+<TD><INPUT TYPE="button" NAME="mem_r"  VALUE=" MR " OnClick="memory_r_WPQ_()"></TD>
+<TD><INPUT TYPE="button" NAME="mem_c"  VALUE=" MC " OnClick="memory_c_WPQ_()"></TD></TR>
+
+
+<TR ALIGN="center">
+<TD><INPUT TYPE="button" NAME="sq_root"  VALUE=" sqrt " OnClick="sqrRT_WPQ_()"></TD>
+<TD><INPUT TYPE="button" NAME="square"  VALUE=" sqr  " OnClick="sqr_WPQ_()"></TD>
+<TD><INPUT TYPE="button" NAME="percent"  VALUE="  %   " OnClick="pcnt_WPQ_()"></TD>
+<TD><INPUT TYPE="button" NAME="negate"  VALUE="  +/-  " OnClick="neg_WPQ_()"></TD></TR>
+
+
+<TR ALIGN="center">
+<TD><INPUT TYPE="button" NAME="seven" VALUE="  7  " OnClick="enterVal_WPQ_('7')"></TD>
+<TD><INPUT TYPE="button" NAME="eight" VALUE="  8  " OnClick="enterVal_WPQ_('8')"></TD>
+<TD><INPUT TYPE="button" NAME="nine"  VALUE="  9  " OnClick="enterVal_WPQ_('9')"></TD>
+<TD><INPUT TYPE="button" NAME="div"   VALUE="   /  " OnClick="operator_WPQ_('/')"></TD></TR>
+
+<TR ALIGN="center">
+<TD><INPUT TYPE="button" NAME="four"  VALUE="  4  " OnClick="enterVal_WPQ_('4')"></TD>
+<TD><INPUT TYPE="button" NAME="five"  VALUE="  5  " OnClick="enterVal_WPQ_('5')"></TD>
+<TD><INPUT TYPE="button" NAME="six"   VALUE="  6  " OnClick="enterVal_WPQ_('6')"></TD>
+<TD><INPUT TYPE="button" NAME="times" VALUE="  x  " OnClick="operator_WPQ_('*')"></TD></TR>
+
+<TR ALIGN="center">
+<TD><INPUT TYPE="button" NAME="one"   VALUE="  1  " OnClick="enterVal_WPQ_('1')"></TD>
+<TD><INPUT TYPE="button" NAME="two"   VALUE="  2  " OnClick="enterVal_WPQ_('2')"></TD>
+<TD><INPUT TYPE="button" NAME="three" VALUE="  3  " OnClick="enterVal_WPQ_('3')"></TD>
+<TD><INPUT TYPE="button" NAME="minus" VALUE="   -  " OnClick="operator_WPQ_('-')"></TD></TR>
+
+<TR ALIGN="center">
+<TD><INPUT TYPE="button" NAME="zero"  VALUE="  0  " OnClick="enterVal_WPQ_('0')"></TD>
+<TD><INPUT TYPE="button" NAME="deci"  VALUE="  .   " OnClick="checkDec_WPQ_()"></TD>
+<TD><INPUT TYPE="button" NAME="comp"  VALUE="  =  " OnClick="compute_WPQ_()"></TD>
+<TD><INPUT TYPE="button" NAME="plus"  VALUE="  +  " OnClick="operator_WPQ_('+')"></TD></TR>
+
+<TR ALIGN="center">
+<TD COLSPAN=2><INPUT TYPE="button" NAME="clear" VALUE="CLEAR" OnClick="clearAll_WPQ_()"></TD>
+<TD><INPUT TYPE="button" NAME="clear_entry" VALUE=" CE " OnClick="clearEntry_WPQ_()"></TD>
+<TD><INPUT TYPE="button" NAME="pi" VALUE=" pi " OnClick="constant_WPQ_('pi')"></TD>
+</TR>
+</TABLE>
+</td></tr></table>
+Microsoft Calculator
+
+<INPUT TYPE=hidden NAME=input SIZE=16>
+<INPUT TYPE=hidden NAME=memory VALUE=0 SIZE=16>
+
+</FORM></CENTER>

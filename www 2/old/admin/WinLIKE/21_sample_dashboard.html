@@ -1,0 +1,44 @@
+<!-- WinLIKE - Copyright (c) 1998-2003 by CEITON technologies GmbH - www.winlike.net -->
+<SCRIPT>WinLIKEerrorpage='winlike/winman/hlp-error.html';</SCRIPT>
+<SCRIPT SRC="winlike/winman/wininit.js"></SCRIPT><SCRIPT SRC="winlike/winman/winman.js"></SCRIPT>
+<!-- Delete the following line, if the editor should not be used anymore. -->
+<SCRIPT SRC="winlike/winedit/winedit.js"></SCRIPT>
+
+<SCRIPT>
+  WinLIKE.definewindows=mydefs;
+  function mydefs() {
+  	var j=new WinLIKE.window('',36,362,387,209,1);
+  	j.Adr="samples/dashboard/stocks.html";
+  	WinLIKE.addwindow(j);
+  	
+  	var j=new WinLIKE.window('',361,482,361,226,2);
+  	j.Adr="samples/dashboard/weather.html";
+  	WinLIKE.addwindow(j);
+  	
+  	var j=new WinLIKE.window('Highway Webcam',141,60,375,298,3);
+  	j.Adr="samples/dashboard/webcam.html";
+  	WinLIKE.addwindow(j);
+  	
+  	var j=new WinLIKE.window('Calculator',456,80,282,329,4);
+  	j.Adr="samples/dashboard/calc.html";
+  	WinLIKE.addwindow(j);
+  }
+</SCRIPT>
+
+
+<BODY onResize=WinLIKE.resizewindows() onload=WinLIKE.init() onDragStart="self.event.returnValue=F_;">
+	<!-- Don't remove this line! --><IMG ID=ih_ SRC="skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+	<!-- You can change this loading picture! --><IMG ID=ig_ SRC="winlike/winman/load.gif" STYLE="position:absolute;left:35%;top:40%;z-Index:4001">
+
+	<!-- Insert your page-content here! -->
+
+	
+	
+	<DIV STYLE="position:absolute;left:110;top:15">
+		<FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+		This page shows that you can also include Portlets or MS Webparts into a WinLIKE-window.
+		<BR>
+		The MSNBC contents works in IE.
+		</FONT>
+	</DIV>
+	

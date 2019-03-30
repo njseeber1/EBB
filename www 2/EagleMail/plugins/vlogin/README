@@ -1,0 +1,628 @@
+Virtual Host Login ("vlogin") plugin for SquirrelMail
+=====================================================
+Ver 3.5, 23/09/04
+
+Authors: Paul Lesneiwski <pdontthink@angrynerds.com>
+         Ryan Orth <snubber-sm@seahat.com>
+
+
+Description
+===========
+
+VLogin is...
+  a plugin for squirrelmail for installations that host more than one domain
+  and need some amount of customization for each domain without installing
+  a separate SquirrelMail for each domain.  Vlogin can do a lot of things,
+  such as:
+
+     * allow users to log in with just a "user" when in fact their IMAP
+       login might be something like "username@domain.com" 
+     * show a different image on the login page for each of your domains
+     * change most any SquirrelMail configuration setting on a per-domain 
+       (or even per-user!) basis
+     * access a sendmail-style virtual users table
+     * change IMAP servers (or any other settings) on a per-domain (or even
+       on a per-user) basis
+     * enable or disable certain plugins on a per-domain or per-user basis
+     * disable certain option page items on a per-domain or per-user basis
+     * dealias Qmail/Vpopmail aliased domains
+     * domain name translation
+     * much more...
+
+
+This plugin should help those who want to have multiple sites pointing to the
+same SquirrelMail installation.
+
+
+
+Help Requests
+=============
+
+Help requests are welcome at my personal email address, but I
+request that you first post to the SquirrelMail Plugins mailing
+list, where you'll get faster help from more people and other
+people with the same problem will be able to see how your issue
+was resolved.  If you don't get good answers that way, you may
+try emailing me directly.
+
+Info about the SquirrelMail Plugins mailing list can be found
+on the SquirrelMail web site.  It is currently located at:
+
+http://lists.sourceforge.net/mailman/listinfo/squirrelmail-plugins
+squirrelmail-plugins@lists.sourceforge.net
+
+
+
+Configuration
+=============
+
+   Vlogin configuration can be complex, but most applications of this plugin
+   require little to no modification of the sample config.php file.  All 
+   configuration options are located in the file config.php, but please
+   read below to understand how they work.  Also, turn on the $debug flag 
+   if you're having trouble configuring the plugin.
+
+
+   To determine the correct IMAP login, the plugin takes the host portion of the 
+   URL that was used to access the login page, manipulates it in any number of 
+   ways, and then combines it with the username given on the login page.  How the 
+   host name is manipulated and combined with the username is highly configurable.
+   Most of these configuration parameters can be used in conjunction with one 
+   another, but some are best not combined - use the comments below (along with 
+   common sense) to determine the settings that you need to make.  Also, refer to 
+   the file config.php.sample.typical for one standard implementation.
+
+   All on/off settings should be set to 1 to turn on and 0 (zero) to turn off.
+
+   Note that if the user logs in with a full username that includes a host name
+   (detected by sensing the presence of an @ sign) such as "paul@virt.domain.com",
+   then this plugin will assume they know what they are doing and not attempt
+   to do any host name manipulation at all (what is given is what is passed to IMAP).
+
+   IMPORTANT WARNING: Make sure your config.php file contains NO linefeeds
+   (blank lines) after the last ?> in the file!  Otherwise you'll get nasty
+   (and seemingly unrelated) consequences.
+
+
+
+   Note that instead of keeping all of your per-domain settings in this one
+   configuration file, you may also create multiple configuration files - one
+   for each domain - in the vlogin/data/domains directory.  Each file is named:
+
+      <domain name>.vlogin.config.php
+
+   where <domain name> is the host name as it will look AFTER vlogin has 
+   manipulated it per the settings below (as such, you'll probably only want to 
+   include the $virtualDomains setting in that file (but feel free to experiment 
+   otherwise - one global setting that will work in this file is $debug)).
+
+
+
+   $numberOfDotSections
+   --------------------
+   dictates the size (given in "dot sections") that the hostname should be.  Thus, 
+   "dot sections" are removed from the host name until it only contains said 
+   number of sections.
+
+   $removeFromFront 
+   ----------------
+   determines if, in order to reach the size given by $numberOfDotSections, "dot 
+   sections" will be taken off the beginning of the host name (or, if set to zero, 
+   the host name will be trimmed from the end).
+
+   For example, with $numberOfDotSections = 2 and $removeFromFront = 1, these
+   logins will be constructed:
+      webmail.foo.com         ==>     username@foo.com
+      server.webmail.foo.com  ==>     username@foo.com
+
+   or with $numberOfDotSections = 2 and $removeFromFront = 0
+      webmail.foo.com         ==>     username@webmail.foo
+      server.webmail.foo.com  ==>     username@server.webmail
+
+   $chopOffDotSectionsFromLeft
+   ---------------------------
+   indicates that a set number of "dot sections" should be removed from the
+   front of the host name.  This is done after the host name is pruned by
+   $numberOfDotSections, so be careful using it in conjunction with 
+   $chopOffDotSectionsFromLeft.
+
+   $chopOffDotSectionsFromRight
+   ----------------------------
+   indicates that a set number of "dot sections" should be removed from the 
+   end of the host name.  This is done after the host name is pruned by
+   $numberOfDotSections, so be careful using it in conjunction with 
+   $chopOffDotSectionsFromRight.
+
+   For example, with $chopOffDotSectionsFromLeft = 1, these logins will be 
+   constructed:
+      webmail.foo.com         ==>     username@foo.com
+      server.webmail.foo.com  ==>     username@webmail.foo.com
+   or with $chopOffDotSectionsFromLeft = 2
+      webmail.foo.com         ==>     username@com
+      server.webmail.foo.com  ==>     username@foo.com
+   or with $chopOffDotSectionsFromRight = 1
+      webmail.foo.com         ==>     username@webmail.foo
+      server.webmail.foo.com  ==>     username@server.webmail.foo
+   or with $chopOffDotSectionsFromRight = 2
+      webmail.foo.com         ==>     username@webmail
+      server.webmail.foo.com  ==>     username@server.webmail
+   or with $chopOffDotSectionsFromLeft = 1 and $chopOffDotSectionsFromRight = 1
+      webmail.foo.com         ==>     username@foo
+      server.webmail.foo.com  ==>     username@webmail.foo
+
+   $reverseDotSectionOrder 
+   -----------------------
+   forces the host name to be inverted by dot section.  For example, 
+   www.domain.com would become com.domain.www (it is important to 
+   note that this is done before any of the other vlogin settings are
+   applied to the host name).
+
+   $checkByExcludeList 
+   -------------------
+   indicates that any "dot sections" in the host name that match those given in
+   the $notPartOfDomainName should be removed.
+
+   $notPartOfDomainName
+   --------------------
+   is an array of "dot sections" that should be removed from the host name when
+   $checkByExcludeList is set to 1.  Add to it as needed.
+
+   For example, with $checkByExcludeList = 1 and $notPartOfDomainName containing
+   'www' and 'mail', these logins will be constructed:
+      www.foo.com       ==>     username@foo.com
+      foo.mail.com      ==>     username@foo.com
+      www.foo.mail.com  ==>     username@foo.com
+
+   $at and $dot
+   ------------
+   can be used when your IMAP logins use different characters where an
+   "@" or "." are typically used in a standard email address.  Specify 
+   replacement characters as needed.
+
+   For example, with $at = '.',  these logins will be constructed:
+      www.foo.com       ==>     username.foo.com
+   or with $at = '.' and $dot = '-'
+      www.foo.com       ==>     username.foo-com
+
+   $atConversion
+   -------------
+   is useful if your users tend to confuse '@' and '%' in their email
+   addresses.  You can specify a list of characters here that will, if 
+   found in the user name, all be converted to whatever you have specified 
+   for the $at setting.
+
+   $replacements
+   -------------
+   is a list of characters or character sequences that you may specify
+   to be replaced in or removed from the host name.  Each item in this 
+   list should have an associated replacement value or an empty string 
+   in the case that it should be removed from the host name.  Note that 
+   these replacements are done in the order given.  See the sample
+   configuration file for examples.
+
+   $alwaysAddHostName
+   ------------------
+   forces the host name to be added to the given user name, no matter
+   what.  You'll probably only need to turn this on if you convert
+   your "@" sign into a character that is also present in your usernames
+   (such as ".").  You should try to avoid using this setting if possible.
+
+   $putHostNameOnFrontOfUsername
+   -----------------------------
+   indicates that when the username and host name are combined together,
+   the host name should be prepended to the username, instead of default
+   behavior, which is to append it to the end of the username.  In both
+   cases, the $at setting separates the two values.
+
+   For example, with $putHostNameOnFrontOfUsername = 1 and $at = '.',
+   these logins will be constructed:
+      www.foo.com  ==>     www.foo.com.username
+
+   $dontUseHostName
+   ----------------
+   allows you to turn off all host name manipulation and simply log in 
+   with whatever the user typed into the login field.  This allows 
+   you to use the other functionalities of the plugin such as specifying
+   IMAP servers or login page images per domain (or user) without touching
+   the login information.
+
+   $smHostIsDomainThatUserLoggedInWith
+   -----------------------------------
+   typically only used when $dontUseHostName is set to 1, this setting 
+   is a way to avoid changing the username but at the same time grabbing
+   the host name from the login URL and making sure the user's email
+   domain is such (otherwise it will default to whatever is specified in 
+   the main SquirrelMail configuration for ALL users -- but usually only
+   when you turn on $dontUseHostName).
+
+   $removeDomainIfGiven
+   --------------------
+   will strip off any domain information from the username if it was
+   given as a full email address.  That is, if a user logs in with 
+   "jose@domain.com", it will strip off "@domain.com".  The domain
+   that is parsed from the URL by this plugin will be added back to
+   the username unless you are using the $dontUseHostName functionality.
+   This is a good way to force users to log into the domain that they
+   used to access the login screen; thus they cannot trick Vlogin.
+   It can also be used in the case that your usernames never include
+   domain information but some users think (erroneously) that they 
+   need to log in with their full email address.
+
+   $virtualDomainDataDir
+   ---------------------
+   is an override of the SquirrelMail data directory specification, and
+   is useful in that it allows you to insert the virtual domain name 
+   and/or user name into that path (use the strings "###VIRTUAL_DOMAIN###" 
+   and "###USERNAME###" respectively anywhere in this setting to do so).
+
+   $allVirtualDomainsAreUnderOneSSLHost
+   ------------------------------------
+   is a flag that indicates that the virtual domain host name will be
+   part of the URL after the actual host, for sites that host all of 
+   their virtual domains off of the same tree (usually for reasons
+   having to do with SSL certificate limitations).
+
+   For example, when $allVirtualDomainsAreUnderOneSSLHost = 1 and the 
+   URI of the login page is "http://www.onedomain.com/virtualdomain.com/mail",
+   the IMAP login will be constructed as "username@virtualdomain.com".
+
+   $sendmailVirtualUserTable
+   -------------------------
+   is a string that specifies the full path to a sendmail-style virtual 
+   user table which is used to remap user logins as specified in that file. 
+   The table will be consulted after any host name manipulation has been 
+   done and can be used in non sendmail environments as well.
+
+   For example, if the virtual user table looks like:
+      @mydomain.com              jose
+      kobayashi@mydomain.com     masaki
+      info@domain2.com          info@domain3.org
+   Then someone who logs in as "kobayashi" (or "kobayashi@mydomain.com" as
+   the case may be) will be logged in to IMAP as the user "masaki", and
+   anyone else who logs in to the virtual domain "mydomain.com" (for example,
+   "mike@mydomain.com") will be logged in to IMAP as user "jose".  
+   "info@domain2.com" will be logged in to IMAP using "info@domain3.org".
+
+   $translateHostnameTable
+   -----------------------
+   is a string that specifies the full path to a host name translation 
+   table which is used to remap the domain host name that your users 
+   use to log in.  Most users of this plugin should leave this as an
+   empty string, since they will not need this functionality.  This 
+   functionality might be necessary if your web services are provided 
+   at a different location than your MX (email server) is.
+
+   For example, if all users log in to SquirrelMail at 
+   "www.companywebdomain.com/mail", but have email accounts in the 
+   form "user@companyemail.com", then it'd be helpful to remap 
+   "companywebdomain.com" to "companyemail.com".  
+
+   Also, source host names can contain the wildcards * and ?
+   which indicate "any number of (or zero) characters" and "one
+   alphanumeric character" respectively.
+
+   A sample translation table should look like:
+      companywebdomain.com      companyemail.com
+      mywebhost.*               myemailhost.org
+
+   See the file hostmap.dat for more information and examples.
+  
+   Finally, note that all host translation is done after any pre-
+   processing (per other settings such as $numberOfDotSections or
+   $checkByExcludeList, etc) of the initial host name to give you
+   maximum flexibility in dealing with what you get from the URI
+   used by the user.
+
+   $pathToQmail
+   ------------
+   is a string that should contain the installation path for 
+   Qmail *if and only if* you are using Qmail/Vpopmail aliased
+   domains and want to prevent users of aliased domains from 
+   logging in to a domain alias and/or the actual domain, thus
+   accidentally creating more than one preferences (and address
+   book, etc) files for themselves.  Otherwise, please leave this
+   as an empty string.
+
+   Also, when using this functionality, please verify that the user 
+   you run httpd with is able to read the file ~qmail/users/assign
+
+   $perUserSettingsFile
+   --------------------
+   is a string that specifies the full path to a file containing per-user
+   setting overrides for any of the settings available in the main config
+   file (usually you'll want to override SquirrelMail settings such as IMAP
+   server address, etc.).  Any number of users may have their settings 
+   individually changed, using the following format in that file (see 
+   users.dat for an example):
+
+   One user per line - username (as per their actual IMAP login) comes
+   first, then any settings are given by specifying the setting name 
+   and the desired value, separated by an equal sign - all fields are
+   separated by commas (and optional whitespace).  For example:
+
+      username@full.imap.login, imapServerAddress=localhost, imapPort=143
+
+   When an array of values needs to be specified for a single setting,
+   such as a list of plugins to be enabled for one user, the values
+   are to be separated with a double comma.  For example:
+
+      username@full.imap.login, domain=abc.com, enable_plugins=debugger,,username, imapPort=143
+
+   Also note that usernames can contain the wildcards * and ? which
+   indicate "any number of (or zero) characters" and "one alphanumeric 
+   character" respectively.  
+
+   For example, the username "jose_r*@domain.com" would match the 
+   username "jose_rodriguez@domain.com" as well as "jose_riviera@domain.com".
+   "jose?@domain.com" would match "jose5@domain.com", but not 
+   "jose@domain.com", although the pattern "jose*@domain.com" would 
+   match both "jose5@domain.com" and "jose@domain.com".  
+
+   Finally, note that if a username listed in this file also matches 
+   one or more username patterns, the exact match takes precedence, 
+   so you may provide patterns with special overrides.
+
+   $useSessionBased
+   ----------------
+   tells vlogin if it can store its configuration settings in the user's
+   PHP session, which helps boost performance.  To use this setting, you
+   need to install the Multilogin plugin and the patch included with that
+   plugin (quite simple, don't worry).  You need not enable Multilogin 
+   in conf.pl unless you are also using it; just having it in place in 
+   the plugins directory is all that is required.  Otherwise, leave this
+   setting turned off, and the old (deprecated) functionality will be
+   used.
+
+   $virtualDomains
+   ---------------
+   is an array that lets you override any SquirrelMail or VLogin settings
+   on a per-domain basis.  Any of the attributes you see when you run 
+   SquirrelMail's config/conf.pl configuration script and select 
+   Organization Preferences (#1), Server Settings (#2), or Folder Defaults 
+   (#3) can be overridden, as well as any of the settings found in the
+   vlogin config file itself.  For help with the format of this array, see 
+   any of the sample config files.  Only those settings that you want to 
+   override need to be listed; and there need not be any consistency 
+   between domains.  Note that each domain is specified in this array 
+   by any string that is unique to the virtual host name (not necessarily
+   the whole host name -- "mydomain" is probably enough to represent 
+   "mydomain.com").  Please note that 'org_title' is unique in that it
+   must be enclosed in two sets of quotes.  See the sample configuration 
+   file for examples.
+
+   It is possible to specify a global (or default) virtual domain by 
+   using the name '*'.  If used, any domain not specified here will
+   inherit the attributes specified in the global virtual domain.  Note
+   that you MUST put this domain at the top of the list, or vlogin will
+   complain very loudly.
+
+   You may use the string "###VIRTUAL_DOMAIN###" (without the quotes) to
+   insert the virtual domain name into any of these settings (such as 
+   org_name, etc.)
+
+   You may use the string "###USERNAME###" (without the quotes) to
+   insert the user name into any of these settings (such as org_name, etc.)
+
+   Note that you may enable or disable individual plugins for a given domain
+   by adding the keywords "enable_plugins" and "disable_plugins" to this 
+   array.  Each of these keywords should have as its associated value an
+   array listing the targeted plugin names.  The names in each list should 
+   match the exact plugin name (same as the directory it redsides in).
+   Of course, as with most other vlogin configuration options, these settings
+   are completely optional.  See the config.php.sample file (near the bottom)
+   for a syntax example.
+
+   It is also possible to disable options page items for a domain (also
+   in the per-user config file) by adding the keyword "disable_options"
+   to this array.  This keyword should have an array as its value.  
+   That array should be a list of option names (enclosed in quotes) that 
+   should be removed from any of the options pages you desire (Display 
+   Preferences, Folder Preferences, Personal Information).  This 
+   functionality is a good compliment to the Forced Preferences plugin or a 
+   good way to disallow a user from entering a fake email address on the
+   Personal Information screen.  See the config.php.sample file for an 
+   example.  The options you may currently disable follows, but this is 
+   ever-changing, so check the source code for the most up-to-date list.
+
+      Display Preferences
+         chosen_theme   
+         custom_css
+         language
+         javascript_setting
+         js_autodetect_results
+         show_num
+         alt_index_colors
+         page_selector
+         page_selector_max
+         show_full_date
+         wrap_at
+         editor_size
+         editor_height
+         location_of_buttons
+         use_javascript_addr_book
+         show_html_default
+         enable_forward_as_attachment
+         forward_cc
+         include_self_reply_all
+         show_xmailer_default
+         attachment_common_show_images
+         pf_cleandisplay
+         mdn_user_support
+         compose_new_win
+         compose_width
+         compose_height
+         sig_first
+         reply_focus
+         internal_date_sort
+         sort_by_ref
+         
+      Folder Preferences
+         folder_prefix
+         trash_folder
+         sent_folder
+         draft_folder
+         location_of_bar
+         left_size
+         left_refresh
+         unseen_notify
+         unseen_type
+         collapse_folders
+         unseen_cum
+         date_format
+         hour_format
+         search_memory
+         mailbox_select_style
+         
+      Personal Preferences
+         full_name
+         email_address
+         reply_to
+         signature
+         identities_link
+         timezone
+         reply_citation_style
+         reply_citation_start
+         reply_citation_end
+         use_signature
+         prefix_sig
+
+   Finally, be aware that you do not need to put anything in this array
+   for vlogin to work.  If you only need user name reconstruction and no
+   other per-domain customization, then you can leave it empty (or only
+   include those domains that require any customization).
+
+   $debug
+   ------
+   allows you to view the IMAP login that is being constructed for you.
+   Set to 1 to see why the damn plugin isn't working.  ;>
+
+
+
+   NOTE - A few settings such as IMAP server might not work by just making
+          the setting in config.php.  In this case, you should apply the
+          session_recall patch to your SquirrelMail installation.  See the
+          INSTALL file for how to do this.
+
+
+   I have tested this plugin with both password_forget and login_alias
+   and all seems to work.
+
+   Grant Stern <grant@grantstern.com> came up with the idea and code 
+   for keeping the domain name correct even when using $dontUseHostName = 1
+
+ ********************************************************************************/
+
+
+CHANGE LOG (new as of v2.5)
+===========================
+
+ v3.5  23/09.04  Paul Lesneiwski <pdontthink@angrynerds.com>
+    *  Added ability to disable options on Display Preferences,
+       Personal Information, and Folder Preferences screens.
+
+ v3.4.1  22.08.04  Paul Lesneiwski <pdontthink@angrynerds.com>
+    *  Added username replacement option for $virtualDomainDataDir
+       as well as any of the values in the virtual domains array
+
+ v3.4  06.05.04  Paul Lesneiwski <pdontthink@angrynerds.com>
+    *  Enabling/Disabling plugins now works on a per-user basis.
+    *  Now properly ignores port number in host URL (if any).
+    *  Gets host name from the HTTP_X_FORWARDED_HOST server
+       variable, if available, in order to facilitate using
+       SquirrelMail in environments behind proxy servers that
+       may rewrite the HTTP_HOST variable (Thanks to Jared 
+       Rhine <jared@wordzoo.com>)
+    *  Allow host name to be appended to username unconditionally
+    *  Implemented reverse dot section order functionality and 
+       added ability to replace or remove characters in host name 
+       (Thanks to Mark van Cuijk <mark@phedny.net>)
+    *  Added ability to separate domain settings in one file 
+       per domain (Thanks to Andy Brook <ducky0@gmail.com>)
+       
+ v3.3  21.09.03  Paul Lesneiwski <pdontthink@angrynerds.com>
+    *  Added abilty to strip domain information from usernames
+       when users log in with full email addresses.  The domain
+       parsed from the URL may or may not be added back on.  
+       You can use this to force users to log in under the 
+       domain used to get to the login page.
+    *  Fixed replacement pattern for $checkByExcludeList (Thanks
+       to Tarragon Allen <tarragon@onthe.net.au>)
+    *  Fixed problem including virtual domain name in $data_dir 
+       in the virtual domains array.
+    *  Removed lockout functionality; there is a separate Lockout 
+       plugin for that now
+
+ v3.2  24.04.03  Paul Lesneiwski <pdontthink@angrynerds.com>
+    *  Added global virtual domain capability (Thanks to Jeff 
+       Hedlund <jhedlund@matrixsi.com>)
+    *  Added ability to use the virtual domain's name in any
+       of the domain's variables (Thanks to Jeff Hedlund 
+       <jhedlund@matrixsi.com>)
+    *  Added $atConversion functionality (see README) (Thanks to
+       Tom Collins <tom@installco.com>)
+    *  Fix for minor $notPartOfDomainName bug that matched (for
+       instance) "webmail" with "mail"
+    *  Fix for when the domain name is part of your usernames and 
+       you are using login_alias, such that someone in "domain_1.com"
+       can use an alias such as "jose" and no longer lock out 
+       "jose@domain_2.com"
+    *  Changed to dynamic global variables (was explicitly specified)
+       so most any SquirrelMail setting should be automatically 
+       available if it wasn't already
+    *  New (optional) session-based functionality allows for better 
+       performance
+    *  Added ability to lock out an entire domain (disallow any 
+       logins) or a specific list of users
+    *  Note that configuration and data file locations have changed
+       to the vlogin/data directory
+
+ v3.1  26.03.03  Paul Lesneiwski <pdontthink@angrynerds.com>
+    *  (When using sendmail-style virtual user table functionality:)
+       Removes extraneous pieces of virtual user catchall
+       mappings (in the form "@domain  catchallmapping+%1", 
+       removes everything including and after the plus sign).
+       (Thanks to Neil Darlow <neil@darlow.co.uk>)
+    *  Added wildcard functionality to the per-user settings file
+    *  Added functionality that allows the activation or deactivation 
+       of specific plugins on a per-domain basis (experimental; may
+       not work with all plugins).
+    *  Updated session_recall patches for SquirrelMail versions 1.2.11 
+       and v1.4
+    *  Added ability to remap host names for those whose web URL
+       is different than their email server's MX record (Thanks to
+       Ville Walveranta <vwal@astronfortis.com>)
+    *  Added ability to unalias Qmail/Vpopmail aliased domains so
+       users using aliased domains don't accidentally create multiple
+       preferences files (Thanks to Lelio della Pietra 
+       <gandalf@writeme.tk>).
+    *  Updated for compliance with new plugin version reporting API
+
+ v3.0  03.03.03  Paul Lesneiwski <pdontthink@angrynerds.com>
+    *  Updated to work with SquirrelMail v1.4
+    *  New setup.php format for better overall SquirrelMail performance
+    *  Makes use of optional session_recall hook to help those of
+       you who can't get vlogin to do dynamic IMAP server settings otherwise
+
+
+ v2.6  02.02.03  Paul Lesneiwski <pdontthink@angrynerds.com>
+    *  Minor update for compatibility with password_forget plugin.
+    *  Minor update for compatibility with login_alias plugin.
+
+
+ v2.5  09.01.03  Paul Lesneiwski <pdontthink@angrynerds.com>
+    *  Changed behavior of $numberOfDotSections to be based on the new 
+         $removeFromFront setting.
+    *  Added $chopOffDotSectionsFromLeft and $chopOffDotSectionsFromRight 
+         and associated functionality.
+    *  Changed $checkByExcludeList behavior to take out undesirables no
+         matter where they are in the host name.
+    *  Added $allVirtualDomainsAreUnderOneSSLHost and associated functionality.
+    *  Added $sendmailVirtualUserTable and associated functionality.
+    *  Added $perUserSettingsFile and associated functionality.
+    *  Added $putHostNameOnFrontOfUsername and associated functionality.
+    *  Updated for compatibility with Plugin Updates plugin
+    *  Fixed php version checking so it works in all locales.         
+    *  Fixed all E_NOTICE warnings
+    *  Added $debug and associated functionality.
+
+

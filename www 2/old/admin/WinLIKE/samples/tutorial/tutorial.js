@@ -1,0 +1,3 @@
+/* WinLIKE 1.1.00  (c) 1998-2004 by CEITON technologies GmbH - www.ceiton.com
+   all rights reserved - patent pending */
+function SS(){WS[TI]=_H_(T_,T_);if(cl_!=N_)EN[TI]=cl_.u_;else EN[TI]=-1}function NS(){j_('td'+TI).innerHTML='<a class=Link href=javascript:Back('+TI+')>'+cJ_+TI+'</a>';TI++;j_('descr').innerHTML=Description[TI];j_('nr').innerHTML=TI}function Back(a){for(var b=1;b<f_(__);b++)if(__[b]!=N_&&__[b].Nam!="dh_"&&(__[b].Nam!="ck_"||EN[a]==-1)){dV_(b);if(e_(b)==N_)__[b]=N_}if(EN[a]>0){var c=a_.searchwindow("ck_");__[c].Vis=T_;__[c].V_=F_;_E_(c)}eval(WS[a]);cm_(e1_,T_);j_('descr').innerHTML=Description[a];j_('nr').innerHTML=a;TI=a}

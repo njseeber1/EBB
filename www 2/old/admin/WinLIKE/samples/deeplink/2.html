@@ -1,0 +1,25 @@
+
+<!--  load this page into a WinLIKE page after a direct call by producing a Deeplink -->
+<SCRIPT>
+	if (self.location==top.location) {
+		// this file -- to detect the filename automatically please look at the ceiton.com website (you can download the hole page as zip)
+		file = "samples/deeplink/2.html";
+		// redirect per generated Deeplink
+		top.location.href = "../../19_sample_deeplink.html?WinLIKE_Deep="+'"'+"var%20j=new%20WinLIKE.window('',365,240,300,300,11);j.Nam='mywin';j.Ski='light';j.Adr='"+file+"';WinLIKE.addwindow(j,true);"+'"';
+	}
+</SCRIPT>
+
+<link rel="stylesheet" href=c.css>
+<title>Two</title>
+<p>
+<a href=1.html>1.html</a><br>
+This is 2.html<br>
+
+<BR><BR>
+Please try to call this page directly (f.i. <A HREF="http://www.ceiton-usa.com/tryonline/samples/deeplink/2.html" TARGET=_blank>http://www.ceiton-usa.com/tryonline/samples/deeplink/2.html</A>).
+<BR><BR>
+The page will reload themself into this WinLIKE page. Perfect for contents found with search engines.
+Just a Deeplink.
+<BR><BR>
+Search f.e. on Google for <B>"What is WinLIKE"</B> (including the quotes).
+

@@ -1,0 +1,135 @@
+<?php
+function getmicrotime(){
+  list($usec, $sec) = explode(" ",microtime());
+    return ((float)$usec + (float)$sec);
+  } 
+	$start_time = getmicrotime()
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+	
+<head><meta name="keywords" content="eagle business brokers commercial property brokerage denver colorado real estate retail liquor stores laundromats businesses">
+<meta name="description" content="eagle business brokers commercial property brokerage denver colorado real estate retail liquor stores laundromats businesses">
+
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title><?php echo "$config[site_title]" ?></title>
+<link rel=stylesheet href="<?php echo $config[template_url] ?>/style.css" type="text/css">
+<script language="JavaScript" type="text/javascript">
+		<!--
+		var browser_type = navigator.appName
+		var mac = (navigator.userAgent.indexOf('Mac') != -1)
+		if ( browser_type == "Microsoft Internet Explorer" && mac )
+		document.write('<LINK REL="StyleSheet" HREF="<?php echo $config['template_url']; ?>/ieMac_style.css" TYPE="text/css">');
+		else
+		document.write('<LINK REL="StyleSheet" HREF="<?php echo $config['template_url']; ?>/dft_style.css" TYPE="text/css">');
+		//-->
+		</script>
+<SCRIPT language="JavaScript" type="text/javascript">
+		function confirmDelete()
+		{
+		var agree=confirm("<?php echo $lang['are_you_sure_you_want_to_delete']; ?>");
+		if (agree)
+		 return true ;
+		else
+		 return false ;
+		}
+		</script>
+<style type="text/css">
+<!--
+/* BEGIN style10 */
+ #navcontainer
+{
+	margin: 5px;
+	padding: 5px;
+	border: thin dotted #336699;
+	height: auto;
+	width: 150px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-style: normal;
+	line-height: normal;
+	color: #336699;
+	background-color: #FFFFFF;
+}
+/* END style10 */
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+</head>
+
+<?php
+	if ($printer_friendly != "yes")
+	{
+?>
+		<body background="<?php echo "$config[template_url]"; ?>/images/bottom.gif">
+        <table width="600" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td height="137" valign="top" background="<?php echo $config[template_url] ?>/images/logo.gif"><img src="<?php echo "$config[template_url]"; ?>/images/logotop.jpg" width="600" height="134" border="0" align="texttop"> 
+      
+        <table border="0" cellspacing="0" cellpadding="0">
+    </table></td>
+  </tr>
+</table>
+<table width="600" height="30" border="0" cellpadding="0" cellspacing="0" background="<?php echo $config[template_url] ?>/images/navbg.jpg">
+  <tr> 
+    <td width="600" height="30" align="left" valign="top" background="<?php echo $config[template_url] ?>/images/navbg.gif"><script type='text/javascript'>
+
+//HV Menu- by Ger Versluis (http://www.burmees.nl/)
+//Submitted to Dynamic Drive (http://www.dynamicdrive.com)
+//Visit http://www.dynamicdrive.com for this script and more
+
+function Go(){return}
+
+</script>
+<script type='text/javascript' src='http://www.eaglebusinessbrokers.com/template/vertical-menu/exmplmenu_var.js'></script>
+<script type='text/javascript' src='http://www.eaglebusinessbrokers.com/template/vertical-menu/menu_com.js'></script>
+&nbsp;    </td>
+  </tr>
+</table>
+        <!--
+								Actual content area starts here. The tables below are for
+								structuring
+								the content area and adding that 'welcome to yoursite.com'
+								image. These
+								tables also keep the content area at a fixed-width.
+								-->
+							<td width="755" valign="top">
+								<table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-width: 0; border-color=#111111;" width="755" id="AutoNumber1">
+									<tr>
+										<td width="755" style="border-style: none; border-width: medium; font-family:arial, helvetica; font-size:11px; color:#c3c3c3; line-height:20px">&nbsp;
+										</td>
+									</tr>
+									<tr>
+										<td width="755" style="border-style: none; border-width: medium; font-family:arial, helvetica; font-size:11px; color:#c3c3c3; line-height:20px">
+	<?php
+		} // end if ($printer_friendly != "yes")
+		else
+		{
+	?>
+			<table border="0" cellspacing="0" cellpadding="2" width="600">
+				<tr>
+					<td width="897">
+
+						<div align="left">
+							<h2><?php echo "$config[site_title]"; ?></h2>
+
+							<hr size="1">
+						</div>
+						<div align="center" class="small">
+						printer friendly page -- <a href="<?php echo $PHP_SELF."?listingID=$listingID"; ?>">return to normal view</a>
+					</td>
+				</tr>
+			</table>
+	<?php
+		} // end printer friendly page layout
+	?>

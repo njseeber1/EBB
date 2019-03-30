@@ -1,0 +1,91 @@
+<?php
+function getmicrotime(){
+  list($usec, $sec) = explode(" ",microtime());
+    return ((float)$usec + (float)$sec);
+  } 
+	$start_time = getmicrotime()
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<title><?php echo "$config[site_title]" ?></title>
+		<link rel=stylesheet href="<?php echo $config[template_url] ?>/style.css" type="text/css">
+		<script type="text/javascript">
+		<!-- 
+		// Nannette Thacker http://www.shiningstar.net
+		function confirmDelete()
+		{
+		var agree=confirm("<?php echo $lang[are_you_sure_you_want_to_delete] ?>");
+		if (agree)
+			return true ;
+		else
+			return false ;
+		}
+		-->
+		</script>
+	</head>
+
+	<body bgcolor="white">
+		<center>
+			<?php
+			if ($printer_friendly != "yes")
+				{
+			?>
+			<table border="0" cellspacing="0" cellpadding="2" width="590">
+				<tr>
+					<td>
+												
+						<div align="left">
+							<h2><?php echo "$config[site_title]"; ?></h2>
+
+							<hr size="1">
+						</div>
+						<div align="right" class="small">
+							<a href="<?php echo $config[baseurl]; ?>/user_signup.php"><?php echo "$lang[menu_new_user_account]"; ?></a> 
+							| <a href="<?php echo $config[baseurl]; ?>/admin/index.php"><?php echo "$lang[menu_user_login]"; ?></a> 
+							| <a href="<?php echo $config[baseurl]; ?>/index.php"><?php echo "$lang[menu_home]"; ?></a> 
+							| <a href="<?php echo $config[baseurl]; ?>/listingsearch.php"><?php echo $lang[search_listings] ?></a> 
+							| <a href="<?php echo $config[baseurl]; ?>/rentalsearch.php"><?php echo $lang['menu_search_rental_listings']; ?></a> 
+							| <a href="<?php echo $config[baseurl]; ?>/listing_browse.php"><?php echo "$lang[menu_user_browse_listings]"; ?></a> 
+							| <a href="<?php echo $config[baseurl]; ?>/listing_browse.php?type%5B%5D=Home"><?php echo $lang['menu_homes']; ?></a>
+							| <a href="<?php echo $config[baseurl]; ?>/listing_browse.php?type%5B%5D=Land"><?php echo $lang['menu_land']; ?></a>
+							| <a href="<?php echo $config[baseurl]; ?>/listing_browse.php?type%5B%5D=Farms"><?php echo $lang['menu_farms']; ?></a>
+							| <a href="<?php echo $config[baseurl]; ?>/listing_browse.php?type%5B%5D=Commercial"><?php echo $lang['menu_commercial']; ?></a>
+							| <a href="<?php echo $config[baseurl]; ?>/members/listsavedsearches.php"><?php echo "$lang[menu_saved_searches]"; ?> </a> 
+							| <a href="<?php echo $config[baseurl]; ?>/members/listfavorites.php"><?php echo "$lang[menu_favorite_listings]"; ?> </a>
+							| <a href="<?php echo $config[baseurl]; ?>/view_users.php"><?php echo $lang['menu_view_agents']; ?></a> 
+							| <a href="<?php echo $config[baseurl]; ?>/aboutus.php"><?php echo $lang['menu_about_us']; ?></a>
+							| <a href="<?php echo $config[baseurl]; ?>/contactus.php"><?php echo $lang['menu_contact_us']; ?></a>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<p>
+			<?php
+				} // end if ($printer_friendly != "yes")
+			else
+				{
+			?>
+			<table border="0" cellspacing="0" cellpadding="2" width="590">
+				<tr>
+					<td>
+												
+						<div align="left">
+							<h2><?php echo "$config[site_title]"; ?></h2>
+
+							<hr size="1">
+						</div>
+						<div align="center" class="small">
+						printer friendly page -- <a href="<?php echo $PHP_SELF."?listingID=$listingID"; ?>">return to normal view</a>
+					</td>
+				</tr>
+			</table>
+			<?php
+				} // end printer friendly page layout
+			?>
+			
+			<table width="590" border="0" cellspacing="3" cellpadding="3">
+				<tr>
+					<td width="590" valign="top">

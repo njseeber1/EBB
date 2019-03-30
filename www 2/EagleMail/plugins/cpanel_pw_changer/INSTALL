@@ -1,0 +1,55 @@
+Installing the CPanel Password Changer Plugin
+=======================
+
+1) Start with unarchiving (untaring) the file into the SM plugins directory.
+   Here is a example for the 1.0 version of this plugin.
+
+	$ cd plugins
+	$ tar -zxvf cpanel_pw_changer-1.0-1.0.0.tar.gz
+
+2) Change into the cpanel_pw_changer directory, copy the config.php.sample
+   file as a new file called config.php and then edit the settings in the file.
+
+	$ cd change_passwd
+	$ cp config.php.sample config.php
+	$ vi config.php
+
+5) Go to the SM config directory and run conf.pl.  Choose option 8 and move 
+   the plugin from the "Available Plugins" category to the "Installed Plugins"
+   category.  Save and exit.
+
+	$ cd ../../config/
+	$ ./conf.pl
+
+   -or-
+
+   Upload the cpanel_pw_changer folder and files into the plugins folder
+   of your SM location. Modify the main SM config.php file and add the
+   cpanel_pw_changer as a new plugin.
+
+6) Verify that you have the "compatibility" plugin installed.  (It is 
+   required.)
+
+
+
+Upgrading the CPanel Password Changer Plugin
+===============================
+
+1) Start with unarchiving (untaring) the file into the plugins directory.
+   Here is a example for the 1.0 version of the plugin.
+
+	$ cd plugins
+	$ tar -zxvf cpanel_pw_changer-1.0-1.0.0.tar.gz
+
+
+2) Change into the cpanel_pw_changer directory.  Check your config.php 
+   file against the new version to see if there are any new settings
+   that you must add to your existing config.php file.
+
+	$ diff -Nau config.php config.php.sample
+
+   -or- 
+   
+   Replace your existing config.php file with the provided sample
+   and then reconfigure the plugin from scratch. (See step 2 under the
+   installation procedure above.)

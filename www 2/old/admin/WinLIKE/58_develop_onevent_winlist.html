@@ -1,0 +1,138 @@
+<!-- WinLIKE - Copyright (c) 1998-2003 by CEITON technologies GmbH - www.winlike.net -->
+<SCRIPT>WinLIKEerrorpage='winlike/winman/hlp-error.html';</SCRIPT>
+<SCRIPT SRC="winlike/winman/wininit.js"></SCRIPT><SCRIPT SRC="winlike/winman/winman.js"></SCRIPT>
+<!--<SCRIPT SRC="winlike/winedit/winedit.js"></SCRIPT>-->
+
+<SCRIPT>
+
+	WinLIKE.definewindows=mydefs;
+	function mydefs()
+	{
+		var j=new WinLIKE.window('Window 1',250,220,200,250,30);
+		j.Nam='one';
+		j.onEvent='myeventfunc' // for capturing the min clicks
+		WinLIKE.addwindow(j);
+		
+		var j=new WinLIKE.window('Window 2',360,160,200,250,10);
+		j.Nam='two';
+		j.onEvent='myeventfunc' // for capturing the min clicks
+		WinLIKE.addwindow(j);
+
+		var j=new WinLIKE.window('normal Window',470,320,200,250,20);
+		j.Nam='three';
+		j.Vis=false;
+		WinLIKE.addwindow(j);
+	}
+
+
+	// WinLIKE window event handler
+	function myeventfunc(window,what) {
+		if (window.myFlag==null) window.myFlag=false;
+		if      (what==1 && window.myFlag==false) { myMinimizing(window);return false;} // WinLIKE min event
+		else if (what==1 && window.myFlag==true ) { myRestoring(window); return false;} // WinLIKE min event - our max event ;)
+		else if (what==5)                         { myRestoring(window); }              // WinLIKE source change event
+	}
+	function myMinimizing(win) {
+		win.myFlag=true; // later we have to remember that we are in our own min status, because for WinLIKE it does not
+		win.hideshow();  // hide the window
+	}
+	function myRestoring(win) {
+		win.myFlag=false;
+		win.hideshow();
+	}
+
+
+	// function for arranging the visible windows
+	function myArrange() {
+		startX=280;
+		startY=180;
+		for (var jj=1;jj<WinLIKE.windows.length;jj++)	// go thru all windows
+		  if (WinLIKE.windows[jj]!=null && !WinLIKE.windows[jj].Del) // if the window is alive
+		  	if (WinLIKE.windows[jj].Vis==true) // if the window is visible
+			    if (WinLIKE.windows[jj].Nam!='WinList') { // do not touch the WinList
+			    	WinLIKE.windows[jj].Top = startY;
+			    	WinLIKE.windows[jj].Left = startX;
+			    	WinLIKE.windows[jj].Width = 250;
+			    	WinLIKE.windows[jj].Height = 250;
+			    	WinLIKE.windows[jj].draw(); // make the changes happen
+			    	if (WinLIKE.windows[jj].Mn) WinLIKE.windows[jj].minmax(); // expand if minimized
+						WinLIKE.windows[jj].front(); // bring the window to front
+			    	startY += 20;
+			    	startX += 20;
+			   }
+	}
+
+
+	// OUR WINLIST DEFINTIONS
+	// set the site, where your personal winlist is located
+	WinLIKE.winlist.Adr="samples/winlist/my-winlist.html";
+	WinLIKE.winlist.Active=true;  // show winlist at the beginning or not
+
+	// you can also determine the layout of the window containing the winlist using this function 
+	WinLIKE.winlist.create=my_winlist_function;
+	function my_winlist_function()
+	{
+		j=new WinLIKE.window('winlist', 10, 15, 150, 300, 1); // create window-object
+	 	j.Ed=false; // not editable
+	 	j.Cls=false;
+		j.Fro=true; // always on top
+		j.SD=false; // display no symbol
+		j.HD=false; // display no history buttons
+		j.LD=false; // display no deeplink
+		return j;
+	}
+
+	// with the following function, you can define the style of the items of your personal winlist
+	// - nr is the number of the window [for internal reasons, don't change it]
+	// - active retrieves, whether it is recommended to enable hiding this window via the winlist. E.g. the toolbox should
+	//   not be hidden by the user.
+	// - title is the WinLIKE title of the window
+	// - name is its WinLIKE name
+	// - skin is its skin name
+	WinLIKE.winlist.getitem=my_item_function;
+	function my_item_function(nr, active, title, name, skin)
+	{
+		if (title=='winlist') return '';
+		if (active){
+			if (title=='') title='[new]';
+			if (WinLIKE.windows[nr].myFlag==true) // restore hidden window
+				return '<nobr class=min onMouseUp="parent.WinLIKE.windows['+nr+'].close()">(x)&nbsp;</nobr>'+
+				       '<nobr class=min onMouseUp="parent.WinLIKE.windows['+nr+'].minmax();'+
+				       'parent.WinLIKE.windows['+nr+'].front();'+
+				       '">'+title+'</nobr><br>';
+			else // bring to front or, if already in front, hide it
+				return '<nobr class=min onMouseUp="parent.WinLIKE.windows['+nr+'].close()")>(x)&nbsp;</nobr>'+
+				       '<nobr class=max onMouseUp="'+
+				       'if (parent.WinLIKE.Actual=='+nr+' || parent.WinLIKE.windows['+nr+'].Bac) parent.WinLIKE.windows['+nr+'].minmax();'+
+				       'else parent.WinLIKE.windows['+nr+'].front();'+
+				       '">'+title+'</nobr><br>';
+		} else return ''; // WinList itself and Toolbox are not listed
+	}
+
+</SCRIPT>
+
+
+<BODY onResize=WinLIKE.resizewindows() onload=WinLIKE.init() onDragStart="self.event.returnValue=F_;">
+	<!-- Don't remove this line! --><IMG ID=ih_ SRC="skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+	<!-- You can change this loading picture! --><IMG ID=ig_ SRC="winlike/winman/load.gif" STYLE="position:absolute;left:35%;top:40%;z-Index:4001">
+
+	<!-- Insert your page-content here! -->
+
+	<DIV STYLE="position:absolute;left:180;top:15">
+		<FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+			In this sample the minimize behavior was changed to an 'Windows like' one. You can specify the onEvent property
+			for each single window (here Window 1 and Window 2).
+			<BR><BR>
+			You can customize the WinList f.i. like the Windows Taskbar or a Tab Control. You can also do that without our WinList feature by
+			developing your own List or Icon feature.
+			<BR><BR>
+			<B>
+			<A HREF="samples/winlist/2.html" TARGET=one>Window 1</A> - <A HREF="samples/winlist/2.html" TARGET=two>Window 2</A> - <A HREF="samples/winlist/2.html" TARGET=three>normal Window</A>
+			<BR>
+			<A HREF="javascript:myArrange();">Arrange windows</A>
+		</FONT>
+	</DIV>
+
+
+
+

@@ -1,0 +1,221 @@
+<?php
+
+  // sample configuration file that has:
+  //   - username modifications TURNED OFF
+  //   - per-domain settings and modifications TURNED OFF
+  //   - per-user settings TURNED ON
+
+
+
+  // Global Variables, don't touch these unless you want to break the plugin
+  //
+  global $notPartOfDomainName, $numberOfDotSections, $useSessionBased,
+         $putHostNameOnFrontOfUsername, $checkByExcludeList,
+         $at, $dot, $dontUseHostName, $perUserSettingsFile,
+         $smHostIsDomainThatUserLoggedInWith, $virtualDomains,
+         $sendmailVirtualUserTable, $virtualDomainDataDir,
+         $allVirtualDomainsAreUnderOneSSLHost, $debug, $removeFromFront,
+         $chopOffDotSectionsFromRight, $chopOffDotSectionsFromLeft,
+         $translateHostnameTable, $pathToQmail, $atConversion,
+         $removeDomainIfGiven, $alwaysAddHostName, $reverseDotSectionOrder,
+         $replacements;
+
+
+
+  // should vlogin use session-based methods for storing dynamic
+  // configuration settings (faster, but requires one source patch)
+  // set to 1 for yes, zero for no
+  //
+  $useSessionBased = 0;
+
+
+
+  // list of domain-specific attributes (note that each domain is 
+  // specified in this array by any string that is unique to the 
+  // virtual host name (not necessarily the whole host name -- 
+  // "mydomain" is probably enough to represent "mydomain.com")
+  //
+  $virtualDomains = array(
+  );
+
+
+  // reverse dot section order allows you to invert a host name
+  // from, for example, www.domain.com to com.domain.www (note
+  // that this is done before any other changes are made to the
+  // host name)
+  //
+  $reverseDotSectionOrder = 0;
+
+
+  // $numberOfDotSections setting dictates the size (given in "dot 
+  // sections") that the hostname should be, while $removeFromFront
+  // determines if, in order to reach that size, "dot sections" will
+  // be taken off the beginning of the host name (if set to zero,
+  // the host name will be trimmed from the end)
+  //
+  $numberOfDotSections = 2;
+  $removeFromFront = 1;
+
+
+  // $checkByExcludeList should be set to 1 in order to strip out any
+  // "dot sections" that match those found in $notPartOfDomainName
+  //
+  $checkByExcludeList = 1;
+  
+  
+  // our "exclude list" of strings that are not usually part of the domain name
+  //
+  $notPartOfDomainName = array('www'
+			       ,'mail'
+			       ,'email'
+			       ,'webmail');
+
+
+  // $chopOffDotSectionsFromLeft allows specification of a set number of "dot
+  // sections" to be removed from the front of the host name
+  //
+  $chopOffDotSectionsFromLeft = 0;
+
+
+  // $chopOffDotSectionsFromRight allows specification of a set number of "dot
+  // sections" to be removed from the end of the host name
+  //
+  $chopOffDotSectionsFromRight = 0;
+
+
+  // some mail systems won't take the '@' symbol in the login name for virtual 
+  // host setups.  Change that here:
+  //
+  $at = '@';
+
+
+  // also change the '.' symbol if necessary.
+  //
+  $dot = '.';
+
+
+  // if your users tend to confuse '@' and '%' in their email
+  // addresses, you may specify a list of characters that will,
+  // if found in the user name, all be converted to whatever
+  // you have specified for the $at setting
+  //
+  //$atConversion = array('%');
+  //$atConversion = array('%', '&');
+  $atConversion = array();
+
+
+  // replace or remove all instances of any other character(s)
+  // in the host name by using this setting.  Specifying a
+  // blank value will result in characters being removed.  Note
+  // that these are replaced in the order given.
+  //
+  $replacements = array(
+  //                  '-'  => '_',   // all dashes converted to underscores
+  //                  'xx' => '',    // all double xx's removed
+                       );
+
+
+  // force the host name to be added unconditionally to the 
+  // user name, which should be avoided if possible.  Only use
+  // this setting if you are converting your '@' sign to a 
+  // character that is also part of your usernames (such as '.')
+  //
+  $alwaysAddHostName = 0;
+
+
+  // indicates that username/hostname combination should begin with hostname
+  // (such as "domainname.username") instead of typical hostname following the
+  // username (such as "username@domain.com")
+  //
+  $putHostNameOnFrontOfUsername = 0;
+
+
+  // you can choose not to append the host name to users' login
+  // names no matter what by setting this to 1.  This is a very
+  // rare use of this plugin, and should usually be left at 0.
+  //
+  $dontUseHostName = 1;
+
+
+  // Additionally, you can make sure your users' outgoing emails
+  // come from the domain they used to log in if you set this
+  // $smHostIsDomainThatUserLoggedInWith to 1.  
+  // NOTE that you'll typically only need to do this if you are 
+  // using $dontUseHostName = 1
+  //
+  $smHostIsDomainThatUserLoggedInWith = 0;
+
+
+  // If users log in with a full email address, you can strip
+  // off the domain information, leaving just the username.
+  // The domain name parsed out of the URL by this plugin
+  // will be added back to the username unless you use the
+  // $dontUseHostName functionality
+  //
+  $removeDomainIfGiven = 0;
+
+
+  // Override the SquirrelMail $data_dir here, and optionally
+  // include the virtual domain name or user name as part of
+  // the path (indicated by the constants "###VIRTUAL_DOMAIN###"
+  // and "###USERNAME###" respectively) (you may also do this
+  // on a per-host basis in the $virtualDomains array)
+  //
+  //$virtualDomainDataDir = '/home/squirrelmail/data/';
+  //$virtualDomainDataDir = '/home/sites/###VIRTUAL_DOMAIN###/data/';
+  //$virtualDomainDataDir = '/home/sites/###VIRTUAL_DOMAIN###/###USERNAME###/data/';
+  $virtualDomainDataDir = '';
+
+
+  // For sites that host all virtual domains off of a single host
+  // URL (commonly used for SSL implementations using just one 
+  // certificate for all hosts), where URLs look like:
+  // http://www.onedomain.com/virtualdomain.com/mail
+  // set this value to 1; otherwise, leave set to zero
+  //
+  $allVirtualDomainsAreUnderOneSSLHost = 0;
+
+
+  // this is the path to the sendmail virtual user table, which 
+  // should be empty if you are not using sendmail or such a table
+  // to remap user logins
+  //
+  //$sendmailVirtualUserTable = '/etc/mail/virtusertable';
+  $sendmailVirtualUserTable = '';
+
+
+  // this is the path to the hostname translation table, which
+  // should be empty if you do not need to remap the domain
+  // host name that your users will be logging in from
+  //
+  //$translateHostnameTable = '/path/to/squirrelmail/plugins/vlogin/data/hostmap.dat';
+  $translateHostnameTable = '';
+
+
+  // this is the path to Qmail.  It should *only* be specified
+  // if you are using Qmail/Vpopmail aliased domains and want to 
+  // prevent users of aliased domains from logging in to a domain 
+  // alias, accidentally creating more than one preferences file 
+  // for themselves.  Otherwise, please leave this as an empty string.
+  //
+  // Also, when using this functionality, please verify that the user
+  // you run httpd with is able to read the file ~qmail/users/assign
+  //
+  //$pathToQmail = '/var/qmail';
+  $pathToQmail = '';
+
+
+  // specify per-user settings in a separate file, if needed - the
+  // the path to that file is given here (empty string if not used)
+  //
+  $perUserSettingsFile = '/path/to/squirrelmail/plugins/vlogin/data/users.dat';
+
+
+  // turn this on to test your configuration settings - the final
+  // IMAP login value will be presented after all processing has
+  // been completed
+  //
+  $debug = 0;
+
+
+?>

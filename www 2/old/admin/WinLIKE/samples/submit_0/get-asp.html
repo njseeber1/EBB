@@ -1,0 +1,39 @@
+
+<FONT FACE="Arial, Verdana, Helvetiva" SIZE=2>
+<B>
+ASP: Form-GET, in the same window
+</B>
+
+<SCRIPT SRC=../../winlike/winman/winxtra.js></SCRIPT>
+
+<form id=form1 action="result/result.asp?xxx=x&yyy=y" onSubmit="return submitWinLIKE_(event)">
+
+	<input name=eingabe type=text value=123>
+	
+	<BR>
+	<select name=artist size="4" multiple>
+		<option value=Heino selected>Heino</option>
+		<option value=Tom>Tom</option>
+		<option value=Nina selected>Nina</option>
+		<option value=Marianne>Marianne</option>
+	</select>
+
+	<br>
+	<input type="radio" name="zahlmethode" value="Mastercard" checked> Mastercard
+	<input type="radio" name="zahlmethode" value="Visa"> Visa
+
+	<br>
+	<input type="checkbox" name="zutat" value="Salami" checked> Salami
+	<input type="checkbox" name="zutat" value="Pilze"> Pilze
+
+	<BR>
+	<textarea name=blabla rows=2 cols=20>here is my text</textarea>
+	<input name=bla type=hidden value=3>
+
+	<br>
+	<input type=submit name=widget value=button>
+	or
+	<A HREF="javascript:submitWinLIKE_('form1')">Submit per Script</A>
+
+</form>
+

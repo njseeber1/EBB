@@ -1,0 +1,103 @@
+<!-- WinLIKE - Copyright (c) 1998-2003 by CEITON technologies GmbH - www.winlike.net -->
+
+<SCRIPT>
+	WinLIKEerrorpage='winlike/winman/hlp-error.html';
+	// do not forget to change the path of the css file within the skins when you change this paths:
+	WinLIKEskinpath="skins/";
+	WinLIKEfilepath="winlike/";
+</SCRIPT>
+
+<SCRIPT SRC="winlike/winman/wininit.js"></SCRIPT><SCRIPT SRC="winlike/winman/winman.js"></SCRIPT>
+<!-- Delete the following line, if the editor should not be used anymore. -->
+<SCRIPT SRC="winlike/winedit/winedit.js"></SCRIPT>
+
+<script>
+  WinLIKE.definewindows=mydefs;
+  function mydefs() {
+    var j=new WinLIKE.window('Adr',100,100,200,200,1);
+    j.Adr='samples/test.html';
+    WinLIKE.addwindow(j);
+  
+    var j=new WinLIKE.window('Nam=1',300,100,200,200,2);
+    j.Nam='1';
+    WinLIKE.addwindow(j);
+  
+    var j=new WinLIKE.window('light',500,100,200,200,3);
+    j.Ski='light';
+    WinLIKE.addwindow(j);
+  
+    var j=new WinLIKE.window('foreground',100,300,200,200,4);
+    j.Fro=true;
+    WinLIKE.addwindow(j);
+  
+    var j=new WinLIKE.window('invisible',300,300,200,200,5);
+    j.Vis=false;
+    WinLIKE.addwindow(j);
+    
+    var j=new WinLIKE.window('[no title]',500,300,200,200,6);
+    j.Tit=false;
+    WinLIKE.addwindow(j);
+  
+    var j=new WinLIKE.window('no min icon',100,500,200,200,7);
+    j.Min=false;
+    WinLIKE.addwindow(j);
+  
+    var j=new WinLIKE.window('no close icon',300,500,200,200,8);
+    j.Cls=false;
+    WinLIKE.addwindow(j);
+  
+    var j=new WinLIKE.window('not moveable',500,500,200,200,9);
+    j.Mov=false;
+    WinLIKE.addwindow(j);
+  
+    var j=new WinLIKE.window('not sizeable',100,700,200,200,10);
+    j.Siz=false;
+    WinLIKE.addwindow(j);
+  
+    var j=new WinLIKE.window('minimized',300,700,200,200,11);
+    j.Mn=true;
+    WinLIKE.addwindow(j);
+    
+    var j=new WinLIKE.window('not editable',500,700,200,200,12);
+    j.Ed=false;
+    WinLIKE.addwindow(j);
+    
+    var j=new WinLIKE.window('no symbol',700,700,200,200,13);
+    j.SD=false;
+    WinLIKE.addwindow(j);
+    
+    var j=new WinLIKE.window('no deeplink',700,100,200,200,14);
+    j.LD=false;
+    WinLIKE.addwindow(j);
+    
+    var j=new WinLIKE.window('only title',700,500,200,200,15);
+    j.LD=false;
+    j.HD=false;
+    j.Min=false;
+    j.Cls=false;
+    j.SD=false;
+    WinLIKE.addwindow(j);
+  
+    var j=new WinLIKE.window('no history',700,300,200,200,16);
+    j.HD=false;
+    WinLIKE.addwindow(j);
+
+    var j=new WinLIKE.window('background',100,900,200,200,6);
+    j.Bac=true;
+    WinLIKE.addwindow(j);  
+
+  }
+</script>
+
+<BODY onResize=WinLIKE.resizewindows() bgColor=#DDDDDD onLoad='WinLIKE.init();' onDragStart="self.event.returnValue=F_;">
+	<!-- Don't remove this line! --><IMG ID=ih_ SRC="skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+	<!-- You can change this loading picture! --><IMG ID=ig_ SRC="winlike/winman/load.gif" STYLE="position:absolute;left:35%;top:40%;z-Index:4001">
+
+	<!-- Insert your page-content here! -->
+
+	
+	<DIV STYLE="position:absolute;left:110;top:15">
+		<FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+		This page shows sample windows with different properties.
+		</FONT>
+	</DIV>

@@ -1,0 +1,39 @@
+
+<!-- WinLIKE - Copyright (c) 1998-2003 by CEITON technologies GmbH - www.winlike.net -->
+<SCRIPT>WinLIKEerrorpage='winlike/winman/hlp-error.html';</SCRIPT>
+<SCRIPT SRC="winlike/winman/wininit.js"></SCRIPT><SCRIPT SRC="winlike/winman/winman.js"></SCRIPT>
+<!-- Disable the following line, if the editor should not be used anymore.-->
+<SCRIPT SRC="winlike/winedit/winedit.js"></SCRIPT>
+
+<!-- WinLIKE Window-Definitions -->
+<SCRIPT>
+  WinLIKE.definewindows=mydefs;
+  function mydefs()
+	{
+	
+		var j=new WinLIKE.window('','0%','0%','100%','100%',1);
+		j.Ski='zero';
+		j.Bac=true;
+		j.Nam='background';
+		j.Adr='samples/background/background_1.html';
+		WinLIKE.addwindow(j);
+
+			
+		var j=new WinLIKE.window('Menu',170,141,280,219,52);
+		j.Cls=false;
+		j.Nam='winX';
+		j.Adr='samples/background/test.html';
+		WinLIKE.addwindow(j);
+
+	}
+</SCRIPT>
+
+
+
+<!-- Do not delete the following four lines! -->
+<BODY style="overflow-y:auto;" onLoad='WinLIKE.init();' onResize="WinLIKE.resizewindows();" LEFTMARGIN=0 TOPMARGIN=0 BOTTOMMARGIN=0 RIGHTMARGIN=0>
+	<IMG id=ig_ src="winlike/winman/load.gif" style="position:absolute;left:35%;top:40%;z-index:4000">
+	<IMG ID=ih_ SRC="skins/trans.gif" style="zIndex:20;position:absolute;left:0;top:0;width:100%;height:100%">
+
+	<!-- insert your HTML-code here! -->
+	

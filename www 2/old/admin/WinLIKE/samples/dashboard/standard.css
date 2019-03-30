@@ -1,0 +1,287 @@
+BODY
+{
+    FONT-FAMILY: Verdana, Arial;
+    FONT-SIZE: 1.5em;
+    MARGIN: 0px
+}
+TD
+{
+    FONT-FAMILY: Verdana, Arial;
+    FONT-SIZE: 1.5em
+}
+TEXTAREA
+{
+    FONT-FAMILY: Verdana, Arial;
+    FONT-SIZE: 2em
+}
+.DashTitleArea
+{
+    BACKGROUND-COLOR: #333366;
+    WIDTH: 100%
+}
+.DashTitle
+{
+    COLOR: white;
+    FONT-FAMILY: arial, verdana;
+    FONT-SIZE: 1.25em;
+    FONT-WEIGHT: normal;
+    PADDING-LEFT: 4px;
+    PADDING-RIGHT: 4px;
+    WIDTH: 100px
+}
+.DashTitleImage
+{
+    BACKGROUND-ATTACHMENT: fixed;
+    BACKGROUND-IMAGE: url(winlogo.gif);
+    BACKGROUND-POSITION: 3px 3px;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 35px;
+    WIDTH: 45px
+}
+.DashTitleGroup
+{
+    BACKGROUND-COLOR: #333366
+}
+.DashTitleSpacer
+{
+    FILTER: Alpha(Opacity=100, finishX=75, finishopacity=0, style=1)
+}
+.DashCommandArea
+{
+    BACKGROUND-COLOR: transparent;
+    COLOR: white;
+    PADDING-RIGHT: 9px;
+    TEXT-ALIGN: right
+}
+A.DashCommand:link
+{
+    COLOR: white;
+    CURSOR: hand;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 1em;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+A.DashCommand:hover
+{
+    COLOR: white;
+    CURSOR: hand;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 1em;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+A.DashCommand:visited
+{
+    COLOR: white;
+    CURSOR: hand;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 1em;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+.DashNavArea
+{
+    BACKGROUND-COLOR: lightgrey;
+    COLOR: black;
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+.DashNavDashArea
+{
+    BORDER-LEFT: silver 1px solid;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 1.5em;
+    MARGIN-BOTTOM: 2px;
+    MARGIN-TOP: 2px;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 5px;
+    PADDING-RIGHT: 5px;
+    PADDING-TOP: 2px
+}
+.DashNavCurDashArea
+{
+    BORDER-LEFT: #cfd5e5 1px solid;
+    COLOR: black;
+    FONT-FAMILY: verdana;
+    FONT-SIZE: 1.5em;
+    FONT-WEIGHT: bold;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 5px;
+    PADDING-RIGHT: 5px;
+    PADDING-TOP: 2px
+}
+.DashNavDropDownArea
+{
+    BACKGROUND-IMAGE: url(dropdown.gif);
+    BACKGROUND-POSITION: left center;
+    BACKGROUND-REPEAT: no-repeat;
+    PADDING-RIGHT: 15px
+}
+.DashNavCurDropDownArea
+{
+    BACKGROUND-IMAGE: url(dropdown.gif);
+    BACKGROUND-POSITION: left center;
+    BACKGROUND-REPEAT: no-repeat;
+    PADDING-RIGHT: 15px
+}
+.DashNavLink:link
+{
+    COLOR: black;
+    TEXT-DECORATION: none
+}
+.DashNavLink:visited
+{
+    COLOR: black;
+    TEXT-DECORATION: none
+}
+.DashNavLink:hover
+{
+    COLOR: white;
+    TEXT-DECORATION: none
+}
+.DashNavUpArea
+{
+    BACKGROUND-IMAGE: url(up.gif);
+    BACKGROUND-POSITION: center center;
+    BACKGROUND-REPEAT: no-repeat;
+    CURSOR: hand;
+    PADDING-RIGHT: 25px
+}
+.DashNavChildMenu
+{
+    BACKGROUND-COLOR: lightgrey;
+    BORDER-BOTTOM: #cfd5e5 1px solid;
+    BORDER-LEFT: #cfd5e5 1px solid;
+    BORDER-RIGHT: #cfd5e5 1px solid;
+    BORDER-TOP: #cfd5e5 1px solid;
+    FONT-FAMILY: verdana;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 4px;
+    PADDING-RIGHT: 4px;
+    PADDING-TOP: 2px
+}
+.DashNavChildMenuItem
+{
+    FONT-SIZE: .544px
+}
+.DashLayoutTable
+{
+    PADDING-BOTTOM: 6px;
+    PADDING-LEFT: 6px;
+    PADDING-RIGHT: 6px;
+    PADDING-TOP: 6px;
+    WIDTH: 100%
+}
+.DashZoneTop
+{
+    PADDING-BOTTOM: 3px;
+    PADDING-LEFT: 3px;
+    PADDING-RIGHT: 3px;
+    PADDING-TOP: 3px;
+    TEXT-ALIGN: left;
+    VERTICAL-ALIGN: top;
+    WIDTH: 100%
+}
+.DashZoneBottom
+{
+    PADDING-BOTTOM: 3px;
+    PADDING-LEFT: 3px;
+    PADDING-RIGHT: 3px;
+    PADDING-TOP: 3px;
+    TEXT-ALIGN: left;
+    VERTICAL-ALIGN: top;
+    WIDTH: 100%
+}
+.DashZoneLeft
+{
+    PADDING-BOTTOM: 3px;
+    PADDING-LEFT: 3px;
+    PADDING-RIGHT: 3px;
+    PADDING-TOP: 3px;
+    TEXT-ALIGN: left;
+    VERTICAL-ALIGN: top;
+    WIDTH: 25%
+}
+.DashZoneCenter
+{
+    PADDING-BOTTOM: 3px;
+    PADDING-LEFT: 3px;
+    PADDING-RIGHT: 3px;
+    PADDING-TOP: 3px;
+    TEXT-ALIGN: left;
+    VERTICAL-ALIGN: top
+}
+.DashZoneRight
+{
+    PADDING-BOTTOM: 3px;
+    PADDING-LEFT: 3px;
+    PADDING-RIGHT: 3px;
+    PADDING-TOP: 3px;
+    TEXT-ALIGN: left;
+    VERTICAL-ALIGN: top;
+    WIDTH: 25%
+}
+.DashPartFrame
+{
+    BORDER-BOTTOM: #cfd5e5 1px solid;
+    BORDER-LEFT: #cfd5e5 1px solid;
+    BORDER-RIGHT: #cfd5e5 1px solid;
+    BORDER-TOP: #cfd5e5 1px solid;
+    WIDTH: 100%
+}
+.DashPartTitle
+{
+    BACKGROUND-COLOR: #cfd5e5;
+    FONT-FAMILY: arial, verdana;
+    FONT-SIZE: 2em;
+    FONT-WEIGHT: bold;
+    PADDING-BOTTOM: 1px;
+    PADDING-LEFT: 2px;
+    PADDING-TOP: 2px;
+    TEXT-ALIGN: left
+}
+.DashPartCommandsArea
+{
+    BACKGROUND-COLOR: #cfd5e5;
+    PADDING-LEFT: 4px;
+    PADDING-RIGHT: 4px;
+    TEXT-ALIGN: right
+}
+.DashPartSpacing
+{
+    HEIGHT: 6px
+}
+.DashPartBody
+{
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+A:link
+{
+    COLOR: #3366cc;
+    TEXT-DECORATION: none
+}
+A:hover
+{
+    COLOR: #ff3300;
+    TEXT-DECORATION: underline
+}
+A:visited
+{
+    COLOR: #000066;
+    TEXT-DECORATION: none
+}
+.UserShadedRegion
+{
+    BACKGROUND-COLOR: whitesmoke
+}
+.UserCaption
+{
+    BACKGROUND-COLOR: lightslategray;
+    COLOR: white
+}

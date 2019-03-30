@@ -1,0 +1,34 @@
+
+<script type="text/javascript">
+	function myAlert() {
+		alert("Hello world!");
+	}
+	
+	function myConfirm() {
+		val = confirm("A question?");
+	}
+	
+	function myPrompt() {
+		val = prompt("Do you like WinLIKE?","");
+	}
+	
+	function myWindow() {
+		val = window.open('about:blank','window','width=250,height=250,left=100,top=100');
+	}
+	function myModal() {
+		val = window.showModalDialog('about:blank','','dialogHeight:250px;dialogWidth:250px;dialogLeft:150;dialogTop:150;center:yes');
+	}
+	
+	function myModeless() {
+		val = window.showModelessDialog('about:blank','','dialogHeight:250px;dialogWidth:250px;dialogLeft:200;dialogTop:200;center:yes');
+	}
+</script>
+
+
+<A HREF="javascript:myAlert()">Alert</A><BR>
+<A HREF="javascript:myConfirm()">Confirm</A><BR>
+<A HREF="javascript:myPrompt()">Prompt</A><BR>
+<A HREF="javascript:myWindow()">regular Window</A><BR>
+<A HREF="javascript:myModal()">modal Window</A> (IE only)<BR>
+<A HREF="javascript:myModeless()">modeless Window</A> (IE only)<BR>
+

@@ -1,0 +1,43 @@
+left_css -- Version 0.2
+By Robin Rainton <robin@rainton.com>
+http://rainton.com/fun/freeware
+
+Description
+===========
+Allows the user to specify a different style sheet for the left
+frame (where the folders are listed). Nice if you want that side
+smaller than the right.
+
+Usage
+=====
+Adds a new option to the 'Display Preferences' page where the
+'Custom Stylesheet (Left Frame)' can be chosen.
+
+To Do
+=====
+
+1. Suggestions welcome.
+
+Changes
+=======
+
+v0.1	10-Feb-2003	Initial version
+v0.2	 1-Jul-2003	Uses loading_prefs hook to do things
+			properly.
+
+Copyright
+=========
+Copyright (C) 2002 Robin Rainton
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+A copy of the GNU General Public License can be found on the
+Free Software Foundation website: http://gnu.org/

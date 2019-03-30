@@ -1,0 +1,56 @@
+<?php
+
+  /**
+   **  Email Footer (email_footer) v0.3.0
+   **
+   **  By Ray Black III <allah@accessnode.net>
+   **  Changes By Paul Lesneiwski <pdontthink@angryners.com>
+   **  (c) 2001 (GNU GPL - see ../../COPYING)
+   **
+   **  This plugin lets site operators set a default footer for
+   **  all emails sent using their installation of SquirrelMail.
+   **  
+   **  To change the footer message, see below.
+   **/
+
+global $enter_your_message_here, $enter_your_message_here_in_HTML, $footer_debug;
+$footer_debug = 0;
+
+
+/*******************************************************
+ **   Replace our footer with yours. Try to keep the
+ **   width of each line under 70-ish characters, and
+ **   end each line with a line break (\n)
+ *******************************************************/
+
+$enter_your_message_here = "\n\n"                   // creating a little space between the email
+    ."-----------------------------------------\n"  // and the footer, the line just looks nice
+    ."This email was sent using SquirrelMail.\n"
+    ."   \"Webmail for nuts!\"\n"
+    ."http://squirrelmail.org/\n";                  // straight text, let the recipient's email 
+                                                    // client generate the link!
+
+
+
+
+/*******************************************************
+ **   If you have the "HTML Mail" plugin installed, 
+ **   you may want to specify a HTML-formatted 
+ **   version of the footer for users who send their 
+ **   email in HTML.  This is OPTIONAL (the plain
+ **   text footer given above will be used if this
+ **   setting is empty),  but if you want to send a 
+ **   footer in HTML format, designate it here.
+ **   Note that each line should end with a <br /> 
+ **   tag instead of line breaks as above.
+ *******************************************************/
+
+$enter_your_message_here_in_HTML = "<br /><br />"      // creating a little space between the email
+    ."<hr />"                                          // and the footer, the line just looks nice
+    ."This email was sent using <b>SquirrelMail</b>.<br />"
+    ."   \"Webmail for nuts!\"<br />"
+    ."<a href=\"http://squirrelmail.org\">http://squirrelmail.org/</a><br />";              
+                                                       // must build the link manually 
+
+
+?>

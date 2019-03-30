@@ -1,0 +1,54 @@
+Mini SquirrelMail plugin
+
+------------------------
+
+by Jason Munro
+
+  The mini SquirrelMail plugin is an addition to SquirrelMail
+that gives you a miniture window in which to keep track of new
+mail and to even read text messages (no html or attachement
+handling). The plugin is simple to use. After installation you
+will have a 'mini window' link at the top of your folder list.
+This will spawn a javascript window that displays any folder
+that has new mail and it's current mail count. The folders can be
+expanded to show you the subject and sender. Clicking on the subject
+will open the message within the mini window if it has an easy to
+locate text part. More complicated multipart messages will not
+open and the plugin will tell you that you must open them up in
+the main SquirrelMail window.
+
+There are several options available in:
+
+Options->Display preferences 
+
+The options are : window width in pixels
+                  window height in pixels
+                  refresh frequency
+                  text size
+
+This plugin is known to work with the following software:
+
+PHP versions: 4.1.2, 4.2.2, 4.2.3
+
+SquirrelMail versions: 1.3.2 CVS + 1.2.9 CVS 
+                       1.3.1 
+                       1.2.8 (rg=0 or 1)
+                       1.2.7 -> 1.2.4
+
+browsers: Netscape (4.77, 6, 7)
+          Internet Explorer (5.5, 6)
+          Mozilla (1.0, 1.1)
+          Galeon (1.2.5, 1.2.6)
+
+It uses very little Javascript and will probably work with almost any setup
+that SquirrelMail works with
+
+Thanks to Jonathan Angliss for all the suggestions, testing, and 
+troubleshooting.
+
+Questions/comments/problems can be directed to:
+
+        jason@stdbev.com                  
+
+Enjoy!
+

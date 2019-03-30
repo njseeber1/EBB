@@ -1,0 +1,39 @@
+
+<SCRIPT src="../../winlike/winman/winxtra.js"></SCRIPT>
+
+<FONT FACE="Arial, Verdana, Helvetiva" SIZE=2>
+<B>
+PHP: Form-POST, in another window with target=new_win
+</B>
+
+<form id=form1 action="result.php" method=post target=new_win onSubmit="return submitWinLIKE_(event)">
+  
+	<input name=eingabe type=text value=123>
+
+	<BR>
+	<select name=artist[] size="4" multiple>
+		<option value=Heino selected>Heino</option>
+		<option value=Tom>Tom</option>
+		<option value=Nina>Nina</option>
+		<option value=Marianne>Marianne</option>
+	</select>
+
+	<br>
+	<input type="radio" name="zahlmethode" value="Mastercard" checked> Mastercard
+	<input type="radio" name="zahlmethode" value="Visa"> Visa
+
+	<br>
+	<input type="checkbox" name="zutat[]" value="Salami" checked> Salami
+	<input type="checkbox" name="zutat[]" value="Pilze"> Pilze
+
+	<BR>
+	<textarea name=blabla rows=2 cols=20>here is my text</textarea>
+
+	<br>
+	<input type=submit name=widget value=button onClick="submitWinLIKE_(event)">
+	or
+	<A HREF="javascript:submitWinLIKE_('form1')">Submit per Script</A>
+
+</form>
+
+<SCRIPT>document.getElementById("eingabe").focus();</SCRIPT>

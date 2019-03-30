@@ -1,0 +1,61 @@
+<!-- WinLIKE - Copyright (c) 1998-2003 by CEITON technologies GmbH - www.winlike.net -->
+<SCRIPT>WinLIKEerrorpage='winlike/winman/hlp-error.html';</SCRIPT>
+<SCRIPT SRC="winlike/winman/wininit.js"></SCRIPT><SCRIPT SRC="winlike/winman/winman.js"></SCRIPT>
+<!-- Delete the following line, if the editor should not be used anymore. -->
+<SCRIPT SRC="winlike/winedit/winedit.js"></SCRIPT>
+
+<SCRIPT>
+  WinLIKE.definewindows=mydefs;
+  function mydefs() {
+    // this is the default setting for all windows
+    _Mn=false;
+		
+	  var j=new WinLIKE.window('Explosive',150,120,300,300,2);
+		j.Adr="samples/skins/zero.html";
+		j.Ski="explosive";
+		j.HD=false;
+		WinLIKE.addwindow(j);
+		
+	  var j=new WinLIKE.window('White',190,160,300,300,3);
+		j.Adr="samples/skins/nix.html";
+		j.SD=false;
+		j.Ski="white";
+		WinLIKE.addwindow(j);
+
+	  var j=new WinLIKE.window('Light',230,200,300,300,4);
+		j.Ski="light";
+		WinLIKE.addwindow(j);
+		
+	  var j=new WinLIKE.window('Default',270,240,300,300,5);
+		WinLIKE.addwindow(j);
+
+       var j=new WinLIKE.window('Round - IE and NN 7.1',310,280,300,300,13);
+		j.Adr="samples/skins/note.html";
+		j.HD=false;
+		j.Ski='round';
+		WinLIKE.addwindow(j);	
+
+	  var j=new WinLIKE.window('Mix',350,320,300,300,15);
+		j.Mn=true;
+		j.Ski="mix";
+		WinLIKE.addwindow(j);
+
+}
+</SCRIPT>
+
+
+<BODY onResize=WinLIKE.resizewindows() onload=WinLIKE.init() onDragStart="self.event.returnValue=F_;">
+	<!-- Don't remove this line! --><IMG ID=ih_ SRC="skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+	<!-- You can change this loading picture! --><IMG ID=ig_ SRC="winlike/winman/load.gif" STYLE="position:absolute;left:35%;top:40%;z-Index:4001">
+
+	<!-- Insert your page-content here! -->
+
+
+	<DIV STYLE="position:absolute;left:110;top:15">
+		<FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+		As this sample page demonstrates, WinLIKE windows can have different skins. You can even build your own skins.
+		<BR>
+		Download other free skins from <A HREF="http://www.winlike.net" TARGET=_blank>www.winlike.net</A><BR>
+		or buy 100 great skins from <A HREF="http://www.nofearsoftware.com" TARGET=_blank>www.nofearsoftware.com</A> for only 30 US$
+		</FONT>
+	</DIV>

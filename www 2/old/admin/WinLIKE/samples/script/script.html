@@ -1,0 +1,107 @@
+<SCRIPT SRC="../../winlike/winman/winxtra.js"></SCRIPT>
+<SCRIPT>
+
+	function testa()
+	{
+		document.getElementById('test').innerHTML = "BODY-OnLoad-Test successfull (function testa)";
+	}
+	function testb()
+	{	
+		alert('FONT-OnClick-Test successfull');
+	}
+	function testc()
+	{	
+		alert('A-HREF-click-Test successfull');
+	}
+	function testd()
+	{	
+		alert('A-onClick-Test successfull');
+	}
+	
+	
+	// dynamically creates a new window, which was not existent before
+	function testx(event)
+	{	
+		var j=new parent.WinLIKE.window('',186,380,401,159);
+		j.Min=false;
+		j.Siz=false;
+		j.Ski='light';
+		j.Adr='samples/title/title3.html'; // source address is set from root view (where the WinLIKE object is) and not from the view of this file
+		j.Nam='window1';
+		parent.WinLIKE.createwindow(j,true);
+	}
+	
+	// load a file into the window with name window1 (was created in the function testx() above)
+	function testy(event)
+	{	
+		// if you don't want to set an address from root view (like in testx() above), just let WinLIKE do the job:
+		var mylink = parent.WinLIKE.setlink('../title/title2.html', getWindowNumber_(), false); // convert Link for WinLIKE
+		parent.WinLIKE.openaddress (mylink, null, 'window1');
+	}
+	
+	// search a window (in this case himself) and change some properties
+	function testz()
+	{	
+		// in this case we know, the WinLIKE object is in the parent frame, otherwise use recognizeWinLIKE_
+		var winNr=getWindowNumber_(); // our own window number
+		parent.WinLIKE.windows[winNr].Cls=false;
+		parent.WinLIKE.windows[winNr].Ski='light';
+		parent.WinLIKE.windows[winNr].Mov=false;
+		parent.WinLIKE.windows[winNr].draw();
+	}
+	
+</SCRIPT>
+
+<BODY onLoad="testa();">
+
+
+<FONT FACE="Verdana,Arial,Helvetica" SIZE=2>
+
+	<I>
+	<FONT ID="test">BODY-OnLoad-Test failed</FONT>
+	</I>
+	
+	<BR><BR>
+	<FONT onClick="testb();">Click me (function testb)</FONT> (Font with onClick-Alert)
+	
+	<BR><BR>
+	<A HREF="javascript:testc();">Click me (function testc)</A> (Link only with HREF-Alert)
+	
+	<BR><BR>
+	<A HREF="script.html" TARGET=neu onClick="testd();">Click me (function testd)</A> (Link with onClick-Alert and standard HREF-address)
+	<BR><BR>
+
+
+
+	<HR>
+	<BR>
+	<input type=button value="Click me (function testx)" onClick=testx(event)>
+	<BR>
+	Dynamically creates a new window which was not existent before.
+	<BR><BR>
+
+
+	<HR>
+	First, click the upper button to create a new window. Then click the following button to load another page into this window:
+	<BR>
+	<input type=button value="Change content (function testy)" onClick=testy(event)>
+	<BR><BR>
+
+
+	<HR>
+	<BR>
+	You can use the function <B>WinLIKE.searchwindow(windowName)</b> to look for a window by its name. 
+	You can subsequently change some attributes of the window (e.g. Ski, Cls, ...) manually and later
+	use the function win.<b>draw()</b> to render the WinLIKE-window again:
+	<b>
+		<br><br>
+		var winNr=parent.WinLIKE.searchwindow("scriptWindow");<br>
+		parent.WinLIKE.windows[winNr].Cls=false;<br>
+		parent.WinLIKE.windows[winNr].Ski='red';<br>
+		parent.WinLIKE.windows[winNr].Mov=false;<br>
+		parent.WinLIKE.windows[winNr].draw();<br>
+	</b>
+	<input type=button value="Change this window (function testz)" onClick="testz()">
+
+
+</body>

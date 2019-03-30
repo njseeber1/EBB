@@ -1,0 +1,94 @@
+td, th, dd, dt, tt, h1, h2, h3, h4, h5, h6, p, ol, ul, li {
+  font-family: verdana;
+  font-size: 10pt;
+  text-decoration: none;
+}
+body, small {
+  font-size: 8pt;
+}
+td, th {
+  font-size: 10pt;
+}
+pre {
+  font-family: verdana;
+  font-size: 9px;
+}
+BODY{
+	font-family: verdana;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-arrow-color: #234F9C;
+	scrollbar-darkshadow-color: #DED6BD;
+	scrollbar-face-color: #DDE6F5;
+	scrollbar-highlight-color: #F7F7EF;
+	scrollbar-shadow-color: #FFFFFF;
+	scrollbar-track-color : #EFEEE7;
+	font-size: 9px;
+	background-repeat: repeat-x;
+}
+
+a:link, a:visited, a:active {
+        font-family: verdana;
+        font-size: 10px;
+		  text-decoration: none;
+}
+a:hover {
+        font-family: verdana;
+        font-size: 10px;
+        text-decoration: none;
+}
+textarea {
+                BACKGROUND-COLOR: #FDFCFA;
+                COLOR: #00CC00;
+                FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+                FONT-SIZE: 9pt;
+                BORDER: 1 solid #0066FF;
+}
+select {
+                FONT-FAMILY: verdana;
+                FONT-SIZE: 7pt;
+                                                                                                                                                }
+.titletext {
+	font-family: Verdana;
+	font-size: 10px;
+	font-weight: bold;
+}
+td {
+	font-family: verdana;
+	font-size: 9px;
+}
+.login_middle {
+	padding: -2 -2;
+	background: url(../../skins/XP_Blue/login_middle.gif) no-repeat fixed center;
+
+	margin: 0px -3px -3px -3px;
+}
+.bottomline {
+
+	padding: -2 -2;
+	background: url(login_bottomline.gif) repeat-x center top;
+
+	margin: 0px -3px -3px -3px;
+}
+.topline {
+	background: url(login_topline.gif) repeat-x center bottom;
+	margin: -1px;
+
+}
+.mainbox {
+	position: absolute;
+	width: 105%;
+	height: 101%;
+	left: -10px;
+	top: -3px;
+	right: -50px;
+	overflow: hidden;
+
+
+
+
+
+
+
+
+
+}

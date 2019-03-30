@@ -1,0 +1,43 @@
+Email Footer Plugin
+-------------------
+
+This automatically tacks a message onto the end of messages
+that as they're being sent from SquirrelMail. It functions
+just like the Hotmail/Yahoo/etc. mail services, with all of
+their little 'get your own free hoojamajiggy' messages.
+
+Changing the message is a very simple process. There's a
+variable called '$enter_your_message_here' in the configuration
+file.  Just change the text of the example there.
+
+If you have the "HTML Mail" plugin installed, you may want
+to specify a HTML-formatted version of the footer for users
+who send their email in HTML.  This is OPTIONAL (the plain
+text footer will be used by default), but if you want to 
+send a footer in HTML format, change the contents of the 
+'$enter_your_message_here_in_HTML' variable in the 
+configuration file.
+
+This plugin should work with all versions of SM since
+1.0.0. If there are problems please post to the
+squirrelmail-plugins mailing list.
+
+
+ChangeLog
+-------------------
+
+0.3 - Updated to work with HTML_Mail plugin, such that
+      a separate footer in HTML may be specified, or
+      the same plain text footer can be used, and lines 
+      won't get concatenated on top of one another when 
+      sending HTML-formatted emails
+
+0.2 - Updated to work with SquirrelMail 1.4.2
+      Updated for compatibility with new faster plugin design.
+      Updated for SquirrelMail version reporting API.
+      Moved message configuration to separate file that
+      will not be overwritten by subsequent plugin upgrades.
+
+0.1 - Initial release. No known problems, but then again I
+    didn't tested it with Konquerer ;)
+

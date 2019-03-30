@@ -1,0 +1,30 @@
+.HA
+{
+	cursor:pointer; cursor:hand;
+	FONT-FAMILY:verdana,arial,helvetica,sans-serif;
+	VERTICAL-ALIGN:middle;
+	FONT-SIZE:10px;
+	color:#333333;
+}
+.DE {
+	margin-left:10px;
+	FONT-FAMILY:verdana,arial,helvetica,sans-serif;
+	background-color:#F0F0F0;
+	COLOR:black;
+	FONT-SIZE:xx-small;
+	VERTICAL-ALIGN:middle;
+	TEXT-ALIGN:center;
+	PADDING:2px;
+}
+.LR {
+	FONT-FAMILY:verdana,arial,helvetica,sans-serif;
+	FONT-SIZE:xx-small;
+	margin:5px;
+	TEXT-align:Right;VERTICAL-ALIGN:middle;color:#333333;
+}
+.LI{
+	FONT-FAMILY:verdana,arial,helvetica,sans-serif;
+	VERTICAL-ALIGN:middle;
+	FONT-SIZE:10px;
+	color:#333333;
+}

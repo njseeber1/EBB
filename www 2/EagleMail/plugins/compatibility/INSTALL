@@ -1,0 +1,23 @@
+Installing the Compatibility Plugin
+===================================
+
+1) Untar the file into the plugins directory.  Here is a example 
+   for the 1.0 version of the compatibility plugin.
+
+      $ cd plugins
+      $ tar -zxvf compatibility-1.0.tar.gz
+
+2) You do *NOT* need to enable this plugin using conf.pl, since
+   it has no functionality in and of itself.  However, if you
+   use the Plugin Updates plugin, you do need to enable this 
+   plugin in order to see it on the Plugin Updates page:
+
+   ---------- optional ----------
+
+   Go to your config directory and run conf.pl.  Choose option
+   8 and add the compatibility plugin.  Save and exit.
+
+      $ cd ../../config
+      $ ./conf.pl
+
+   ---------- optional ----------

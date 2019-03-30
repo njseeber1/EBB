@@ -1,0 +1,53 @@
+.Titl
+{
+  color:black;
+  font-family:verdana,arial,helvetica;
+  font-size:x-large;
+  font-variant:bold;
+  text-align:Center;
+}
+.Desc
+{
+  color:black;
+  font-family:verdana,arial,helvetica;
+  font-size:x-small;
+  font-variant:bold;
+  text-align:left;
+}
+.Link
+{
+  color:blue;
+  font-family:verdana,arial,helvetica;
+  font-size:small;
+  font-variant:bold;
+  text-align:Center;
+  text-decoration:none;
+}
+.Desc2
+{
+  color:black;
+  font-family:verdana,arial,helvetica;
+  font-size:x-small;
+  font-variant:bold;
+  text-align:Center;
+}
+.Skin
+{
+	FONT-FAMILY:verdana,arial,helvetica,sans-serif;
+	FONT-SIZE:x-small;
+	margin:5px;
+	VERTICAL-ALIGN:middle;color:#333333;
+}
+.Inp{
+	FONT-FAMILY:verdana,arial,helvetica,sans-serif;
+	VERTICAL-ALIGN:medium;
+	FONT-SIZE:10px;
+	color:#333333;
+}
+.nr
+{
+	FONT-FAMILY:verdana,arial,helvetica,sans-serif;
+	VERTICAL-ALIGN:;
+	FONT-SIZE:60px;
+	color:red;
+}

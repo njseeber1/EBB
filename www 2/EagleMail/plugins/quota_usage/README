@@ -1,0 +1,115 @@
+Quota Usage                                                 version 1.1
+
+
+* ABOUT *
+
+This plugin retrieves the currect quota usage from the IMAP server using the 
+IMAP4 QUOTA extension.  Right now, it only parses the STORAGE part.  If you
+also have a quota on the number of messages, it won't display it.  I don't use
+it, so it'll probably be up to someone else to write it.
+
+
+* REQUIREMENTS *
+
+- IMAP server with QUOTA Extension support
+- Quota set for user.  (if it's not set, nothing is displayed).
+    NOTE:  Courier-IMAP may not report the quota if usage is 0%.  Try sending
+    a message to the user if this is the case.
+
+
+I've tested this with Courier-IMAP 1.4.0 and above .  Courier-IMAP only deals 
+with maildirquotas, as far as I know.  So it might not work with file system 
+quotas.  I use it successfully with Vpopmail 5.1.4 and above, a virtual domain 
+package for Qmail.
+
+As of version 0.2, it should work with Cyrus IMAP as well.
+
+Version 1.1 has been verified to work with SquirrelMail 1.4
+
+Version 1.2 has been verified to work with SquirrelMail 1.5
+
+
+* INSTALL *
+
+Please read the INSTALL file.
+
+
+* CONFIGURATION *
+
+There are just a few optional configuration items:  
+
+   $fontsize              --  Change this if you want to increase or decrease 
+                              the size of the text and bar graph shown
+   $warn_percent          --  Change this to match the warning level of your 
+                              system.  It turns the bar graph to a red color
+                              when a user gets to the specified level
+   $yellow_alert_percent  --  Set this to a percentage lower than $warn_percent
+                              if you want the graph to turn yellow at the 
+                              specified level.  Set to zero or an empty string
+                              to disable.                              
+   $intro_text            --  This is the text that shows up above the quota 
+                              report; change as desired or set it as an empty 
+                              string to remove it from the display
+
+These are all found in the config.php file.
+
+Please me send me any enhancements or success stories!
+
+
+* CREDITS *
+
+Most of the code (for establishing the IMAP stream) is taken directly from
+the Filters plugin by Brent Bice.  The rest is just based on examples from the
+SquirrelMail source, plus some formatting of the results by me.
+
+Paul Lesneiwski <pdontthink@angrynerds.com> made the version 1.1 and 1.2 updates.
+
+
+* TODO *
+
+- None at this point
+
+
+* LINKS *
+
+Courier-IMAP        http://www.inter7.com/courierimap
+RFC 2087            http://www.cis.ohio-state.edu/cgi-bin/rfc/rfc2087.html
+Maildir++           http://www.inter7.com/courierimap/README.maildirquota.html
+Vpopmail            http://www.inter7.com/vpopmail       
+
+
+* Changes *
+
+1.2 12/23/2003 - Now works with SquirrelMail 1.5
+               - Split out configuration items into separate file
+
+1.1 05/20/2003 - New setup.php format for better overall SquirrelMail performance
+               - Smaller graph size (matches font size of text)
+               - Internationalized all output
+               - Option to turn off (or change) the "current usage" text
+               - Updated for SquirrelMail plugin version reporting APIs
+               - "Yellow alert" option added
+
+1.0 12/19/2002 - Updated version to 1.0 (since I never get complaints anymore)
+               - verified that it works with register_globals off
+               - Minor updates to documentation
+               - added screen.jpg so people can see what it looks like
+0.5  4/29/2002 - Added HTML graph of usage - (me)
+               - Added Over Quota message- (Daniel Holdren)
+
+0.4 12/31/2001 - Added color based warning (turns red if over 80 percent) - (me)
+
+0.3 12/31/2001 - Fixed check for QUOTA capability to work on Courier
+               - Updated README, FAQ
+
+0.2 12/31/2001 - Added check for QUOTA capability (Daniel Holdren)
+               - switched to "GETQUOTAROOT" so Cyrus works. (Daniel Holdren)
+               - Percentage now shows one decimal.
+
+0.1 12/27/2001 - Initial Release
+
+
+Enjoy!
+
+Bill Shupp
+hostmaster@shupp.org

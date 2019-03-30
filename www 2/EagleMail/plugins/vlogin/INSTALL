@@ -1,0 +1,72 @@
+Installing Vlogin
+=================
+
+1) Start with untaring the file into the plugins directory.
+   Here is a example for the 3.4 version of the vlogin plugin.
+
+  $ cd plugins
+  $ tar -zxvf vlogin-3.4-1.2.7.tar.gz
+
+2) Change into the vlogin/data directory, copy config.php.sample
+   to config.php and edit config.php, making adjustments as 
+   you deem necessary.  For more detailed explanations about 
+   each of these parameters, consult the README file.
+
+  $ cd vlogin/data
+  $ cp config.php.sample config.php
+  $ vi config.php
+
+
+3) Then go to your config directory and run conf.pl.  Choose
+   option 8 and move the plugin from the "Available Plugins"
+   category to the "Installed Plugins" category.  Save and exit.
+
+  $ cd ../../../config/
+  $ ./conf.pl
+
+4) Also, please verify that you have the "compatibility" plugin
+   installed.
+
+
+---------- optional ----------
+
+If you need to change certain settings such as IMAP server, you
+will need to download the Multilogin plugin and use the patch
+included with it to make one small modification of the SquirrelMail
+code.  If you do so, you must also set $useSessionBased = 1 in 
+vlogin's config.php file (mentioned above).  
+
+Please note that this is only necessary for settings such as
+IMAP server, and most installations will not require this extra
+step.
+
+Please read the instructions in the Multilogin INSTALL file for
+how to make the change to the SquirrelMail source code (you can
+safely ignore all other steps in that INSTALL file, except step
+number 1).
+
+---------- optional ----------
+
+
+
+Upgrading Vlogin
+================
+
+1) Start with untaring the file into the plugins directory.
+   Here is a example for the 3.4 version of the vlogin plugin.
+
+  $ cd plugins
+  $ tar -zxvf vlogin-3.4-1.2.7.tar.gz
+
+
+2) Change into the vlogin/data directory, check your config.php
+   file against the new version, to see if there are any new 
+   settings that you must add to your config.php file.
+
+  $ cd vlogin/data
+  $ diff -Nau config.php config.php.sample
+
+   Or simply replace your config.php file with the provided sample
+   and reconfigure the plugin from scratch (see step 2 under the
+   installation procedure above).
+

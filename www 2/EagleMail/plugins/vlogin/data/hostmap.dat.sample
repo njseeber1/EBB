@@ -1,0 +1,23 @@
+#
+#   Sample vlogin host name translation table
+#
+#   One host name per line - source host name comes first, followed by
+#   any amount of whitespace, and then the target host name as such:
+#   
+#      sourcehostname.com    targethostname.org
+#
+#   Also note that source host names can contain the wildcards * and ? 
+#   which indicate "any number of (or zero) characters" and "one 
+#   alphanumeric character" respectively.  
+#
+#   For example, the host name "mycompany.*  mycompany.com" would remap
+#   "mycompany.net", "mycompany.org", as well as "mycompany.ca" to be
+#   "mycompany.com".
+#
+#   Finally, note that if a host name matches more than one of the 
+#   entries in this table, the first one takes precedence.
+#
+
+companywebdomain.com      companyemail.com
+mywebhost.*               myemailhost.org
+

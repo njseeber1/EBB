@@ -1,0 +1,139 @@
+<?php
+	global $config, $lang;
+	function getmicrotime()
+	{
+		list($usec, $sec) = explode(" ",microtime());
+		return ((float)$usec + (float)$sec);
+	} 
+	$start_time = getmicrotime()
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+	
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title><?php echo "$config[site_title]"; ?></title>
+<link rel=stylesheet href="<?php echo $config[template_url] ?>/style.css" type="text/css">
+<script type="text/javascript">
+		<!-- // Nannette Thacker http://www.shiningstar.net
+				function confirmDelete()
+		{
+		var agree=confirm("<?php echo $lang[are_you_sure_you_want_to_delete] ?>");
+		if (agree)
+			return true ;
+		else
+			return false ;
+		}
+		function confirmUserDelete()
+		{
+		var agree=confirm("<?php echo $lang[delete_user] ?>");
+		if (agree)
+			return true ;
+		else
+			return false ;
+		}
+		// -->
+	</script>
+<style type="text/css">
+<!--
+/* BEGIN style10 */
+ #navcontainer
+{
+margin: 0;
+padding: 0;
+}
+
+#navcontainer UL
+{
+list-style: none;
+margin: 0;
+padding: 0;
+border: none;
+}
+
+#navcontainer LI
+{
+display: block;
+margin: 0;
+padding: 0;
+float: right;
+width: 100px;
+}
+
+#navcontainer A
+{
+	color: #444;
+	display: block;
+	width: 100px;
+	text-decoration: none;
+	background: #162D57;
+	margin: 0;
+	padding: 3px;
+	border-left: 1px solid #fff;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #aaa;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	text-align: center;
+}
+
+#navcontainer A:hover, #navcontainer A:active {
+	background: #BBBBBB;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+}
+
+#navcontainer A.active:link, #navcontainer A.active:visited
+{
+position: relative;
+z-index: 102;
+background: #BBBBBB;
+font-weight: bold;
+}
+/* END style10 */
+-->
+</style>
+</head>
+
+	
+<body class="admin"><center>
+<tr> 
+  <td width="590" valign="top">
+    <!-- Add in a size lock table to keep everything inside. -->
+    <tr>
+	<td width="100%">
+
+	<table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1" background="<?php echo $config[template_url] ?>/images/bottom.gif">
+      <tr> 
+        <td width="100%" align="left" valign="middle">
+          <!-- <img border="0" src="<?php echo $config[template_url] ?>/images/logo.gif" width="350" height="75"> -->
+          <h3 style="color:white;"><?php echo $config[site_title] ?> Control Panel</h3>
+          <table border="0" width="100%" cellspacing="0" cellpadding="0" background="<?php echo $config[template_url] ?>/images/navbg.gif">
+            <tr> 
+              <td width="100%" align="left" valign="top" background="<?php echo $config[template_url] ?>/images/navbg.gif"> 
+                <div id="navcontainer"> 
+                  <ul id="navlist">
+                    <li><a href="<?php echo $config[baseurl]; ?>/admin/logout.php">Log 
+                      Out</a> </li>
+					  <li><a href="<?php echo $config[baseurl]; ?>/admin/module_admin/list_admin.php">My Mail List</a></li>
+                    <li><a href="<?php echo $config[baseurl]; ?>/admin/edit_my_listings.php">Edit 
+                      My Listings</a></li>
+                    <li><a href="<?php echo $config[baseurl]; ?>/admin/add_listing.php">Add 
+                      A Listing</a></li>
+                    <li><a href="<?php echo $config[baseurl]; ?>/admin/edit_my_account.php">Edit 
+                      My Account</a></li>
+                    <li> <a href="<?php echo $config[baseurl]; ?>/index.php">Home</a></li>
+                  </ul>
+                </div></td>
+            </tr>
+          </table></td>
+  </tr>
+</table>
+    <table border="0" cellspacing="0" cellpadding="2" width="100%"> 
+    <tr>
+				<td valign="top" align="left" width="148" background="<?php echo $config[template_url] ?>/images/navbg.gif">
+              <? include("$config[template_path]/admin_left.html"); ?>
+        </td>
+					<td width="100%" align="center" valign="top">
+						 

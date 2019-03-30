@@ -1,0 +1,25 @@
+<head>
+<link rel="stylesheet" href=c.css>
+<TITLE>Cookies einschalten</TITLE>
+</head>
+<BODY>
+<P CLASS=LI>
+You can use cookies to store the window's settings by changing the script statement of your site in the following way:
+</P>
+<P CLASS=DE>
+&lt;SCRIPT><BR>
+WinLIKE.cookie.Active=true; <B>//<-- insert this line (before function mydefs!).</B><br>
+WinLIKE.definewindows=mydefs;<br>
+function mydefs() {<br>
+  ...<br>
+}<br>
+&lt;/SCRIPT><br>
+</P>
+<P CLASS=LI><P CLASS=LI>
+This site was changed in this way. Move this window and create some new windows. Now close the browser and reload the site.
+The former window settings will be applied.
+<BR>
+You can delete the WinLIKE cookie with the function <B>WinLIKE.reset()</B>:
+<input type=button value="WinLIKE.reset()" onClick=parent.WinLIKE.reset()>
+</P>
+</BODY>

@@ -1,0 +1,844 @@
+[27-Jul-2004 05:00:32] PHP Warning:  move_uploaded_file(/home/freeziek/www/eaglesite/images/listing_photos/2_sun sportsbar.jpg): failed to open stream: Permission denied in /home/freeziek/public_html/eaglesite/include/main.php on line 1195
+[27-Jul-2004 05:00:32] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpKsVuUa' to '/home/freeziek/www/eaglesite/images/listing_photos/2_sun sportsbar.jpg' in /home/freeziek/public_html/eaglesite/include/main.php on line 1195
+[27-Jul-2004 05:00:32] PHP Warning:  filesize(): Stat failed for /home/freeziek/www/eaglesite/images/listing_photos/2_sun sportsbar.jpg (errno=2 - No such file or directory) in /home/freeziek/public_html/eaglesite/include/main.php on line 1196
+[27-Jul-2004 05:00:32] PHP Warning:  unlink(/home/freeziek/www/eaglesite/images/listing_photos/2_sun sportsbar.jpg): No such file or directory in /home/freeziek/public_html/eaglesite/include/main.php on line 1200
+[27-Jul-2004 05:05:43] PHP Warning:  move_uploaded_file(/home/freeziek/www/eaglesite/images/listing_photos/2_sun sportsbar.jpg): failed to open stream: Permission denied in /home/freeziek/public_html/eaglesite/include/main.php on line 1195
+[27-Jul-2004 05:05:43] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpebbMBn' to '/home/freeziek/www/eaglesite/images/listing_photos/2_sun sportsbar.jpg' in /home/freeziek/public_html/eaglesite/include/main.php on line 1195
+[27-Jul-2004 05:05:43] PHP Warning:  filesize(): Stat failed for /home/freeziek/www/eaglesite/images/listing_photos/2_sun sportsbar.jpg (errno=2 - No such file or directory) in /home/freeziek/public_html/eaglesite/include/main.php on line 1196
+[27-Jul-2004 05:05:43] PHP Warning:  unlink(/home/freeziek/www/eaglesite/images/listing_photos/2_sun sportsbar.jpg): No such file or directory in /home/freeziek/public_html/eaglesite/include/main.php on line 1200
+[27-Jul-2004 05:06:32] PHP Warning:  move_uploaded_file(/home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg): failed to open stream: Permission denied in /home/freeziek/public_html/eaglesite/include/main.php on line 1195
+[27-Jul-2004 05:06:32] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpsgpPMJ' to '/home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg' in /home/freeziek/public_html/eaglesite/include/main.php on line 1195
+[27-Jul-2004 05:06:32] PHP Warning:  filesize(): Stat failed for /home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg (errno=2 - No such file or directory) in /home/freeziek/public_html/eaglesite/include/main.php on line 1196
+[27-Jul-2004 05:06:32] PHP Warning:  unlink(/home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg): No such file or directory in /home/freeziek/public_html/eaglesite/include/main.php on line 1200
+[27-Jul-2004 07:06:35] PHP Warning:  move_uploaded_file(/home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg): failed to open stream: Permission denied in /home/freeziek/public_html/eaglesite/include/main.php on line 1195
+[27-Jul-2004 07:06:35] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpD8RfkC' to '/home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg' in /home/freeziek/public_html/eaglesite/include/main.php on line 1195
+[27-Jul-2004 07:06:35] PHP Warning:  filesize(): Stat failed for /home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg (errno=2 - No such file or directory) in /home/freeziek/public_html/eaglesite/include/main.php on line 1196
+[27-Jul-2004 07:06:35] PHP Warning:  unlink(/home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg): No such file or directory in /home/freeziek/public_html/eaglesite/include/main.php on line 1200
+[27-Jul-2004 07:16:19] PHP Warning:  move_uploaded_file(/home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg): failed to open stream: Permission denied in /home/freeziek/public_html/eaglesite/include/main.php on line 1195
+[27-Jul-2004 07:16:19] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php8l51d8' to '/home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg' in /home/freeziek/public_html/eaglesite/include/main.php on line 1195
+[27-Jul-2004 07:16:19] PHP Warning:  filesize(): Stat failed for /home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg (errno=2 - No such file or directory) in /home/freeziek/public_html/eaglesite/include/main.php on line 1196
+[27-Jul-2004 07:16:19] PHP Warning:  unlink(/home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg): No such file or directory in /home/freeziek/public_html/eaglesite/include/main.php on line 1200
+[27-Jul-2004 07:21:54] PHP Warning:  move_uploaded_file(/home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg): failed to open stream: Permission denied in /home/freeziek/public_html/eaglesite/include/main.php on line 1195
+[27-Jul-2004 07:21:54] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpnm1EYf' to '/home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg' in /home/freeziek/public_html/eaglesite/include/main.php on line 1195
+[27-Jul-2004 07:21:54] PHP Warning:  filesize(): Stat failed for /home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg (errno=2 - No such file or directory) in /home/freeziek/public_html/eaglesite/include/main.php on line 1196
+[27-Jul-2004 07:21:54] PHP Warning:  unlink(/home/freeziek/www/eaglesite/images/listing_photos/2_sunsportsbar.jpg): No such file or directory in /home/freeziek/public_html/eaglesite/include/main.php on line 1200
+[15-Mar-2011 23:26:27] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:26:27] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:26:27] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[15-Mar-2011 23:26:27] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:26:27] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[15-Mar-2011 23:26:27] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[15-Mar-2011 23:26:27] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 46
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 47
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 48
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 49
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 50
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 51
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 52
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 53
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 54
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 55
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 56
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 57
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:27] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:34] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:26:34] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:26:34] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[15-Mar-2011 23:26:34] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:26:34] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[15-Mar-2011 23:26:34] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[15-Mar-2011 23:26:34] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[15-Mar-2011 23:26:34] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[15-Mar-2011 23:26:34] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 46
+[15-Mar-2011 23:26:34] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 47
+[15-Mar-2011 23:26:34] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 48
+[15-Mar-2011 23:26:34] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 49
+[15-Mar-2011 23:26:34] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 50
+[15-Mar-2011 23:26:34] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 51
+[15-Mar-2011 23:26:34] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 52
+[15-Mar-2011 23:26:34] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 53
+[15-Mar-2011 23:26:34] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 54
+[15-Mar-2011 23:26:34] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 55
+[15-Mar-2011 23:26:34] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 56
+[15-Mar-2011 23:26:34] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 57
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:35] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:26:36] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:26:36] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[15-Mar-2011 23:26:36] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:26:36] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[15-Mar-2011 23:26:36] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[15-Mar-2011 23:26:36] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 46
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 47
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 48
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 49
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 50
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 51
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 52
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 53
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 54
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 55
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 56
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 57
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:36] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:26:37] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:26:37] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[15-Mar-2011 23:26:37] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:26:37] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[15-Mar-2011 23:26:37] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[15-Mar-2011 23:26:37] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 46
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 47
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 48
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 49
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 50
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 51
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 52
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 53
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 54
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 55
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 56
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 57
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:26:37] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:17] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:28:17] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:28:17] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[15-Mar-2011 23:28:17] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:28:17] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[15-Mar-2011 23:28:18] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[15-Mar-2011 23:28:18] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[15-Mar-2011 23:28:18] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[15-Mar-2011 23:28:18] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 46
+[15-Mar-2011 23:28:18] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 47
+[15-Mar-2011 23:28:18] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 48
+[15-Mar-2011 23:28:18] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 49
+[15-Mar-2011 23:28:18] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 50
+[15-Mar-2011 23:28:18] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 51
+[15-Mar-2011 23:28:18] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 52
+[15-Mar-2011 23:28:18] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 53
+[15-Mar-2011 23:28:18] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 54
+[15-Mar-2011 23:28:18] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 55
+[15-Mar-2011 23:28:18] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 56
+[15-Mar-2011 23:28:18] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 57
+[15-Mar-2011 23:28:48] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:28:48] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:28:48] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[15-Mar-2011 23:28:48] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[15-Mar-2011 23:28:48] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[15-Mar-2011 23:28:48] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[15-Mar-2011 23:28:48] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 46
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 47
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 48
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 49
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 50
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 51
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 52
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 53
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 54
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 55
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 56
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 57
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[15-Mar-2011 23:28:48] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 15:28:34] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:34] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:34] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[16-Mar-2011 15:28:34] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:34] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[16-Mar-2011 15:28:34] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[16-Mar-2011 15:28:34] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[16-Mar-2011 15:28:34] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[16-Mar-2011 15:28:36] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:36] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:36] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[16-Mar-2011 15:28:36] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:36] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[16-Mar-2011 15:28:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[16-Mar-2011 15:28:36] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[16-Mar-2011 15:28:36] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[16-Mar-2011 15:28:36] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:36] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:36] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[16-Mar-2011 15:28:36] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:36] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[16-Mar-2011 15:28:36] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[16-Mar-2011 15:28:36] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[16-Mar-2011 15:28:36] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[16-Mar-2011 15:28:37] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[16-Mar-2011 15:28:37] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[16-Mar-2011 15:28:37] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[16-Mar-2011 15:28:37] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[16-Mar-2011 15:28:37] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[16-Mar-2011 15:28:37] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[16-Mar-2011 15:28:37] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[16-Mar-2011 15:28:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/admin/logout.php on line 5
+[16-Mar-2011 15:28:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/admin/logout.php on line 6
+[16-Mar-2011 15:28:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/admin/logout.php on line 7
+[16-Mar-2011 15:28:37] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/eaglmcom/public_html/admin/logout.php:5) in /home/eaglmcom/public_html/include/main.php on line 4
+[16-Mar-2011 15:28:37] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/eaglmcom/public_html/admin/logout.php:5) in /home/eaglmcom/public_html/include/main.php on line 4
+[16-Mar-2011 15:28:37] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[16-Mar-2011 15:28:37] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[16-Mar-2011 15:28:37] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[16-Mar-2011 17:31:13] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 17:31:13] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 17:31:13] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[16-Mar-2011 17:31:13] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 17:31:13] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[16-Mar-2011 17:31:13] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[16-Mar-2011 17:31:13] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[16-Mar-2011 17:31:13] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[16-Mar-2011 17:31:33] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 17:31:33] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 17:31:33] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[16-Mar-2011 17:31:33] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 17:31:33] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[16-Mar-2011 17:31:33] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[16-Mar-2011 17:31:33] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[16-Mar-2011 17:31:33] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[16-Mar-2011 17:31:44] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 17:31:44] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 17:31:44] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[16-Mar-2011 17:31:44] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 17:31:45] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[16-Mar-2011 17:31:45] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[16-Mar-2011 17:31:45] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 46
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 47
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 48
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 49
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 50
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 51
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 52
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 53
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 54
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 55
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 56
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 57
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:31:45] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Warning:  PHP Startup: PDO: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 17:32:47] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 17:32:47] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/sqlite.so: undefined symbol: third_arg_force_ref in Unknown on line 0
+[16-Mar-2011 17:32:47] PHP Warning:  PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20060613
+PHP    compiled with module API=20090626
+These options need to match
+ in Unknown on line 0
+[16-Mar-2011 17:32:47] PHP Deprecated:  Directive 'register_globals' is deprecated in PHP 5.3 and greater in Unknown on line 0
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 5
+[16-Mar-2011 17:32:47] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3211
+[16-Mar-2011 17:32:47] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/eaglmcom/public_html/include/adodb/adodb.inc.php on line 3248
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 46
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 47
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 48
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 49
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 50
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 51
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 52
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 53
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 54
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 55
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 56
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function session_register() is deprecated in /home/eaglmcom/public_html/include/main.php on line 57
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[16-Mar-2011 17:32:47] PHP Deprecated:  Function ereg_replace() is deprecated in /home/eaglmcom/public_html/include/main.php on line 1117
+[30-Oct-2014 13:58:20 UTC] PHP Fatal error:  Call to undefined function session_register() in /home/entekada1/public_html/admin/logout.php on line 5

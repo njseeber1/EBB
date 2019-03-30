@@ -1,0 +1,101 @@
+<!-- WinLIKE - Copyright (c) 1998-2003 by CEITON technologies GmbH - www.winlike.net -->
+<SCRIPT>WinLIKEerrorpage='winlike/winman/hlp-error.html';</SCRIPT>
+<SCRIPT SRC="winlike/winman/wininit.js"></SCRIPT><SCRIPT SRC="winlike/winman/winman.js"></SCRIPT>
+
+<script>
+	// set the site, where your personal winlist is located
+	WinLIKE.winlist.Adr="samples/winlist/my-winlist.html";
+	//WinLIKE.winlist.Active=true;  // show winlist at the beginning or not
+
+	// you can also determine the layout of the window containing the winlist using this function 
+  WinLIKE.winlist.create=my_winlist_function;
+  function my_winlist_function()
+	{
+		j=new WinLIKE.window('winlist', 96, 88, 130, 300); // create window-object
+	 	j.Ed=false; // not editable
+		j.Fro=true; // always on top
+		j.SD=false; // display no symbol
+		j.HD=false; // display no history buttons
+		j.LD=false; // display no deeplink
+		j.Bac=true; // comes never in foreground (if you click at the window)
+		// j.Nam='WinList'; do not set the name - he is set automatically
+		return j;
+	}
+
+	// with the following function, you can define the style of the items of your personal winlist
+	// - nr is the number of the window [for internal reasons, don't change it]
+	// - active retrieves, whether it is recommended to enable hiding this window via the winlist. E.g. the toolbox should
+	//   not be hidden by the user.
+	// - title is the WinLIKE title of the window
+	// - name is its WinLIKE name
+	// - skin is its skin name
+	WinLIKE.winlist.getitem=my_item_function;
+	function my_item_function(nr, active, title, name, skin)
+	{
+		if (title=='winlist') return '';
+		if (active)
+		
+			// Customize the function of your WinList here!
+			// f.i. the following line will be inserted into the WinList-DIV in the site you have set with WinLIKE.winlist.create, if
+			// an active window with nr=1 skin="red" and title="WinLIKE" is created:
+			// <nobr class=active onMouseUp="parent.WinLIKE.windows[1].hideshow()"><img src="icon_red.gif">WinLIKE</br>
+			// You can determine, which function shall be executed, if the user clicks at the window list items
+			// .close() : closes the window
+			// .minmax() : minimizes or maximizes the window
+			// .hideshow() : show or hide the window		
+			// Note: there are no spaces allowed within the onMouseUp string
+			//sample 1: icon and hide/show
+			return '<nobr class=active onMouseUp="parent.WinLIKE.windows['+nr+'].hideshow()"><img src="icon_'+skin+'.gif">'+title+'</nobr><br>';
+			//sample 2: close and bringToFront
+			//return '<nobr class=active onMouseUp="parent.WinLIKE.windows['+nr+'].close()">(x)</nobr><nobr class=active onMouseUp="parent.WinLIKE.windows['+nr+'].front()">&nbsp;&nbsp;'+title+'</nobr><br>';
+			
+			
+		else return '<nobr class=passive>'+title+'</nobr><BR>';
+	}
+
+	WinLIKE.definewindows=mydefs;
+  function mydefs()
+	{
+		var j=new WinLIKE.window('Window 1',350,120,200,250);
+		j.Ed=false;
+		j.Adr='samples/winlist/1.html';
+		j.Nam='one';
+		WinLIKE.addwindow(j);
+		
+		var j=new WinLIKE.window('Window 2',560,120,200,250);
+		j.Ed=false;
+		j.Ski='light';
+		j.Nam='two';
+		WinLIKE.addwindow(j);
+	}
+</SCRIPT>
+
+
+<BODY onResize=WinLIKE.resizewindows() onload=WinLIKE.init() onDragStart="self.event.returnValue=F_;">
+	<!-- Don't remove this line! --><IMG ID=ih_ SRC="skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+	<!-- You can change this loading picture! --><IMG ID=ig_ SRC="winlike/winman/load.gif" STYLE="position:absolute;left:35%;top:40%;z-Index:4001">
+
+	<!-- Insert your page-content here! -->
+	
+	<DIV STYLE="position:absolute;left:110;top:15">
+		<FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+		WinList generates a list of all the WinLIKE-windows currently open. Open
+		the WinList by pressing the button on the left and see how opening and
+		closing windows affects the list.
+		<BR><BR>
+		In this particular example, you can display or hide a particular
+		WinLIKE-window by clicking its name in the WinList. For other variations, please take a look at the source code.
+		</FONT>
+	</DIV>
+	
+	
+	<BR><BR><BR>
+	<img src="samples/winlist/stickie.gif" onClick=WinLIKE.winlist.show();>
+	<BR><BR>
+	<B>
+	<FONT FACE="Arial,Verdana,Helvetica" SIZE=2>
+	<A HREF="samples/winlist/1.html" TARGET=one>Window 1</A>
+	<BR>
+	<A HREF="samples/winlist/2.html" TARGET=two>Window 2</A>
+	
+	

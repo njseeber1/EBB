@@ -1,0 +1,58 @@
+@charset "utf-8";
+.contactcol {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+}
+div.box{
+	width:500px;
+	float: left;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+div.box label{
+	width:100%;
+	display: block;
+	float: left;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+}
+div.box label span{
+	display: block;
+	float:left;
+	width:100px;
+	text-align:right;
+	padding:5px 20px 0 0;
+}
+
+div.box .input_text{
+	padding:10px 10px;
+	width:200px;
+	background-color: #F7F7F7;
+	border: 1px solid #CCCCCC;
+}
+
+div.box .message{
+padding:7px 7px;
+width:350px;
+background-color: #F7F7F7;
+border: 1px solid #CCCCCC;
+overflow:hidden;
+height:150px;
+}
+
+div.box .button
+{
+	border:1px solid #CCCCCC;
+	float: left;
+	padding-top: 4px;
+	padding-right: 7px;
+	padding-bottom: 4px;
+	padding-left: 7px;
+	background-color: #3399FF;
+	margin-left: 120px;
+	color: #FFFFFF;
+}

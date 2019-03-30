@@ -1,0 +1,42 @@
+ <!--start -->
+                          </div>
+                          <div style="color:#505050; padding-top:16px "></div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div style="padding-top:3px "> </div>
+            </TD>
+        </TR>
+      </TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<IMG SRC="<?php echo $config[template_url] ?>/images/bot.jpg" WIDTH=751 HEIGHT=6 ALT=""></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=751 HEIGHT=67 ALT="" valign="top">
+		
+      <div align="center" style="padding-top:7px; color:#666666 "><a href="<?php echo $config[baseurl]; ?>/index.php" style="color:#666666 ">Home</a><img src="<?php echo $config[template_url] ?>/images/spacer.gif" width="12" height="1" align="absmiddle" border="0">:<img src="<?php echo $config[template_url] ?>/images/spacer.gif" width="12" height="1" align="absmiddle" border="0"><a href="<?php echo $config[baseurl]; ?>/contactus.php" style="color:#666666 ">Contact 
+        us</a></div>
+		
+      <div align="center" style="padding-top:5px; font-size:10px; color:#A4A4A4 "> 
+        <?php echo "$config[site_title]" ?>
+        2005 - <a href="<?php echo $config[baseurl]; ?>/legal.php" style="color:#A4A4A4 ">Terms 
+        Of Use</a></div>
+		</TD>
+	</TR>
+</TABLE>
+
+	<?php
+		$end_time = getmicrotime();
+		$render_time = sprintf('%.16f', $end_time - $start_time);
+		echo "<!-- This page was generated in $render_time seconds -->";
+
+	?>
+	</body>
+</html>

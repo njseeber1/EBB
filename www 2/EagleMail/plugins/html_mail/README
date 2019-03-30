@@ -1,0 +1,121 @@
+HTML Mail plugin for SquirrelMail
+=================================
+Ver 2.0, 11/09/03
+
+Original Author: Paul Lesneiwski <pdontthink@angrynerds.com>
+Derived From: htmlArea WYSIWYG editor from interactivetools.com
+              Enhanced Text Area Plugin by Chris Franklin
+              Emoticons Plugin by Pablo Macouzet Jr.
+
+
+
+Description
+===========
+
+This plugin allows users with IE 5.5 and Mozilla 1.4 and 
+above to compose and send their email in HTML format.
+
+A selection of emoticons are available as an optional
+feature.  Note that these emoticon images will be served
+from your web server when message recipients read their
+mail.  Also note that when adding emoticons, the user 
+should be sure to click in the textarea for correct focus.
+
+Also, an integrated spell checker is available.  You must
+turn it on in the configuration file, and make sure that
+your server is ready to support this functionality (see
+below).  
+
+This plugin requires a minor patch to the SquirrelMail source
+only if you do not have SquirrelMail 1.4.2 or if you want to 
+use the emoticons functionality.
+
+Note that this plugin can be quirky, especially in combination
+with other plugins, etc.  This is due to the beta nature of 
+the renderer as well as the fact that everything is javascript
+based and can thus intimidate some browsers (so to speak).
+
+
+
+Spell Check Configuration
+=========================
+
+You must have a Perl interpreter available with these modules
+installed:
+
+  - CGI
+  - Encode
+  - HTML::Parser
+  - HTML::Entities
+  - Text::Aspell
+
+If you have a recent version of Perl (such as 5.8), Text::Aspell
+might be the only one of these you don't already have.  Of course,
+CPAN.org is helpful in obtaining and installing Perl modules.  An
+example of how to get Text::Aspell is as such:
+
+perl -MCPAN -e'CPAN::Shell->install("Text::Aspell")'
+
+You must also make sure your web server is configured to allow
+the execution of CGI scripts at least in the spell checker
+directory.  For apache, an appropriate directive might look
+like:
+
+<Directory /path/to/squirrelmail/plugins/html_mail/htmlarea/plugins/SpellChecker>
+  Options +ExecCGI
+  AddHandler cgi-script cgi
+</Directory>
+
+Note that if you symlink multiple virtual domains to one SquirrelMail
+installation, you may need to repeat this directive for each domain,
+or alternatively, you can place these directives in a .htaccess file 
+in the spell checker directory (given in the above example).  If you
+choose the latter, note that your AllowOverride directive would need 
+to include the Options directive type.
+
+And, of course, you have to turn on the spell checker in the
+html_mail configuration file!
+
+
+
+Change Log
+==========
+
+  2.0 -  Paul Lesneiwski <pdontthink@angrynerds.com>
+   * Newer Gecko browsers (e.g., Mozilla 1.4) now supported
+   * When replying, adding signatures, etc., lines don't
+     get concatenated all into one
+   * Added emoticons functionality (optional) added (credit
+     to Pablo Macouzet Jr. <squirrelmail@kingnothing.com> 
+     for writing the original Emoticons plugin)
+   * Disable SquirrelSpell plugin when user is composing
+     emails in HTML format, since the two plugins are
+     not compatible
+   * Integrated spell checking mechanism is now available
+   * Custom style configuration is available (you can turn
+     down the initial font size, etc)
+   * Updated for compatibility with email_footer plugin
+   * Updated for compatibility with quicksave plugin (quirky)
+   * When sending attachments, HTML format is retained
+   * Updated HTML renderer
+   * Added configuration file
+
+  1.0 -  Paul Lesneiwski <pdontthink@angrynerds.com>
+   * Improvements over "Enhanced Text Area Plugin":
+     - updated text area renderer
+     - fixed all those darn bugs
+     - as of SM 1.4.2, no source patch is required
+     - sends HTML email in correct format
+     - no longer clashes with File Manager plugin
+
+
+
+Future Work
+===========
+
+   *  fix compatibility issues with any other plugins, such as:
+       - templates plugin
+
+   *  updates to renderer as they become available
+
+

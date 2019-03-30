@@ -1,0 +1,45 @@
+#
+#   Sample vlogin per-user settings file
+#
+#   One user per line - username (as per their actual IMAP login) comes
+#   first, then any settings are given by specifying the setting name
+#   and the desired value, separated by an equal sign - all fields are
+#   separated by commas (and optional whitespace).  For example:
+#   
+#      username@full.imap.login, imapServerAddress=localhost, imapPort=143
+#
+#   When an array of values needs to be specified for a single setting,
+#   such as a list of plugins to be enabled for one user, the values
+#   are to be separated with a double comma.  For example:
+#
+#      username@full.imap.login, domain=abc.com, enable_plugins=debugger,,username, imapPort=143
+#
+#   Note that values of "true" and "false" (case insensitive) will be
+#   converted from strings to real boolean values.
+#
+#   Also note that usernames can contain the wildcards * and ? which
+#   indicate "any number of (or zero) characters" and "one alphanumeric 
+#   character" respectively.  
+#
+#   For example, the username "jose_r*@domain.com" would match the 
+#   username "jose_rodriguez@domain.com" as well as "jose_riviera@domain.com".  
+#   "jose?@domain.com" would match "jose5@domain.com", but not 
+#   "jose@domain.com", although the pattern "jose*@domain.com" would 
+#   match both "jose5@domain.com" and "jose@domain.com".  
+#
+#   Finally, note that if a username listed in this file also matches 
+#   one or more username patterns, the exact match takes precedence, 
+#   so you may provide patterns with special overrides.
+#
+
+
+# note that only org_title needs to be enclosed in quotes
+#
+user1@domain.com, org_title="my domain hosting services", imapServerAddress=localhost, imapPort=143, imap_server_type=courier, smtpServerAddress=localhost, smtpPort=25
+
+
+# wildcard example
+#
+user?@domain.*, org_title="my domain hosting services", imapServerAddress=localhost, imapPort=143, imap_server_type=courier, smtpServerAddress=localhost, smtpPort=25
+
+

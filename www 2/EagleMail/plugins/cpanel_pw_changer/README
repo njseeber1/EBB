@@ -1,0 +1,50 @@
+CPanel Password Changer
+======================================================================
+Author: Henri Straforelli <henri@etwebhosting.com>
+Copyright (c) 2003 GNU GPL
+======================================================================
+
+DESCRIPTION
+===========
+
+This is a SquirrelMail plugin to allow users to change their own POP account 
+password using the CPanel web hosting control panel mechanism. 
+
+It also allows an existing "web protected" (htaccess) folder to be synched 
+up with the new password. (The protected folder must already by configured 
+using the CPanel web protection utility and it must use the same username 
+as the email account.)
+
+WARNING
+===========
+
+This plugin ONLY works for "additional" POP email accounts that have been
+created through CPanel. It will NOT work with the "main" CPanel POP account. 
+(In other words, it will only work with POP accounts that use the full
+"username@domain.com" naming convention.)
+
+REQUIREMENTS
+===========
+
+1)  The "compatibility" plugin is required.
+    (http://www.squirrelmail.org/plugin_view.php?id=152)
+2) A web hosting account that uses the CPanel control panel.
+
+
+INSTALLATION
+============
+
+See the INSTALL file in this folder for details.
+
+
+COMMENTS/QUESTIONS
+===========
+Send them to the author, Henri Straforelli <henri@etwebhosting.com>.
+
+
+REVISION HISTORY
+===========
+
+26-Jul-2003	1.0	+ Initial release.
+26-Jul-2003	1.1	+ Added ability to synch new pw with "web protected" folder.
+20-Aug-2003	1.2	- Fixed major security hole.

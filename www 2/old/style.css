@@ -1,0 +1,250 @@
+/* GENERIC STYLE SHEET
+built by Jon Roig (jon@jonroig.com) for OpenListings
+http://jonroig.com for info
+*/
+
+/* MAIN STYLES */
+BODY {scrollbar-face-color: #3A6DA4;
+scrollbar-shadow-color: #336699;
+scrollbar-highlight-color: #FFFFFF;
+scrollbar-3dlight-color: #687888;
+scrollbar-darkshadow-color: #DCE0E2;
+scrollbar-track-color: #3A6DA4;
+scrollbar-arrow-color: #336699;}
+
+BODY.admin {
+	margin-top: 0px;
+	margin-left: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #ffffff;
+}
+
+BODY {
+	position:absolute;
+	top:0px;
+	left:0px;
+	margin:0px;
+	padding:0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #ffffff;
+}
+td.header {
+	background-color : #336699;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+}
+	
+td.adminbg {
+	background-color : #666666; }
+
+tr, td, th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	background-color : transparent;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+
+h1, h2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	color: #000000;
+}
+
+h3, h4 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin-left: 20px;
+	color: #000000;
+}
+
+h5, h6 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: Left;
+	margin-left: 35px;
+	color: #000000;
+}
+
+P {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin-left: 0px;
+	margin-right: 12px;
+}
+li {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+a:link   {
+	color: #333399;
+	font-weight: normal;
+	text-decoration: none;
+	background-color: transparent;
+	}
+a:visited   {
+	color: #333399;
+	font-weight: normal;
+	text-decoration: none;
+	background-color: transparent;
+	}
+a:hover   {
+	color: #333399;
+	font-weight: normal;
+	text-decoration: none;
+	background-color: transparent;
+	}
+a:active  {
+	color: #333399;
+	font-weight: normal;
+	text-decoration: none;
+	background-color: transparent;
+	}
+
+
+hr { height: 0px; color: #CCCCCC}
+
+/* TABLE STYLES Main Page Color*/
+table.form_main { background-color :  transparent;}
+td.form_main { background-color :  transparent;}
+/* NEW TABLE STYLE FOR Vertical Layout Control Secondary Layout Color(Light Blue)*/
+table.color2_layout { background-color: #a6b3cf; }
+td.color2_layout { background-color: #a6b3cf; }
+
+/* for alternating listings in the admin area*/
+td.row1_0	{ background-color: #009900; }
+td.row2_0	{ background-color: #CCFFCC; }
+td.row3_0	{ background-color: #99CC99; }
+.adminListingLeft_0 {
+color: #FFFFFF;
+background-color : transparent;
+}
+
+td.row1_1	{ background-color: #006699; }
+td.row2_1	{ background-color: #DEE3E7; }
+td.row3_1	{ background-color: #D1D7DC; }
+.adminListingLeft_1 {
+color: #FFFFFF;
+background-color : transparent;
+}
+
+/* for alternating image listings */
+td.image_row_0	{ background-color: #D6D3EE; }
+td.image_row_1	{ background-color: #FFFFFF; }
+
+/* for alternating search result listings */
+td.search_row_0	{ background-color: #D6D3EE; }
+td.search_row_1	{ background-color: #FFFFFF; }
+
+/* FORM STYLES */
+INPUT, select, textarea, text {
+border: 1px #006699 groove;
+background-color: #FFFFFF; 
+font-family: Arial, Helvetica, sans-serif; 
+font-size: 11px;
+color: #000000;
+border-color: #000000;
+border-style: solid;
+}
+
+
+/* TEXT STYLES */
+.small { font-size : 10px; color : #ffffff;}
+
+.required {
+color: #FF0000;
+background-color : transparent;
+}
+
+.lightText {
+color: #FFFFFF;
+background-color : transparent;
+}
+
+
+/* TEMPLATE EDITOR STYLES */
+td.templateEditorHead	{ background-color: #D6D3EE; }
+td.templateEditorNew	{ background-color: #EEEEFF; }
+
+/* STATS display stuff */
+
+.Body {background-color: #D8D8F8}
+
+.Table1 { 
+	background-color: #000000; 
+	text-align: center; 
+	width: 600px; border: 0;
+}
+.TR1 { 
+	background-color: #3A73CD; 
+	vertical-align: middle;
+}
+.TR2 { 
+	background-color: #CCCCCC; 
+	vertical-align: bottom;
+}
+.TR3 { 
+	background-color: #C0C0C0; 
+	vertical-align: bottom;
+}
+.TD1 {  
+	width: 549px; 
+	height: 16px; 
+	text-align: left; 
+	font-size: 10pt ;
+	font-weight:bold ;
+	vertical-align: bottom; 
+	word-spacing=0px;
+	}
+.TD2 { 
+	text-align: left; 
+	font-size: 10pt;
+}
+.TD3 { 
+	text-align: right; 
+	font-size: 10pt;
+}
+.TD4 { 
+	background-color: #CCCCFF; 
+	width: 48px; 
+	text-align: center ;
+	font-weight:bold;
+}
+.TD5 { 
+	width: 178px;}
+.TD6 { width: 48px;}
+.TD7 { width: 188px;}
+.TD8 { width: 364px;}
+.TD9 { 
+	background-color: #CCCCFF; 
+	vertical-align: middle; 
+	font-size: 10pt;font-weight:bold; 
+	text-align: left;
+}
+.TD10 { 
+	background-color: #CCCCFF; 
+	vertical-align: top; 
+	width: 48px; 
+	text-align: right ;
+	font-weight:bold; 
+}
+.TD11 {
+	width: 549px; 
+	height: 110px; 
+	text-align: left; 
+	font-size: 10pt ;
+	font-weight:bold ;
+	vertical-align: 
+	bottom; word-spacing:0px;
+}
+.TD12 { 
+	vertical-align: bottom; 
+	text-align: left; 
+	width: 17px;
+	font-size: 10pt ;
+	font-weight:bold; 
+	word-spacing=0px;
+}
+
+
+

@@ -1,0 +1,17 @@
+
+<!-- only needed for getWindowNumber_() -->
+<SCRIPT SRC="../../winlike/winman/winxtra.js"></SCRIPT>
+
+<SCRIPT>
+	function myAlert() {
+		alert("Hello world!");
+	}
+
+	function myNr() {
+		mynr=getWindowNumber_(); // retrieves the actual window number of this content
+		document.getElementById('mytag').innerHTML="I am loaded into window number <B>"+mynr+"</B><BR>";
+	}
+</SCRIPT>
+
+<BODY onLoad=myNr()>
+	<FONT ID=mytag FACE="Verdana, Arial, Helvetica" SIZE=2></FONT>

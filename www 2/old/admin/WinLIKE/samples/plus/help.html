@@ -1,0 +1,21 @@
+
+<SCRIPT>
+	function showHelp()
+	{
+		query = window.location.search.substring(1);
+		help = query.split("&"); // copy the querystrings into an array
+			
+		document.getElementById('message1').innerHTML='Here you can show some help text for the file <B>' + unescape(help[0]);
+		document.getElementById('message2').innerHTML='The source window has the title <B>' + unescape(help[1]);
+	}
+</SCRIPT>
+
+
+<BODY onLoad=showHelp();>
+	
+	<FONT ID=message1 FACE="Verdana, Arial, Helvetica" SIZE=2></FONT>
+	<BR><BR>
+	<FONT ID=message2 FACE="Verdana, Arial, Helvetica" SIZE=2></FONT>
+
+</BODY>
+

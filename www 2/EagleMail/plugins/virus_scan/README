@@ -1,0 +1,100 @@
+<?php
+/*******************************************************************************
+
+    Author ......... Jimmy Conner
+    Contact ........ jimmy@advcs.org
+    Home Site ...... http://www.advcs.org/
+    Program ........ Virus Scan
+    Version ........ 0.5
+    Purpose ........ Allows an admin to scan any types of attachments for known
+                     Mass Mailing Viruses
+
+*******************************************************************************/
+
+   REQUIRES : Squirrlemail v1.4.0 or higher
+
+
+Features
+========
+
+   * Simplistic Virus Scanning ability (with over 130 signatures of
+     common Mass Mail viruses)
+   * Blocks users from downloading infected files
+     (except excludes users, just warns)
+   * A warning is displayed when the user tries to download the file
+   * Users can be excluded by username
+   * Can Auto-Update virus definitions, checks every 24 hours for updates
+   * RG = 0 Compatible
+   * E_ALL Compatible
+   * Faster loading SM Compatible
+   * SM Version checking Compatible
+
+
+Installation
+============
+
+   As with other plugins, just uncompress the archive in the plugins
+   directory, go back to the main directory, run configure and add the plugin.
+   Questions/comments/flames/etc can be sent to the jimmy@advcs.org
+
+   plugins/virusscan/includes/virussignatures.php has to be writable by the webserver!
+   plugins/virusscan/config.php has to be writable by the webserver!
+
+   To administer the plugin, create a file called "admins" inside of the squirrelmail
+   config directory.  Then put your the usernames that are used to log into squirrelmail
+   in this file (1 name per line) and leave a few blank lines after the last one.
+   Then open Squirrlemail and goto the options panel and click on "Virus Scan"
+   (This is a limitation of how the administrator plugin handles the admins file,
+   I do it this way to keep compatibility)
+   Or just download the Admin Add plugin.
+
+To Do
+============
+
+  Faster Scanning engine, possibly perl in order to include all 9000+ virus signatures
+
+
+Change Log
+============
+   0.5
+      * Major Bug Fix - Unconfigured clients (No write access to virussignatures.php)
+           are hammering my server once every 1-60 seconds.
+           PLEASE PLEASE PLEASE configure your plugin correctly!!
+           
+      * Updating Signatures will now not return signatures that will not run on your
+           version of VirusScan, this opens up the ability to add new wildcard signatures
+           wihout breaking older clients
+
+      * A few small fixes
+
+   0.4
+      * Admin Interface - Can now set it to update at every 4, 6, 8, 12, 24, or 48 Hours
+      * Admin Interface - Now shows Signatures version and time stamp
+      * Admin Interface - Added an "Update Virus Signatures" link to immediately check for updates
+      * Admin Interface - Added a "Show Virus Signatures" link to show the current Signature table
+      * Admin Interface - Displays last time it checked for an update
+      * Changed Updater to default to every 12 hours instead of 24
+      * Complete Internationalization (Just need some translators now)
+      * Now checks to see if we need to update on login and attachment scan
+      * Some code cleanup
+
+   0.3
+      * Fixes for wrong file name reporting, E_ALL errors
+      * Changes to the virus signatures, now much faster loading
+      * Small code improvements
+      * Renamed config file to config.php (with code to auto rename it for you)
+      * Doesn't scan files above 1 Meg (not likely to be a mass mailing virus)
+      * Enabling AutoUpdate immediately checks for an update
+
+   0.2
+      * Small fix for when you don't have an admins file in the config directory
+        (Which it tells you in the install section that you have to create one)
+
+   0.1
+      * Converted to its own plugin (formerly in blocked attachments plugin)
+      * Lots of small fixes
+      * Admin can click on the number of viruses in admin interface to see all the
+        viruses being blocked with a link to each Norton page with info on the virus.
+
+
+

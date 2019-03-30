@@ -1,0 +1,19 @@
+Installing the abook_import_export Plugin
+==================================
+
+1) Start with untaring the file into the plugins directory.
+Here is a example for the 0.1 version of the abie plugin.
+
+    $ cd plugins
+    $ tar -xzvf abook_import_export-0.1-1.4.0.tar.gz
+
+2) Then go to your config directory and run conf.pl.  Choose
+option 8 and move the plugin from the "Available Plugins"
+category to the "Installed Plugins" category.  Save and exit.
+
+    $ cd ../config/
+    $ ./conf.pl
+
+3) Log into SquirrelMail and goto 'Addresses' and at the bottom
+of the page will be the buttons for importing and exporting your
+address book.

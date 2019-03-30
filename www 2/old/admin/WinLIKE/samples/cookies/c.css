@@ -1,0 +1,20 @@
+.DE {
+	margin-left:10px;
+	FONT-FAMILY:verdana,arial,helvetica,sans-serif;
+	background-color:#F0F0F0;
+	COLOR:black;
+	FONT-SIZE:xx-small;
+	VERTICAL-ALIGN:middle;
+	TEXT-ALIGN:left;
+	PADDING:2px;
+}
+p{
+	FONT-FAMILY:verdana,arial,helvetica,sans-serif;
+	VERTICAL-ALIGN:middle;
+	FONT-SIZE:xx-small;
+	color:#333333;
+}
+body
+{
+  background-color:#CCCCCC;
+}

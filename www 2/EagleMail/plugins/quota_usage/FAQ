@@ -1,0 +1,16 @@
+QUESTIONS
+
+1. I use Courier-IMAP with the user quota set, but nothing shows up.
+
+
+ANSWERS
+
+1. I use Courier-IMAP with the user quota set, but nothing shows up.
+
+    A: The "QUOTA" capability is not listed in the configuration file by 
+    default.  To turn this on, add "QUOTA" in the CAPABILITY directive 
+    of /usr/lib/courier-imap/etc/imapd, then restart the imap server.
+
+    NOTE: Courier-IMAP will NOT report a quota if usage is 0%.  If you believe
+    you have it setup correctly, try sending a message to the user, then 
+    check again.
