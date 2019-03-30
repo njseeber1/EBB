@@ -1,0 +1,922 @@
+<?php
+// NOTE: this file IS NOT UP TO DATE!
+
+/**
+  * SquirrelMail Virtual Host Login Plugin
+  * Copyright (C) 2003, 2004 Paul Lesneiwski <pdontthink@angrynerds.com>
+  * This program is licensed under GPL. See COPYING for details
+  *
+  */
+
+
+// include compatibility plugin
+//
+if (defined('SM_PATH'))
+   include_once(SM_PATH . 'plugins/compatibility/functions.php');
+else if (file_exists('../plugins/compatibility/functions.php'))
+   include_once('../plugins/compatibility/functions.php');
+else if (file_exists('./plugins/compatibility/functions.php'))
+   include_once('./plugins/compatibility/functions.php');
+
+
+function overrideSmConfig() {
+
+   global $allVirtualDomainsAreUnderOneSSLHost, 
+          $smHostIsDomainThatUserLoggedInWith, $virtualDomainDataDir, 
+          $data_dir, $domain, $virtualDomains, $plugins,  
+          $squirrelmail_plugin_hooks, $useSessionBased;
+      
+  
+  // get global variable for versions of PHP < 4.1 
+  //
+  if (!compatibility_check_php_version(4,1)) {
+    global $HTTP_SERVER_VARS, $HTTP_SESSION_VARS, $HTTP_POST_VARS;
+    $_SERVER = $HTTP_SERVER_VARS;
+    $_SESSION = $HTTP_SESSION_VARS;
+    $_POST = $HTTP_POST_VARS;
+  }
+
+
+  // make sure the session has started
+  //
+  compatibility_sqsession_is_active();
+
+
+  if (compatibility_check_sm_version(1, 3))
+     include_once (SM_PATH . 'plugins/vlogin/data/config.php');
+  else
+     include_once ('../plugins/vlogin/data/config.php');
+
+
+  if ($useSessionBased)
+  {
+     global $config_override;
+     compatibility_sqsession_unregister('config_override');
+     // If we don't initialize this, it will work 
+     // together with the multilogin plugin
+     // $config_override = array();
+  }
+
+
+  // grab hostname into local var
+  //
+  if (isset($_SERVER['HTTP_X_FORWARDED_HOST']) && !empty($_SERVER['HTTP_X_FORWARDED_HOST']))
+     $hostname = $_SERVER['HTTP_X_FORWARDED_HOST'];
+  else
+     $hostname = $_SERVER['HTTP_HOST'];
+  $hostname_stripped = deconstructDomainName($hostname);
+
+
+  // for sites where virtual host is pegged on the end of the main
+  // site's URL (usually for single-certificate SSL hosting), get 
+  // the actual host name out of the PHP_SELF portion of the URL
+  //
+  if ($allVirtualDomainsAreUnderOneSSLHost) {
+
+     preg_match('/[\/]*(.*?)(\/|$)/', $_SERVER['PHP_SELF'], $matches);
+     $hostname = $matches[1];
+
+  }
+
+
+  // set domain if the $smHostIsDomainThatUserLoggedInWith
+  // flag is on...
+  //
+  if ($smHostIsDomainThatUserLoggedInWith)
+  {
+     if ($useSessionBased)
+        $config_override['domain'] = $hostname_stripped;
+     else
+        $domain = $hostname_stripped; 
+  }
+      
+
+  // override data_dir if the $virtualDomainDataDir variable 
+  // has been specified
+  //
+  if (!empty($virtualDomainDataDir)) {
+     $the_data_dir = $virtualDomainDataDir;
+     $the_data_dir = str_replace('###VIRTUAL_DOMAIN###', 
+                             $hostname_stripped, 
+                             $the_data_dir);
+     if ($useSessionBased)
+        $config_override['data_dir'] = $the_data_dir;
+     else
+        $data_dir = $the_data_dir;
+  }
+
+
+  $firstTime = 1;
+
+
+  // override the org_logo and other stuff if we find a match
+  //
+// NOTE: the following line will solve PHP 4.3 problems when using
+//       the session_recall patch, however it will also unfortunately
+//       mask errors in the config file.  removing this line could
+//       possibly help debug non-functional vlogin installations
+  if (is_array($virtualDomains))
+  foreach (array_keys($virtualDomains) as $virtualDomain) {
+
+    if (stristr($hostname, $virtualDomain) || $virtualDomain == '*') {
+
+
+      // limit usage of global domain to first entry only
+      //
+      if ($virtualDomain == '*' && !$firstTime)
+      {
+         echo '<html><body><font color="red" size="12pt">';
+         echo 'Sorry, please contact your administrator and ';
+         echo 'ask them to reconfigure the SquirrelMail Virtual Host Login ';
+         echo 'plugin such that the global virtual domain is listed first';
+         echo '</font></body></html>';
+         exit(1);
+      }
+
+
+      foreach ($virtualDomains[$virtualDomain] as $setting => $value)
+      {
+
+        // Go ahead and replace the string ###VIRTUAL_DOMAIN###
+        //
+        if (!is_array($value))
+           if (strpos($value, '###VIRTUAL_DOMAIN###') !== FALSE)
+              $value = str_replace('###VIRTUAL_DOMAIN###',
+                                   $hostname_stripped,
+                                   $value);
+         
+        // enable additional plugins
+        //
+        if (stristr($setting, 'enable_plugins'))
+        {
+           if ($useSessionBased)
+           {
+              $config_override[$setting] = $value;
+           }
+           else
+           {
+              foreach ($value as $pluginName)
+              {
+                 $plugins[] = $pluginName;
+                 use_plugin($pluginName);
+              }
+           }
+           continue;
+        }
+
+
+        // disable plugins
+        //
+        if (stristr($setting, 'disable_plugins'))
+        {
+           if ($useSessionBased)
+           {
+              $config_override[$setting] = $value;
+           }
+           else
+           {
+              foreach ($value as $pluginName)
+              {
+                 $pluginKey = array_search($pluginName, $plugins);
+                 if (!is_null($pluginKey) && $pluginKey !== FALSE)
+                 {
+                    unset($plugins[$pluginKey]);
+                    foreach (array_keys($squirrelmail_plugin_hooks) as $hookName)
+                    {
+                       unset($squirrelmail_plugin_hooks[$hookName][$pluginName]);
+                    }
+                 }
+              }
+           }
+           continue;
+        }
+
+
+        // replace SquirrelMail config values
+        //
+        if ($useSessionBased)
+        {
+
+           // in order to set the org_title, in the browser
+           // title bar, have to do it now (using an eval
+           // otherwise things like $_SESSION will never be
+           // found when the variable is first defined)
+           //
+           if ($setting == 'org_title')
+           {
+              global $$setting;
+              eval('$$setting = ' . $value . ';');
+           }
+           else
+              $config_override[$setting] = $value;
+
+        }
+        else
+        {
+
+           // in order to set the org_title, in the browser
+           // title bar, have to do it now using and eval,
+           // otherwise things like $_SESSION will never be
+           // found when the variable is first defined)
+           //
+           if ($setting == 'org_title')
+           {
+              global $$setting;
+              eval('$$setting = ' . $value . ';');
+           }
+           else
+           {
+              global $$setting;
+              $$setting = $value;
+           }
+
+        }
+
+      }
+
+
+      if ($smHostIsDomainThatUserLoggedInWith)
+      {
+         if ($useSessionBased)
+            $config_override['domain'] = $hostname_stripped;
+         else
+            $domain = $hostname_stripped; 
+      }
+
+      
+      // exit this loop, unless this is the global default
+      // 
+      if( $virtualDomain != '*' ) break;
+
+    }
+
+
+    $firstTime = 0;
+
+
+  }
+
+
+  if ($useSessionBased)
+  {
+
+     compatibility_sqsession_register($config_override, 'config_override');
+
+     if (compatibility_check_sm_version(1, 3))
+        include_once (SM_PATH . 'plugins/multilogin/functions.php');
+     else
+        include_once ('../plugins/multilogin/functions.php');
+
+     multilogin_sqoverride_config_do();
+
+  }
+
+
+  // override settings on a per-user basis
+// TODO: not clear if this will work with password_forget and/or login_alias...
+  //
+  $user = '';
+  if (isset($_SESSION['username']))
+     $user = $_SESSION['username'];
+  elseif (isset($_POST['login_username']))
+     $user = $_POST['login_username'];
+  perUserOverride($user);
+
+
+}
+
+
+
+// Magic happens below.
+function vlogin_domain_do() {
+
+
+  global $plugins, $login_username, $$login_username, $debug, $data_dir, 
+         $foundLoginAlias, $at, $dot, $dontUseHostName, $atConversion,
+         $sendmailVirtualUserTable, $putHostNameOnFrontOfUsername,
+         $allVirtualDomainsAreUnderOneSSLHost, $prefs_dsn, $useSessionBased,
+         $virtualDomains, $removeDomainIfGiven;
+
+
+  // figure out where prefs are stored
+  //
+  if (isset($prefs_dsn) && !empty($prefs_dsn))
+      $prefsInDB = true;
+  else
+      $prefsInDB = false;
+
+
+  // get global variable for versions of PHP < 4.1
+  //
+  if (!compatibility_check_php_version(4,1)) {
+    global $HTTP_SERVER_VARS;
+    $_SERVER = $HTTP_SERVER_VARS;
+  }
+
+
+  // grab hostname into local var
+  //
+  if (isset($_SERVER['HTTP_X_FORWARDED_HOST']) && !empty($_SERVER['HTTP_X_FORWARDED_HOST']))
+     $hostname = $_SERVER['HTTP_X_FORWARDED_HOST'];
+  else
+     $hostname = $_SERVER['HTTP_HOST'];
+echo "1) hostname = $hostname<br>";
+
+
+  // for sites where virtual host is pegged on the end of the main
+  // site's URL (usually for single-certificate SSL hosting), get 
+  // the actual host name out of the PHP_SELF portion of the URL
+  //
+  if ($allVirtualDomainsAreUnderOneSSLHost) {
+
+     preg_match('/[\/]*(.*?)(\/|$)/', $_SERVER['PHP_SELF'], $matches);
+     $hostname = $matches[1];
+
+  }
+echo "2) hostname = $hostname<br>";
+
+
+  if (compatibility_check_sm_version(1, 3))
+     include_once (SM_PATH . 'plugins/vlogin/data/config.php');
+  else
+     include_once ('../plugins/vlogin/data/config.php');
+
+
+
+  $user=$login_username;
+  
+  // if password_forget is loaded, use the obfuscated name
+  if (in_array('password_forget', $plugins)) {
+    if (!isset($$login_username)) compatibility_sqextractGlobalVar($login_username);
+    if ($$login_username != '')
+      $user=$$login_username;
+  }
+
+
+  // if user logged in with full email address, 
+  // chop off domain info if needed
+  //
+  if ( $removeDomainIfGiven && strstr( $user, $at ) ) 
+  {
+     $user = substr($user, 0, strpos($user, $at));
+  }
+
+
+  // check for login_alias plugin
+  //
+  if (in_array('login_alias',$plugins)) {
+
+
+    // check if login alias was already processed
+    if (isset($foundLoginAlias)) {
+
+      if ($foundLoginAlias) return;
+
+    }
+    else {
+
+      // check for login alias here and return if found
+      // (but only if it is in the domain being used
+      // to log in when dontUseHostName is off)
+      //
+      $filename = $data_dir.'login_alias.pref';
+      if ((!$prefsInDB && file_exists($filename)) || $prefsInDB) {
+         $loginAlias=getPref($data_dir,'login_alias',$user);
+
+         if (!empty($loginAlias))
+         {
+            if (!$dontUseHostName)
+            {
+               if (strpos($loginAlias, deconstructDomainName($hostname)) !== FALSE)
+                  return;
+            }
+            else
+               return;
+         }
+      }
+
+    }
+
+  }
+
+
+  // find domain name.  Only truly important bit.
+
+
+  // convert "at" sign...
+  //
+  foreach ($atConversion as $otherAt)
+     $user = str_replace($otherAt, $at, $user);
+
+
+  // check and see if they decided to insert the host anyways
+  // or we don't want to use the host name...
+  //
+  if( !$dontUseHostName && !strstr( $user, $at ) ) {
+
+
+    $hostname = deconstructDomainName($hostname);
+echo "3) hostname = $hostname<br>";
+
+
+    // assign realname using parsed hostname
+    //
+    if ($putHostNameOnFrontOfUsername)
+       $realname = $hostname . $at . $user;
+    else
+       $realname = $user . $at . $hostname;
+
+
+  } else {
+    $realname = $user;
+  }
+
+  
+  // remap to correct user account when using sendmail virtual logins...
+  //
+  if (!empty($sendmailVirtualUserTable))
+  {
+     $realname = getSendmailVirtualUser($realname, $sendmailVirtualUserTable);
+  }
+
+
+  if ($useSessionBased)
+     overrideSmConfig();
+
+
+  // override settings on a per-user basis
+  //
+  perUserOverride($realname);
+
+
+  // if password_forget is loaded, use the obfuscated name
+  if (in_array('password_forget',$plugins) && $$login_username != '')
+     $$login_username=$realname;
+  else
+     $login_username=$realname;
+
+
+  // when in debug mode, just dump out final login name and quit
+  //
+  if ($debug)
+  {
+
+     echo '';
+     echo '';
+     echo '<html><body><hr><br>';
+     echo '<h4>Your IMAP login was resolved to:<br><br>';
+     echo $realname;
+     echo '</h4><br><hr>';
+     // was confusing to people using $dontUseHostName 
+     echo '<br>$hostname is ' . $hostname . '<br>';
+     echo '<br>PHP_SELF is ' . $_SERVER['PHP_SELF'] . '<br>';
+global        $imapServerAddress;
+echo '<hr>' . $imapServerAddress . '<hr>';
+sm_print_r($_SERVER);
+echo '<hr>';
+     echo '<br><hr></body></html>';
+     exit;
+
+  }
+
+}
+
+
+
+function perUserOverride($user) {
+
+  global $at, $atConversion, $perUserSettingsFile, $useSessionBased;
+
+
+  // convert "at" sign...
+  //
+  foreach ($atConversion as $otherAt)
+     $user = str_replace($otherAt, $at, $user);
+
+
+  // override per-user settings
+  //
+  if (!empty($perUserSettingsFile) && !empty($user)) {
+
+
+     // find settings for user
+     //
+     $userSettings = array();
+     if ($USERSETTINGS = @fopen ($perUserSettingsFile, "r"))
+     {
+
+        while (!feof($USERSETTINGS))
+        {
+
+           $line = fgets($USERSETTINGS, 4096);
+           $line = trim($line);
+
+
+           // skip blank lines and comment lines
+           //
+           if (strpos($line, '#') === 0 || strlen($line) < 3)
+              continue;
+
+
+           // parse fields out
+           //
+           if (substr($line, strlen($line) - 1) != ',') $line .= ',';
+           preg_match_all('/(.+?),\s*/', $line, $configSettings, PREG_PATTERN_ORDER);
+
+
+           // stop when we have the right username (case insensitive)
+           //
+           if (strtoupper($user) == strtoupper($configSettings[1][0]))
+           {
+              $userSettings = $configSettings[1];
+              break;
+           }
+
+
+           // if wildcard match for user is found, 
+           // grab settings, but don't stop looking 
+           // for exact match
+           //
+           if (strpos($configSettings[1][0], '*') !== FALSE
+            || strpos($configSettings[1][0], '?') !== FALSE)
+           {
+              if (preg_match('/^' . str_replace(array('?', '*'), array('\w{1}', '.*?'), 
+                          strtoupper($configSettings[1][0])) . '$/', strtoupper($user)))
+                 $userSettings = $configSettings[1];
+           }
+
+        }
+
+        fclose($USERSETTINGS);
+
+     }
+
+     if (sizeof($userSettings) > 0)
+     {
+
+
+        if ($useSessionBased)
+        {
+           global $config_override;
+           compatibility_sqsession_unregister('config_override');
+           // If we don't initialize this, it will work
+           // together with the multilogin plugin and 
+           // any settings already made for the domain
+           // $config_override = array();
+        }
+
+
+        // loop through user's settings 
+        //
+        foreach ($userSettings as $setting)
+        {
+
+           if (!strpos($setting, '='))
+              continue;
+
+           $matches = explode('=', $setting);
+           if ($useSessionBased)
+           {
+              $config_override[$matches[0]] = $matches[1];
+           }
+           else
+           {
+
+              // in order to set the org_title, in the browser
+              // title bar, have to do it now (using an eval
+              // otherwise things like $_SESSION will never be
+              // found when the variable is first defined)
+              //
+              if ($matches[0] == 'org_title')
+              {
+                 global $$matches[0];
+                 eval('$$matches[0] = ' . $matches[1] . ';');
+              }
+              else
+              {
+                 global $$matches[0];
+                 $$matches[0] = $matches[1];
+              }
+           }
+
+        }
+
+
+        if ($useSessionBased)
+        {
+      
+           compatibility_sqsession_register($config_override, 'config_override');
+      
+           if (compatibility_check_sm_version(1, 3))
+              include_once (SM_PATH . 'plugins/multilogin/functions.php');
+           else
+              include_once ('../plugins/multilogin/functions.php');
+
+           multilogin_sqoverride_config_do();
+
+        }
+
+     }
+
+  }
+
+}
+
+
+
+// Does the actual hostname deconstruction
+//
+function deconstructDomainName($hostname) {
+
+  global $notPartOfDomainName, $chopOffDotSectionsFromRight, 
+         $chopOffDotSectionsFromLeft, $numberOfDotSections, 
+         $checkByExcludeList, $at, $dot,
+         $removeFromFront, $translateHostnameTable, $pathToQmail;
+
+
+  if (compatibility_check_sm_version(1, 3))
+     include_once (SM_PATH . 'plugins/vlogin/data/config.php');
+  else
+     include_once ('../plugins/vlogin/data/config.php');
+
+
+
+  // if a port number is in the URL, remove it before proceeding
+echo "A) hostname = $hostname<br>";
+  //
+  $hostname = preg_replace('/:\d+/', '', $hostname);
+echo "B) hostname = $hostname<br>";
+
+
+
+  // if enabled, remove "dot sections" until desired size of hostname is reached
+  //
+  if ($numberOfDotSections > 0) {
+
+     // lop off pieces of hostname until 
+     // number of dot sections is same as desired
+     //
+     while (sizeof(explode('.', $hostname)) > $numberOfDotSections) {
+
+        if ($removeFromFront)
+           $hostname = substr($hostname, strpos($hostname, '.') + 1);
+        else
+           $hostname = substr($hostname, 0, strrpos($hostname, '.'));
+        
+     }
+
+  }
+echo "C) hostname = $hostname<br>";
+
+
+  // if enabled, remove "dot sections" from the left side...
+  //
+  for ($i = 0; $i < $chopOffDotSectionsFromLeft; $i++) {
+
+    $hostname = substr($hostname, strpos($hostname, '.') + 1);
+     
+  }
+
+
+  // if enabled, remove "dot sections" from the right side...
+echo "D) hostname = $hostname<br>";
+  //
+  for ($i = 0; $i < $chopOffDotSectionsFromRight; $i++) {
+
+    $hostname = substr($hostname, 0, strrpos($hostname, '.'));
+     
+  }
+
+
+echo "E) hostname = $hostname<br>";
+// TODO: I think it makes more sense to do this BEFORE 
+// doing the $numberOfDotSections functionality.  I would
+// move it now, but I don't know if I'll break things for
+// people out there.... ;>
+   // if enabled, extract any of the undesired host name pieces
+   //
+   if ($checkByExcludeList) {
+    
+      foreach ($notPartOfDomainName as $dotSection)
+      {
+
+         $hostname = preg_replace('/(^|\.)' . $dotSection . '($|\.)/', 
+                                  "\$1", $hostname);
+
+      }
+
+   }
+
+
+   // if resulting hostname begins or ends with a dot, remove it
+echo "F) hostname = $hostname<br>";
+   //
+   $hostname = preg_replace('/^\./', '', $hostname);
+   $hostname = preg_replace('/\.$/', '', $hostname);
+
+
+  // just in case they need a different '.' seperator
+echo "G) hostname = $hostname<br>";
+  $hostname = str_replace( ".", $dot, $hostname );
+
+
+  // if domain name needs to be remapped, do so here
+echo "H) hostname = $hostname<br>";
+  //
+  if (!empty($translateHostnameTable))
+     $hostname = translateHostname($hostname, $translateHostnameTable);
+
+
+  // if qmail/vpopmail domain aliasing is used and we
+echo "I) hostname = $hostname<br>";
+  // need to translate this domain (if it is an alias),
+  // do so here
+  //
+  if (!empty($pathToQmail))
+     $hostname = unaliasQmailDomainAlias($hostname, $pathToQmail);
+
+
+echo "J) hostname = $hostname<br>";
+  return $hostname;
+
+}
+
+
+
+// unalias any Qmail/Vpopmail domain aliases
+//
+function unaliasQmailDomainAlias($host, $pathToQmail)
+{
+    $tmp = '+'.$host.'-:' ;
+    $tlen = strlen($tmp) ;
+    $file = fopen($pathToQmail.'/users/assign','r') ;
+    while(!feof($file)) {
+      $line = fgets($file,256) ;
+      if(substr($line,0,$tlen) == $tmp)	{
+        $host = substr($line,$tlen) ;
+        $tmp = strpos($host,':') ;
+        if ($tmp !== FALSE) $host = substr($host,0,$tmp) ;
+        break ;
+      }
+    }
+    fclose($file) ;
+    return $host;
+}
+
+
+
+// remap a host name to the one specified in the translate host 
+// name table (path given by the $translateHostnameTable)
+//
+function translateHostname($host, $translateHostnameTable)
+{
+
+   if ($HOSTTABLE = @fopen ($translateHostnameTable, 'r'))
+   {
+
+      while (!feof($HOSTTABLE))
+      {
+
+         $line = fgets($HOSTTABLE, 4096);
+         $line = trim($line);
+
+
+         // skip blank lines and comment lines
+         //
+         if (strpos($line, '#') === 0 || strlen($line) < 3)
+            continue;
+
+
+         // parse fields out
+         //
+         preg_match('/^(\S+)\s+(\S+)/', $line, $matches);
+
+
+         // if host is found, get remapped hostname and return
+         //
+         if (preg_match('/^' . str_replace(array('?', '*'), 
+                                           array('\w{1}', '.*?'),
+                                           strtoupper($matches[1])) 
+                             . '$/', strtoupper($host)))
+         {
+            fclose($HOSTTABLE);
+            return $matches[2];
+         }
+
+      }
+
+
+      fclose($HOSTTABLE);
+      return $host;
+
+
+   }
+
+
+   // if we got here and a catchall login is available, use it
+   //
+   if (!empty($catchallLogin))
+   {
+
+      // remove extraneous stuff we don't need off end (begins with plus sign)
+      //
+      $catchallLogin = preg_replace('/\+%\S+\s*$/', '', $catchallLogin);
+
+      return $catchallLogin;
+
+   }
+
+
+   // otherwise, unaltered username is returned
+   //
+   return $user;
+
+}
+
+
+
+// remap a user login to the one specified in the sendmail virtual
+// user table (path given by the $sendmailVirtualUserTable parameter)
+//
+function getSendmailVirtualUser($user, $sendmailVirtualUserTable)
+{
+
+   global $at;
+
+   $catchallLogin = '';
+
+
+   if ($VIRTTABLE = @fopen ($sendmailVirtualUserTable, 'r'))
+   {
+
+      // be ready to use catchall address - prepare domain name
+      //
+      $domainName = '';
+      if (strpos($user, $at) !== FALSE)
+         $domainName = substr($user, strpos($user, $at));
+
+
+      while (!feof($VIRTTABLE))
+      {
+
+         $line = fgets($VIRTTABLE, 4096);
+         $line = trim($line);
+
+
+         // skip blank lines and comment lines
+         //
+         if (strpos($line, '#') === 0 || strlen($line) < 3)
+            continue;
+
+
+         // parse fields out
+         //
+         preg_match('/^(\S+)\s+(\S+)/', $line, $matches);
+
+
+         // grab catchall login
+         //
+         if ($domainName === $matches[1]) 
+            $catchallLogin = $matches[2];
+
+
+         // if user is found, get remapped login and return
+         //
+         if ($user === $matches[1]) 
+         {
+            fclose($VIRTTABLE);
+            return $matches[2];
+         }
+
+      }
+
+
+      fclose($VIRTTABLE);
+
+
+   }
+
+
+   // if we got here and a catchall login is available, use it
+   //
+   if (!empty($catchallLogin))
+   {
+
+      // remove extraneous stuff we don't need off end (begins with plus sign)
+      //
+      $catchallLogin = preg_replace('/\+%\S+\s*$/', '', $catchallLogin);
+
+      return $catchallLogin;
+
+   }
+
+
+   // otherwise, unaltered username is returned
+   //
+   return $user;
+
+}
+
+
+
+?>

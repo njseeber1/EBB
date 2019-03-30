@@ -1,0 +1,61 @@
+Username Display -- Version 2.2
+
+Someone wanted a plugin to show the current username so they didn't get
+mixed up with their numerous accounts.
+
+
+Features
+========
+
+* Positionable
+* Three different formats for displaying
+* Able to be disabled
+
+
+Description
+===========
+
+Just shows the username in a box either above or below the list of folders
+and/or as the "Message Of The Day".
+
+
+Future Work
+===========
+
+* Ideas?
+
+
+Change Log
+==========
+
+  * v2.3 29/08/03 Paul Lesneiwski <pdontthink@angrynerds.com>
+      Added the ability for the username and the regular MOTD
+      to coexist (or for the MOTD to be overwritten - this is
+      configurable).
+      Added new configuration file.
+
+  * v2.2 23/06/03 Paul Lesneiwski <pdontthink@angrynerds.com>
+      Added the ability for administrators to indicate that "@domain.com"
+      should be added to username display
+
+  * v2.1 14/06/03 Paul Lesneiwski <pdontthink@angrynerds.com>
+      Option to put username into a welcome message displayed where
+      the Message Of The Day appears.
+      Shrunk the display of the username above/below the folder 
+      list with usage of proportional font.  Ahhh.
+
+  * v2.0 26/03/03 Paul Lesneiwski <pdontthink@angrynerds.com>
+      Updated for compatibility with SquirrelMail v1.4
+      Internationalized all output
+      New setup.php format for better overall SquirralMail performance
+
+  * v1.1 13/02/03 Paul Lesneiwski <pdontthink@angrynerds.com>
+      Made compatible with register_globals = Off
+      Made compatible with Plugin Updates plugin 
+   
+  * v1.0 - Initial version
+
+
+
+Questions/comments/flames/etc can be sent to the SquirrelMail Plugins list.
+

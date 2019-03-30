@@ -1,0 +1,65 @@
+<BODY BGCOLOR="#E0E0E0">
+	<FONT FACE="Verdana,Arial,Helvetica">
+		<FONT  SIZE=3>
+			<B>Summary of WinLIKE form submit samples</B>
+		</FONT>
+		<BR><BR>
+
+		<TABLE WIDTH=100%>
+			<TR BGCOLOR=#f1f1f1><TD>
+				<FONT SIZE=2>
+					<B>Normal submits within windows (#42):</B><BR>
+					&nbsp;&nbsp;&nbsp;	&lt;form id=form1><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;input name=eingabe type=text><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;input type=submit name=widget value=button><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;a href="javascript:document.getElementById('form1').submit();">Submit per Script&lt;/a><BR>
+					&nbsp;&nbsp;&nbsp;	&lt;/form><BR>
+					
+					<BR>
+					<B>Submits within windows with WinLIKE help (#42):</B><BR>
+					&nbsp;&nbsp;&nbsp;	<FONT COLOR="EE0000">&lt;script src="...../winlike/winman/winxtra.js">&lt;/script></FONT><BR>
+					&nbsp;&nbsp;&nbsp;	&lt;form id=form1 <FONT COLOR="EE0000">onSubmit="return submitWinLIKE_(event)"</FONT>><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;input name=eingabe type=text><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;input type=submit name=widget value=button><BR>
+					&nbsp;&nbsp;&nbsp;	&lt;/form><BR>
+			</TR></TD>
+		
+			<TR><TD>
+				<BR>
+			</TR></TD>
+		
+			<TR BGCOLOR=#f1f1f1><TD>
+				<FONT SIZE=2>
+					<B>Submits in foreign windows (#43/#44):</B><BR>
+					&nbsp;&nbsp;&nbsp;	<FONT COLOR="EE0000">&lt;script src="...../winlike/winman/winxtra.js">&lt;/script></FONT><BR>
+					&nbsp;&nbsp;&nbsp;	&lt;form id=form1 target=new_win <FONT COLOR="EE0000">onSubmit="return submitWinLIKE_(event)"</FONT>><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;input name=eingabe type=text><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;input type=submit name=widget value=button <FONT COLOR="EE0000">onClick="submitWinLIKE_(event)"</FONT>><BR>
+					&nbsp;&nbsp;&nbsp;	&lt;/form><BR>
+			
+					<BR>
+					<B>Submits in foreign windows with ASP.NET System.Web.UI.HTMLControls (#43):</B><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;		<FONT COLOR="EE0000">&lt;script src="...../winlike/winman/winxtra.js">&lt;/script></FONT><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;		&lt;form runat=server id=Form1 target=new_win <FONT COLOR="EE0000">onsubmit="return submitWinLIKE_(event)"</FONT>><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			&lt;input runat=server id=text type=text><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			&lt;input type=submit name=widget value=button <FONT COLOR="EE0000">onClick="submitWinLIKE_(event)"</FONT><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;runat=server onserverclick=myserverhandler><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;		&lt;/form><BR>
+
+					<BR>
+					<B>Submits in foreign windows with ASP.NET System.Web.UI.WebControls (#43):</B><BR>
+					&nbsp;&nbsp;&nbsp;	ASPX file:<BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		<FONT COLOR="EE0000">&lt;script src="...../winlike/winman/winxtra.js">&lt;/script></FONT><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;form runat=server id=Form1 target=new_win <FONT COLOR="EE0000">onsubmit="return submitWinLIKE_(event)"</FONT>><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			&lt;input runat=server id=text type=text><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			&lt;asp:button runat=server id=Button1 text=button onClick=myServerHandler>&lt;/asp:button><BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;/form><BR>
+					&nbsp;&nbsp;&nbsp;	Add to Page_Load function:<BR>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		<FONT COLOR="EE0000">Button1.Attributes.Add("onClick", "submitWinLIKE_(event)");</FONT><BR>
+			</TR></TD>
+		<TABLE>		
+
+				<!--<BR>
+				<B>Content after submit redirect in Mozilla/Netscape (#45):</B><BR>
+				&nbsp;&nbsp;&nbsp;	<FONT COLOR="EE0000">&lt;script src="...../winlike/winman/winxtra.js">&lt;/script></FONT><BR>
+				&nbsp;&nbsp;&nbsp;		&lt;body <FONT COLOR="EE0000">onLoad="registerWinLIKE_();"</FONT>><BR>-->

@@ -1,0 +1,19 @@
+Changelog for Mini Squirrelmail plugin
+
+   0.2
+  -----
+
+  - Added UID support for 1.3 series Squirrelmail
+  - Updated message parsing for new message object structure
+  - disabled page refresh when reading a message
+  - modified JS function to allow resizing of mini window
+  - Added 'keep as new' link to bottom of read message display
+  - Added a third text size option to display prefs
+  - Various other fixes and cleanups
+
+   0.1
+  ----- 
+
+  - initial release
+
+

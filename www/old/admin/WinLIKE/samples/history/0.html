@@ -1,0 +1,25 @@
+<link rel="stylesheet" href=c.css>
+<title>history</title>
+<p>
+WinLIKE windows have their own history. You can determine whether a window shall display its
+history buttons or not. By default, the history buttons will be shown. You can hide them by insertig
+the following line in the window`s declaration routine:
+</p>
+<P CLASS=DE>
+&lt;SCRIPT><BR>
+WinLIKE=new Object;
+WinLIKE.errorpage='winlike/winman/hlp-error.html';
+WinLIKE.definewindows=mydefs;<br>
+function mydefs()<br>
+{<br>
+&nbsp;&nbsp;var j=cW(...);<br>
+&nbsp;&nbsp;<b>j.HD=false; </b><br>
+&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;WinLIKE.addwindow(j);<br>
+}<br>
+&lt;/SCRIPT><br>
+</P>
+<p>
+<a href=2.html>2.html</a>
+<a href=3.html>3.html</a>
+</p>

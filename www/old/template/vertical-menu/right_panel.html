@@ -1,0 +1,83 @@
+<!-- put in a body tag  to get the background coulor to flow thru -->
+<body  bgcolor="#394984">
+<table width="150" align="right" border="0" bgcolor="#394984">
+<table width="150" align="left" border="0" >
+			  <?php 
+if ($active == "yes") 
+   { 
+ 
+ echo "<tr><td class=\"sql_button\" onclick=\"javascript: window.location=('$config[baseurl];/members/listsavedsearches.php')\">";
+echo "<font class=\"sql_text\"><b>$lang[menu_saved_searches]</b></font></td></tr>";
+
+
+ echo "<tr><td class=\"sql_button\" onclick=\"javascript: window.location=('config[baseurl];/members/listfavorites.php')\">";
+echo "<font class=\"sql_text\"><b>$lang[menu_favorite_listings]</b></font></td></tr>";
+			  
+echo "<tr><td class=\"sql_button\" onclick=\"javascript: window.location=('$config[baseurl]/members/logout.php')\">";
+echo "<font class=\"sql_text\"><b>Logout</b></font></td></tr>";
+   
+}	else	{	
+
+echo "<tr><td class=\"sql_button\" onclick=\"javascript: window.location=('$config[baseurl]/members/member_signup.php')\">";
+echo "<font class=\"sql_text\"><b>Register</b></font></td></tr>";
+
+?>
+<tr><td align="center">
+<form action="<?php echo $config[baseurl]; ?>/admin/index.php" method="post">
+Login Name: <br><input type="text" name="user_name">
+Password: <input type="password" name="user_pass">
+<p><input type="submit" value="Log In"></p>
+</form>
+<?php	}	?>
+</td></tr><tr>
+<tr><td><hr>
+
+
+<!-- <b><u>Login:</u></b><br>
+<form action="<?php echo $config[baseurl]; ?>/admin/index.php" method="post"> 
+Login Name: <input type="text" name="user_name"> 
+Password: <input type="password" name="user_pass"></p> 
+<p><input type="submit" value="Log In"> 
+</form>
+
+<hr> -->
+
+<table><tr><td>
+
+<b><u>Direct Link:</u></b><br>
+<font size="-2">Enter the property ID</font>
+<form name="id_search" action="./listingview.php" method="get"> 
+<INPUT TYPE="TEXT" NAME="listingID" id="listingID" VALUE="" size="10"> &nbsp;&nbsp;
+<INPUT TYPE="submit" value="Go"> 
+
+</form> 
+<form name="townjump" action="./listing_browse.php" method="get">
+<?php searchbox_city_dropdown(); ?>
+&nbsp;&nbsp;
+<INPUT TYPE="submit" value="Go">
+</form>
+</td></tr></table>
+<hr>
+
+
+<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="lloydmc@netxp.com.au">
+<input type="hidden" name="item_name" value="Open-Realty Modifiers">
+<input type="hidden" name="item_number" value="mods">
+<input type="hidden" name="no_note" value="1">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="tax" value="0">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-butcc-donate.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+</form>
+
+<hr>
+  <a href="http://validator.w3.org/check/referer" target="_blank">
+	  <img border="0" src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01!" height="31" width="88"></a>
+<br>
+<a href="http://jigsaw.w3.org/css-validator/">
+  <img style="border:0;width:88px;height:31px"
+       src="http://jigsaw.w3.org/css-validator/images/vcss" 
+       alt="Valid CSS!">
+ </a>
+</td></tr></table>

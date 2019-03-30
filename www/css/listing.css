@@ -1,0 +1,165 @@
+@charset "utf-8";
+.bodylistings {
+	float: left;
+	width: 930px;
+	padding-bottom: 20px;
+}
+.sortcol {
+	float: left;
+	width: 928px;
+	background-color: #8b9dc3;
+	margin-top: 10px;
+	border: 1px solid #CCCCCC;
+	margin-bottom: 10px;
+}
+.sortcol ul {
+	margin: 0px;
+	padding: 0px;
+}
+.sortcol li {
+	float: left;
+	font-size: 16px;
+}
+.sortcol li a {
+	margin: 0px;
+	display: block;
+	color: #FFFFFF;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #CCCCCC;
+	width: 150px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+.sortcol li a:hover {
+	background-color: #333333;
+	color: #FFFFFF;
+}
+.sortcolsub {
+	float: left;
+	width: 928px;
+	background-color: #F8F8F8;
+	margin-bottom: 10px;
+	border: 1px solid #CCCCCC;
+}
+.sortcolsub ul {
+	margin: 0px;
+	padding: 0px;
+}
+.sortcolsub li {
+	float: left;
+}
+.sortcolsub li a {
+	margin: 0px;
+	text-align: center;
+	display: block;
+	color: #000000;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #CCCCCC;
+	padding-top: 10px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+.sortcolsub li a:hover {
+	background-color: #333333;
+	color: #FFFFFF;
+}
+.sortcolbox {
+	float: left;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+
+
+.bodylistingslt {
+	float: left;
+	width: 630px;
+}
+.bodylistingsrt {
+	float: left;
+	width: 275px;
+	padding-left: 25px;
+	background-color: #F1F1F1;
+}
+.listingbox {
+	float: left;
+	width: 930px;
+	padding-bottom: 10px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #006395;
+	padding-top: 5px;
+}
+.listingboxcol {
+	float: left;
+	width: 930px;
+	margin-bottom: 10px;
+	background-color: #F1F1F1;
+	margin-top: 5px;
+}
+
+.listingbox img, .listingbox iframe {
+	float: left;
+	width: 630px;
+	margin: 0px;
+	height: 350px;
+}
+
+.listinghead {
+	float: left;
+	width: 260px;
+	font-size: 16px;
+	font-family: robotomedium;
+	color: #006395;
+	margin-bottom: 10px;
+	margin-top: 15px;
+	line-height: 22px;
+}
+.listingtxt {
+	float: left;
+	width: 100%;
+}
+.listingcol {
+	color: #333333;
+	font-size: 13px;
+	float: left;
+}
+.listinghl {
+	color: #666666;
+}
+.listnav {
+	float: left;
+	width: 630px;
+	background-color: #eaeaea;
+	padding: 0px;
+	letter-spacing: 0.1em;
+	margin: 0px;
+}
+
+.listnav ul {
+	margin: 0px;
+	padding: 0px;
+}
+.listnav li {
+	float: left;
+}
+.listnav li a {
+	background-color: #0066CC;
+	width: 188px;
+	margin: 0px;
+	padding: 10px;
+	border: 1px solid #006699;
+	text-align: center;
+	display: block;
+	color: #FFFFFF;
+}
+.listnav li a:hover {
+	background-color: #F0F0F0;
+	color: #333333;
+}

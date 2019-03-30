@@ -1,0 +1,33 @@
+<SCRIPT>
+	// close the window
+	function testv(event)
+	{	
+		// insteed of this, you can also use getWindowNumber_(), but you need to load the winxtra.js
+		var winNr=parent.WinLIKE.searchwindow('scriptWindow2'); // get our own window number
+		parent.WinLIKE.windows[winNr].close(); // close myself
+	}
+</SCRIPT>
+
+
+<BODY>
+
+	<FONT FACE="Verdana,Arial,Helvetica" SIZE=2>
+
+		<br>
+		You can use the function win.<B>close()</b> to close a window.
+		win is the object of the desired window.
+		<br>
+		Use parent. or f.i. top. to reach WinLIKE, because this script is
+		inside of the content and does not know anything about WinLIKE.
+
+		<b>
+			<br><BR>
+			var winNr=parent.WinLIKE.searchwindow('scriptWindow2');<br>
+			parent.WinLIKE.windows[winNr].close()<br>
+		</b>
+		<br><br>
+		
+
+		<input type=button value="Close this window (function testv)" onClick="testv(event)">
+
+</BODY>

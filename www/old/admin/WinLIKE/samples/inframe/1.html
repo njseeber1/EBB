@@ -1,0 +1,19 @@
+<SCRIPT src="../../winlike/winman/winxtra.js"></SCRIPT>
+<script>
+function x(event)
+{
+  // function WinLIKE.openaddress (site, query, windowName, windowNr, newWin) 
+  // - site is the site you wish to load (eg. an asp-file or php-file)
+  // - query is a parameter. The site will be load with the QueryString: "?[query]=[nummer]", in the following example eg. "?target=5"
+  // - windowName is the window name of the window which will contain the result
+  // - windowNr ist the window number of the window which will contain the result, please specify only one of the parameters windowName and windowNr
+  // - newWin sets, whether a new window shall be opened each time or not
+			
+	place=recognizeWinLIKE_(top); // find WinLIKE
+	place.WinLIKE.openaddress('samples/inframe/2.html', null, 'platin', null, true);
+
+	// the actionWinLIKE_ function is an improved equivalent for the JavaScript function 'eval'
+	//actionWinLIKE_("WinLIKE.openaddress('samples/inframe/2.html', null, 'platin', null, true);", event); 
+}	
+</script>
+<input type=button value="open 2.html in the upper IFrame" onClick=x(event)>

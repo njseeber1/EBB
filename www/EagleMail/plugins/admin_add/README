@@ -1,0 +1,43 @@
+/*******************************************************************************
+
+    Author ......... Jimmy Conner
+    Contact ........ jimmy@advcs.org
+    Home Site ...... http://www.advcs.org/
+    Program ........ Admin Add
+    Version ........ 0.1
+    Purpose ........ Add / Remove Admins
+
+*******************************************************************************/
+
+   REQUIRES : Squirrlemail v1.4.0 or higher
+
+
+Features
+========
+   Allows you to add and delete admins from the config/admins file
+   
+
+Installation
+============
+
+   As with other plugins, just uncompress the archive in the plugins
+   directory, go back to the main directory, run configure and add the plugin.
+   Questions/comments/flames/etc can be sent to the jimmy@advcs.org
+   
+   To administer the plugin, create a file called "admins" inside of the squirrelmail
+   config directory.  Then put your the usernames that are used to log into squirrelmail
+   in this file (1 name per line) and leave a few blank lines after the last one.
+   Then open Squirrlemail and goto the options panel and click on "Virus Scan"
+   (This is a limitation of how the administrator plugin handles the admins file,
+    I do it this way to keep compatibility)
+    
+To Do
+============
+  Groups (certain admins for certain plugins)
+  
+
+
+Change Log
+============
+   0.1
+      * Initial release

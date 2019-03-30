@@ -1,0 +1,27 @@
+
+<SCRIPT SRC=../../winlike/winman/winxtra.js></SCRIPT>
+<script>
+	function x()
+	{
+		var li=document.getElementById('li'); // get the link
+		var nr=getWindowNumber_();
+		if (li.innerHTML=='Two')
+		{
+			li.href=parent.WinLIKE.setlink('3.html',nr,true);
+			li.innerHTML='Three';
+		}
+		else
+		{
+			li.href=parent.WinLIKE.setlink('dir/2.html',nr,true);
+			li.innerHTML='Two';
+		}
+	}
+</script>
+
+<FONT FACE="Arial,Verdana,Helvetica" SIZE=2>
+<BR>
+Link: <B>
+<a id=li target=newWindow href=dir/2.html>Two</a>
+</B>
+<BR><BR><BR>
+<input type=button onClick=x() value="change href">

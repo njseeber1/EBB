@@ -1,0 +1,108 @@
+<!-- WinLIKE - Copyright (c) 1998-2003 by CEITON technologies GmbH - www.winlike.net -->
+<SCRIPT>WinLIKEerrorpage='winlike/winman/hlp-error.html';</SCRIPT>
+<SCRIPT SRC="winlike/winman/wininit.js"></SCRIPT><SCRIPT SRC="winlike/winman/winman.js"></SCRIPT>
+<!-- Delete the following line, if the editor should not be used anymore. -->
+
+
+<script>
+	WinLIKE.definewindows=mydefs;
+	function mydefs()
+	{
+		// for relatuve positioning insert here %-values for x,y,height and width:
+		var j=new WinLIKE.window('win 1','1%','20%', '40%', '35%', 1);
+		//j.Rel=true; // this is set by WinLIKE automatically because % values above
+		j.Min=false;
+		j.Cls=false;
+		j.Mov=false;
+		j.Ski="black";
+		WinLIKE.addwindow(j);
+		
+		var j=new WinLIKE.window('win 2','1%','56%', '40%', '35%', 2);
+		j.Min=false;
+		j.Cls=false;
+		j.Mov=false;
+		j.Ski="black";
+		WinLIKE.addwindow(j);
+		
+		var j=new WinLIKE.window('win 3','1%','92%', '40%', '35%', 3);
+		j.Min=false;
+		j.Cls=false;
+		j.Mov=false;
+		j.Ski="black";
+		WinLIKE.addwindow(j);
+		
+		var j=new WinLIKE.window('win 4','80%','20%', '19%', '79%', 4);
+		j.Ski="black";
+		j.HD=false;
+		WinLIKE.addwindow(j);
+		
+		var j=new WinLIKE.window('',200,200,500,300, 5);
+		j.Adr="samples/relative/1.html";
+		j.Nam="change";
+		WinLIKE.addwindow(j);
+	}
+	
+  
+	function change_one()
+	{
+		var winNr=WinLIKE.searchwindow('change'); // search the window
+		if (WinLIKE.windows[winNr].Rel) // window is relativ
+		{
+			WinLIKE.windows[winNr].Rel = false; // not relative anymore
+			// here you can define the window coordinates manually
+			//WinLIKE.windows[winNr].Left=400; // 400 pixels
+			//WinLIKE.windows[winNr].Top=400;
+			//WinLIKE.windows[winNr].Width=400;
+			//WinLIKE.windows[winNr].Height=400;
+			document.getElementById('btn').value='relative'; // set the value of the button
+		}
+		else
+		{
+			WinLIKE.windows[winNr].Rel = true; // relative
+			// here you can define the window coordinates manually
+			//WinLIKE.windows[winNr].RLeft=0.3; // 0.3 * browser width (30%)
+			//WinLIKE.windows[winNr].RTop=0.3;
+			//WinLIKE.windows[winNr].RWidth=0.3;
+			//WinLIKE.windows[winNr].RHeight=0.3;
+			document.getElementById('btn').value='absolute';
+		}
+		WinLIKE.windows[winNr].draw();
+	}
+	
+	function change_all()
+	{
+		if (document.getElementById('btn').value=='absolute') {
+			for (var jj=1;jj<WinLIKE.windows.length;jj++)	// go thru all windows
+				if (WinLIKE.windows[jj]!=null)	// if the window is alive
+					WinLIKE.windows[jj].Rel = false; // set it relative
+			document.getElementById('btn').value='relative';
+		} else {
+			for (var jj=1;jj<WinLIKE.windows.length;jj++)
+				if (WinLIKE.windows[jj]!=null)
+			 		WinLIKE.windows[jj].Rel = true;
+			document.getElementById('btn').value='absolute';
+		}
+		WinLIKE.resizewindows();
+	}
+</script>
+
+<BODY onResize=WinLIKE.resizewindows() onload=WinLIKE.init() onDragStart="self.event.returnValue=F_;">
+	<!-- Don't remove this line! --><IMG ID=ih_ SRC="skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+	<!-- You can change this loading picture! --><IMG ID=ig_ SRC="winlike/winman/load.gif" STYLE="position:absolute;left:35%;top:40%;z-Index:4001">
+
+	<!-- Insert your page-content here! -->
+
+	
+	<DIV STYLE="position:absolute;left:110;top:15">
+		<FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+			This page shows you how the relative positioning of windows works.
+			Resize your browser to see the effect!
+			<BR>
+			Click the following button to change the relative positioning behaviour of the grey window by changing the .Rel Property:   
+			<!-- try also to call the function change_all() -->
+			<input type=button id=btn onMouseUp=change_one() value=relative>
+			<BR><BR>
+			You do not need to set the .Rel property at startup. The property is set by WinLIKE automatically.
+		</FONT>
+	</DIV>
+	

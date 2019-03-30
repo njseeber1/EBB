@@ -1,0 +1,173 @@
+<BODY>
+<link rel=stylesheet href=winman.css><link rel=stylesheet href=winedit.css>
+<TITLE>Links</TITLE>
+<BR>
+<P CLASS=DE>
+	<B>The FRAME principle</B>
+	<BR><BR>
+  WinLIKE-Windows are treated like FRAMES. Therefore a link with a TARGET-property can load 
+  an HTML-page into a window with the requested name.
+</P>
+<P CLASS=DE>
+	<B>Creating a window</B>
+	<BR><BR>
+	A WinLIKE-Window can be displayed on the website in three different ways. 
+	<BR><BR>
+	1) On an HTML-page it is defined as standard and will be shown right from the start with contents. 
+	<BR><BR>
+  2) The window is also defined right from the beginning, but without content and invisible. Only with a click 
+  on a special link the window with its content will be rendered visible. 
+	<BR><BR>
+	3) The window is not defined, but a special link refers to that window. On choosing that link, a standard 
+	window will be created and filled with the content of that link.
+</P>
+<P CLASS=DE>
+	<B>Example</B>
+	<BR><BR>
+	To open a window with a distinct size, position, skin etc. with a link, just do the following: 
+	<BR><BR>
+	Code a link of the form &lt;A HREF="hallo.html" TARGET=new>...&lt;/A>.
+	In your WinLIKE-page you should also declare a window called <I>new</I> (j.Nam='new';)
+	and make it invisible (j.Vis=false;).
+	<BR><BR>
+	A click on the link will subsequently render the window <I>new</I> visible and will load <I>hallo.html</I> into it.
+</P>
+<P CLASS=DE>
+	<B>Link types</B>
+	<BR><I>(try also shift- or right-click)</I>
+	<BR><BR>
+	<TABLE>
+  		<TR>
+    			<TD CLASS=DE>
+    				No target - the current window will be overwritten
+    			</TD>
+    			<TD CLASS=DE>
+    				<A HREF="hallo.html">&lt;A HREF="hallo.html"></A>
+    			</TD>
+  		</TR>
+  		<TR>
+    			<TD CLASS=DE>
+    				No target - the current window will be overwritten
+    			</TD>
+    			<TD CLASS=DE>
+    				<A HREF="test.gif">&lt;A HREF="test.gif"></A>
+    			</TD>
+  		</TR>
+    		<TR>
+    			<TD CLASS=DE>
+    				No target - the current window will be overwritten
+    			</TD>
+    			<TD CLASS=DE>
+    				<A HREF="test.pdf">&lt;A HREF="test.pdf"></A>
+    			</TD>
+  		</TR>
+
+  		<TR>
+    			<TD CLASS=DE>
+    			  Own window called <I>links</I> will be overwritten
+    			</TD>
+			<TD CLASS=DE NOWRAP>
+				<A HREF="hallo.html#bottom" TARGET="links">&lt;A HREF="hallo.html#bottom" TARGET="links"></A>
+			</TD>
+  		</TR>
+  		<TR>
+    			<TD CLASS=DE>
+    				Window <I>new</I> exists and will be displayed
+    			</TD>
+    			<TD CLASS=DE>
+    				<A HREF="hallo.html#bottom" TARGET="new">&lt;A HREF="hallo.html#bottom" TARGET="new"></A>
+    			</TD>
+  		</TR>
+  		<TR>
+    			<TD CLASS=DE>
+    				Link to window <I>new</I> with a querystring
+    			</TD>
+    			<TD CLASS=DE>
+    				<A HREF="hallo.html?a=b+c&d=8" TARGET="new">&lt;A HREF="hallo.html?a=b+c&d=8" TARGET="new"></A>
+    			</TD>
+  		</TR>
+  		<TR>
+    			<TD CLASS=DE>
+    				Window does not exists, default window with the name <I>xyz</I> will be created
+    			</TD>
+    			<TD CLASS=DE>
+    				<A HREF="hallo.html" TARGET="xyz">&lt;A HREF="hallo.html" TARGET="xyz"></A>
+    			</TD>
+  		</TR>
+  		<TR>
+    			<TD CLASS=DE>
+    				Window does not exists, default window with the name <I>xyz</I> will be created
+    			  or formerly created window will be overwritten
+    			</TD>
+			<TD CLASS=DE NOWRAP>
+				<A HREF="http://www.google.de" TARGET="xyz">&lt;A HREF="http://www.google.de" TARGET="xyz"></A>
+			</TD>
+  		</TR>  		
+  		<TR>
+    			<TD CLASS=DE>
+    				default target (_blank)
+    			</TD>
+    			<TD CLASS=DE>
+    				<A HREF="hallo.html" TARGET=_blank>&lt;A HREF="hallo.html" TARGET=_blank></A>
+    			</TD>
+  		</TR>
+  		<TR>
+    			<TD CLASS=DE>
+    				default target (_top)
+    			</TD>
+    			<TD CLASS=DE>
+    				<A HREF="hallo.html" TARGET=_top>&lt;A HREF="hallo.html" TARGET=_top></A>
+    			</TD>
+  		</TR>
+
+  		<TR>
+    			<TD CLASS=DE>
+    				special link <I>Name</I> e.g. for frames (turns WinLIKE off)
+    			</TD>
+    			<TD CLASS=DE>
+    				<A HREF="frame.html" NAME=WLoff_ TARGET=myframe>&lt;A HREF="frame.html" NAME=WLoff_ TARGET=myframe></A>
+    			</TD>
+  		</TR>
+  		<TR>
+    			<TD CLASS=DE>
+    				special link <I>Name</I> e.g. for downloads (turns WinLIKE off)
+    			</TD>
+    			<TD CLASS=DE>
+    				<A HREF="test.exe" NAME=WLoff_>&lt;A HREF="test.exe" NAME=WLoff_></A>
+    			</TD>
+  		</TR>
+  		<TR>
+    			<TD CLASS=DE>
+    				special link <I>Name</I> (turns WinLIKE off)
+    			</TD>
+    			<TD CLASS=DE>
+    				<A HREF="test.zip" NAME=WLoff_>&lt;A HREF="test.zip" NAME=WLoff_></A>
+    			</TD>
+  		</TR>
+  		<TR>
+    			<TD CLASS=DE>
+    				special link <I>Name</I> (turns WinLIKE off)
+    			</TD>
+    			<TD CLASS=DE>
+    				<A HREF="javascript:alert('hallo');">&lt;A HREF="javascript:alert('hallo')"></A>
+    			</TD>
+  		</TR>
+  		<TR>
+    			<TD CLASS=DE>
+    				Mail-Link
+    			</TD>
+    			<TD CLASS=DE>
+    				<A HREF="mailto:contact@ceiton.com">&lt;A HREF="mailto:contact@ceiton.com"></A>
+    			</TD>
+  		</TR>
+	</TABLE>
+</P>
+<P CLASS=DE>
+<B>ALT key</B>
+<BR><BR>
+If you hold down the ALT key while clicking a link, the target window will not be overwritten, 
+but a new window (a copy) will be created. Later, the original window will not be loaded 
+on a left click anymore, but only the new window. 
+</P>
+<BR>
+</BODY>

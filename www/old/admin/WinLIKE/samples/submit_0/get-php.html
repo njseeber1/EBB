@@ -1,0 +1,40 @@
+
+<FONT FACE="Arial, Verdana, Helvetiva" SIZE=2>
+<B>
+PHP: Form-GET, in the same window
+</B>
+
+<form id=form1 action="result/result.php" method=get>
+
+	<input name=eingabe type=text value=123>
+
+	<BR>
+	<select name=artist[] size="4" multiple>
+		<option value=Heino selected>Heino</option>
+		<option value=Tom>Tom</option>
+		<option value=Nina selected>Nina</option>
+		<option value=Marianne>Marianne</option>
+	</select>
+
+	<br>
+	<input type="radio" name="zahlmethode" value="Mastercard" checked> Mastercard
+	<input type="radio" name="zahlmethode" value="Visa"> Visa
+
+	<br>
+	<input type="checkbox" name="zutat[]" value="Salami" checked> Salami
+	<input type="checkbox" name="zutat[]" value="Pilze"> Pilze
+
+	<BR>
+	<textarea name=blabla rows=2 cols=20>here is my text</textarea>
+
+	<br>
+	<input type=submit name=widget value=button>
+	or
+	<A HREF="javascript:document.getElementById('form1').submit();">Submit per Script</A>
+
+</form>
+
+<SCRIPT>
+	// set the focus (cursor is blinking) to the first ([0]) INPUT field
+	document.getElementsByTagName('INPUT')[0].focus();
+</SCRIPT>

@@ -1,0 +1,19 @@
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td align="left" background="<?php echo $config[template_url] ?>/images/navbg.gif">&nbsp;</td>
+  </tr>
+  <tr> 
+      <td align="center" valign="top" background="<?php echo "$config[template_url]"; ?>/images/bottom.gif"> 
+        <p class="small">Eagle Business Brokers<br>
+        Powered by: <a href="http://www.LiquidConceptions.com">Liquid Conceptions</a><br>
+        Visit <a href="http://www.LiquidConceptions.com">http://www.LiquidConceptions.com</a></p>
+        <p class="small" align="left"> </p></td>
+  </tr>
+</table>
+<?php
+		$end_time = getmicrotime();
+		$render_time = sprintf('%.16f', $end_time - $start_time);
+		echo "<!-- This page was generated in $render_time seconds -->";
+?>
+	</body>
+</html>

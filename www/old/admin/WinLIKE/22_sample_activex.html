@@ -1,0 +1,34 @@
+<!-- WinLIKE - Copyright (c) 1998-2003 by CEITON technologies GmbH - www.winlike.net -->
+<SCRIPT>WinLIKEerrorpage='winlike/winman/hlp-error.html';</SCRIPT>
+<SCRIPT SRC="winlike/winman/wininit.js"></SCRIPT><SCRIPT SRC="winlike/winman/winman.js"></SCRIPT>
+<!-- Delete the following line, if the editor should not be used anymore. -->
+<SCRIPT SRC="winlike/winedit/winedit.js"></SCRIPT>
+
+<SCRIPT>
+  WinLIKE.definewindows=mydefs;
+  function mydefs() {
+  	var j=new WinLIKE.window('',137,84,663,289,1);
+  	j.Adr="samples/dashboard/outlook.html";
+  	WinLIKE.addwindow(j);
+  	
+  	var j=new WinLIKE.window('W2K System Monitor',95,287,525,379,2);
+  	j.Adr="samples/dashboard/sysmon.html";
+  	WinLIKE.addwindow(j);
+}
+</SCRIPT>
+
+
+<BODY onResize=WinLIKE.resizewindows() onload=WinLIKE.init() onDragStart="self.event.returnValue=F_;">
+	<!-- Don't remove this line! --><IMG ID=ih_ SRC="skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+	<!-- You can change this loading picture! --><IMG ID=ig_ SRC="winlike/winman/load.gif" STYLE="position:absolute;left:35%;top:40%;z-Index:4001">
+
+	<!-- Insert your page-content here! -->
+
+	
+	
+	<DIV STYLE="position:absolute;left:110;top:15">
+		<FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+		In IE you can also load ActiveX-Controls into a WinLIKE-window. In this example we use the Outlook-Inbox and the Windows-System Monitor.
+		</FONT>
+	</DIV>
+	

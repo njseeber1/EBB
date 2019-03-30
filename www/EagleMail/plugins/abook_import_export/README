@@ -1,0 +1,37 @@
+This file is to inform you of any bugs or issues related to using this plugin.
+
+GENERAL USE
+===========
+1. Sanity checks
+	
+	There still aren't a lot of sanity checks on the file that you upload. 
+	As of right now it will check to see if you uploaded an Outlook file or 
+	one that was downloaded from Squirrelmail. It will perform it's upload 
+	a little differently from each side. 
+
+
+Credit where Credit is due. 
+===========================
+
+	The original plugin that I made my updates to was Dustin Anders' 
+	abook_import_export plugin version 0.6 the Squirrelmail 1.4 version. The
+	plugin interface on the Address page is still the same, as well as the 
+	address_book_export.php, for the most part. There is one small change to 
+	use the hashed directory structure. The majority of my changes went into 
+	the address_book_import.php. There is still some of the original code, but 
+	not a whole lot. I moved where things are to make it easier to read and 
+	to write to.
+
+
+	I developed and tested this version of the plugin using PHP 4.1.1, Squirrelmail
+	1.4.0 and Outlook 2000 as the export file to test with. Please let me know 
+	if you find any bugs or issues, as well as enhancements and feature 
+	requests. 
+- Andy Brook <andyb@iserv.net>
+
+
+  Did some "under the cover" work, cleaned up some E_ALL errors, and updated
+  the plugin for 1.4+ compatability.
+- Christian Sauer <christian@endrun.org>
+
+

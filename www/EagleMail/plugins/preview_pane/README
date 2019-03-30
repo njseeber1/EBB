@@ -1,0 +1,49 @@
+Preview Pane plugin for SquirrelMail
+====================================
+Ver 1.1, 7/03/04
+
+Original author: Paul Lesneiwski <pdontthink@angrynerds.com>
+
+
+Description
+===========
+
+This plugin allows the user to turn on an extra frame below
+the mailbox message list where the messages themselves are 
+displayed, very similar to many other popular (typically
+non-web-based) email clients.
+
+Note that users must turn this functionality on by going to
+the Options-->Display Preferences menu.  
+
+While this plugin has been tested thoroughly, there may be
+some functionalities and/or plugins that don't quite work 
+when the preview pane is turned on, since SquirrelMail was 
+not designed with this type of layout in mind.  Future versions
+of SquirrelMail will have its presentation layer abstracted
+to a larger degree, at which time any anomalies you may 
+experience with this plugin will probably go away.  But for
+the most part, this plugin should be very solid.
+
+Feel free to report any anomalous behavior to the SquirrelMail
+Plugins mailing list.  
+
+Also note that this plugin was meant to work with SquirrelMail
+versions 1.4.3 and 1.5.1.  It will work with 1.4.1, 1.4.2, 
+1.5.0, and probably 1.4.0, however, it requires several code
+updates that are currently only in 1.4.3 and 1.5.1.  
+
+Finally, for users of the Sent Confirmation plugin, you should
+download the newest version (1.6) of Sent Confirmation that was 
+designed to work more seamlessly with Preview Pane.
+
+
+Change Log
+==========
+
+  v1.1  7/03/04  Paul Lesneiwski <pdontthink@angrynerds.com>
+   * Added option to split frames vertically instead of horizontally
+
+  v1.0  20/02/04  Paul Lesneiwski <pdontthink@angrynerds.com>
+   * Initial version
+

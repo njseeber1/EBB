@@ -1,0 +1,331 @@
+
+
+<!-- Simple Blue-boxes Property Portal Template ---Temp-05 --- was created by Ted, Webpropertyshop@aol.com  http://www.webpropertyshop.com -->
+<!-- You can remove these comments if you need to modify this template to suit your requirements-->
+
+
+<?php
+function getmicrotime(){
+  list($usec, $sec) = explode(" ",microtime());
+    return ((float)$usec + (float)$sec);
+  } 
+	$start_time = getmicrotime()
+?>
+<HTML>
+<HEAD>
+<TITLE><?php echo "$config[site_title]" ?></TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+<style type="text/css">
+<!--
+td {
+	text-align: left;
+	vertical-align: top;
+	font-family:Tahoma;
+	font-size:11px;
+	color:#333333;
+}
+a {
+	text-decoration: none;
+}
+a.1 {
+	text-decoration: none;
+	color: 000000;
+}
+.t11 {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-style: normal;
+}
+body  {margin:0px;padding:0px}
+#rol { background-image:url(<?php echo $config[template_url] ?>/images/m1r.jpg); cursor:hand}
+#bg { background-image:url(<?php echo $config[template_url] ?>/images/m1.jpg)}
+.style1 {
+	color: #667c99;
+	font-size: 10px;
+}
+.style2 {
+	color: #FFFFFF;
+	font-size: 10px;
+}
+.style3 {color: #FFFFFF}
+.style4 {color: #333333}
+.style5 {color: #505050}
+.style7 {
+	color: #FF0000;
+	font-size: 14px;
+	font-weight: bold;
+}
+.style8 {color: #FF0000}
+.style10 {color: #FF0000; font-weight: bold; }
+-->
+</style>
+
+</HEAD>
+<BODY BGCOLOR=#FFFFFF LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+<TABLE WIDTH=751 BORDER=0 CELLPADDING=0 CELLSPACING=0 align="center">
+	<TR>
+		<TD>
+			<IMG SRC="<?php echo $config[template_url] ?>/images/top1.jpg" WIDTH=751 HEIGHT=11 ALT=""></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=751 HEIGHT=167 ALT="" valign="top">
+		<TABLE WIDTH=751 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD height="66">
+			<IMG SRC="<?php echo $config[template_url] ?>/images/logotop.jpg" WIDTH=751 HEIGHT=167 ALT="">
+		    <div class="style1" align="right" style="padding-right:7px; padding-top:0px "></div></TD>
+		</TR>
+</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=751 HEIGHT=25 ALT="" valign="top">
+		<TABLE WIDTH=751 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		 <TD WIDTH=182 HEIGHT=25 ALT="" valign="top" bgcolor="#737373">
+		<div class="style2" style="padding-left:19px; padding-top:8px ">	<script  TYPE="text/javascript">
+							<!-- Begin
+							var days=new Array(7);
+							days[1]="Monday";
+							days[2]="Tuesday";
+							days[3]="Wednesday";
+							days[4]="Thursday";
+							days[5]="Friday";
+							days[6]="Saturday";
+							days[0]="Sunday";
+							var months=new Array(13);
+							months[1]="January";
+							months[2]="February";
+							months[3]="March";
+							months[4]="April";
+							months[5]="May";
+							months[6]="June";
+							months[7]="July";
+							months[8]="August";
+							months[9]="September";
+							months[10]="October";
+							months[11]="November";
+							months[12]="December";
+							var time=new Date();
+							var ldays=days[time.getDay()];
+							var lmonth=months[time.getMonth() + 1];
+							var date=time.getDate();
+							var year=time.getYear();
+							if (year < 2000)
+							year = year + 1900;
+							document.write(ldays + "," + " " + lmonth + " " + date + "," + " " + year);
+							// End
+							// -->
+							</script></div>
+		</TD>
+		<TD>
+			<IMG SRC="<?php echo $config[template_url] ?>/images/spacer.gif" WIDTH=5 HEIGHT=25 ALT=""></TD>
+		<TD WIDTH=559 HEIGHT=25 ALT="" valign="top" bgcolor="#99AFCC">
+		    <div style="padding-left:10px; padding-top:7px ">
+              <div align="right" class="style7"><a href="http://www.brittanyrealestatellc.com">Check out our RESIDENTIAL PROPERTIES! Click
+                Here. </a></div>
+            </div>
+		</TD>
+	</TR>
+</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=751 HEIGHT=160 ALT="" valign="top">
+		<TABLE WIDTH=751 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+	  <TD ROWSPAN=3 WIDTH=192 ALT="" valign="top">
+            <div style="padding-left:0px; padding-top:8px "> <TABLE WIDTH=182 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD id="bg" onMouseOver="this.id='rol';" onMouseOut="this.id='bg';" height="22" valign="top" WIDTH=182>
+		            <div style="padding-top:3px; padding-left:34px "><a href="<?php echo $config[baseurl]; ?>/index.php" class="style3"><strong>Home</strong></a></div>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<IMG SRC="<?php echo $config[template_url] ?>/images/spacer.gif" WIDTH=182 HEIGHT=3 ALT=""></TD>
+	</TR>
+	<TR>
+		<TD id="bg" onMouseOver="this.id='rol';" onMouseOut="this.id='bg';" height="22" valign="top" WIDTH=182>
+		            <div style="padding-top:3px; padding-left:34px "><a href="<?php echo $config[baseurl]; ?>/listing_browse.php?&status=Active" class="style3"><strong>List
+		                   All <span class="style8">ACTIVE</span> Busineses</strong></a></div>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<IMG SRC="<?php echo $config[template_url] ?>/images/spacer.gif" WIDTH=182 HEIGHT=3 ALT=""></TD>
+	</TR>
+	<TR>
+		<TD id="bg" onMouseOver="this.id='rol';" onMouseOut="this.id='bg';" height="22" valign="top" WIDTH=182>
+		            <div style="padding-top:3px; padding-left:34px "><a href="<?php echo $config[baseurl]; ?>/listingsearch.php" class="style3"><strong>Business 
+                      Search</strong></a></div>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<IMG SRC="<?php echo $config[template_url] ?>/images/spacer.gif" WIDTH=182 HEIGHT=3 ALT=""></TD>
+	</TR>
+	<TR>
+		<TD id="bg" onMouseOver="this.id='rol';" onMouseOut="this.id='bg';" height="22" valign="top" WIDTH=182>
+		            <div style="padding-top:3px; padding-left:34px "><a href="<?php echo $config[baseurl]; ?>/view_users.php" class="style3"><strong>Meet
+		                  Our Brokers </strong></a></div>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<IMG SRC="<?php echo $config[template_url] ?>/images/spacer.gif" WIDTH=182 HEIGHT=3 ALT=""></TD>
+	</TR>
+	<TR>
+		<TD id="bg" onMouseOver="this.id='rol';" onMouseOut="this.id='bg';" height="22" valign="top" WIDTH=182>
+		            <div style="padding-top:3px; padding-left:34px "><a href="<?php echo $config[baseurl]; ?>/aboutus.php" class="style3"><strong>About 
+                      Us</strong></a></div>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<IMG SRC="<?php echo $config[template_url] ?>/images/spacer.gif" WIDTH=182 HEIGHT=3 ALT=""></TD>
+	</TR>
+	<TR>
+		<TD id="bg" onMouseOver="this.id='rol';" onMouseOut="this.id='bg';" height="22" valign="top" WIDTH=182>
+		            <div style="padding-top:3px; padding-left:34px "><a href="<?php echo $config[baseurl]; ?>/contactus.php" class="style3"><strong>Contact 
+                      Us</strong></a></div>
+		</TD>
+	</TR>
+</TABLE></div>
+        </TD>
+	  <TD COLSPAN=3>
+			<IMG SRC="<?php echo $config[template_url] ?>/images/spacer.gif" WIDTH=559 HEIGHT=8 ALT=""></TD>
+	</TR>
+	<TR>
+	  <TD WIDTH=343 HEIGHT=147 ALT="" valign="top">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="343" height="147">
+          <param name="movie" value="<?php echo $config[template_url] ?>/flash/header.swf">
+          <param name="quality" value="high">
+          <embed src="<?php echo $config[template_url] ?>/flash/header.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="343" height="147"></embed>
+        </object>
+      </TD>
+		<TD>
+			<IMG SRC="<?php echo $config[template_url] ?>/images/spacer.gif" WIDTH=5 HEIGHT=147 ALT=""></TD>
+		<TD WIDTH=211 HEIGHT=147 ALT="" valign="top">
+		<TABLE WIDTH=211 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD background="<?php echo $config[template_url] ?>/images/top_bg1.jpg" WIDTH=211 HEIGHT=25 ALT="" valign="top">
+		<div class="style4" style="padding-left:12px; padding-top:5px "><strong>In the Spotlight</strong></div>
+		</TD>
+	</TR>
+	<TR>
+		<TD background="<?php echo $config[template_url] ?>/images/top_bg2.jpg" WIDTH=211 HEIGHT=122 ALT="" valign="top" style="padding-left:10px; padding-top:10px; padding-right:16px ">
+		          <div></div>
+                  <div>
+                    <!--scroller -->
+<?php renderFeaturedListingsVertical2(1); ?>
+                  </div>
+		</TD>
+	</TR>
+</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=3>
+			<IMG SRC="<?php echo $config[template_url] ?>/images/spacer.gif" WIDTH=559 HEIGHT=5 ALT=""></TD>
+	</TR>
+</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<IMG SRC="<?php echo $config[template_url] ?>/images/centr.jpg" WIDTH=751 HEIGHT=6 ALT=""></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=751 HEIGHT=373 ALT="" valign="top">
+		
+      <TABLE WIDTH=751 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+        <TR> 
+          <TD WIDTH=184 HEIGHT=373 ALT="" valign="top"> 
+            <div>
+              <table border="0" cellspacing="0" cellpadding="1" bgcolor="#999999">
+                <tr> 
+                  <td valign="top"> 
+                    <table width="100%" height="79" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+                      <tr> 
+                        <td valign="top" style="padding-left:10px; padding-top:7px; padding-right:9px "> 
+                          <div class="style4"><strong><?php echo "Eagle Business Brokers" ?></strong></div>
+                          <div style="color:#667C99; line-height:12px; padding-top:3px ">
+                            <p>We 
+                            make it easy for you to invest in business opportunities or sell your existing business.<br><br>
+                            <a href="<?php echo $config[baseurl]; ?>/listing_browse.php?&status=sold"><img src="<?php echo $config[template_url] ?>/images/sold_listings.jpg" alt="View our sold listings" /></a> 
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div style="padding-top:5px ">
+              <table width="100%" height="24" border="0" cellspacing="0" cellpadding="0" bgcolor="#C6D2E2">
+                <tr> 
+                  <td valign="top"> 
+                    <div style="padding-left:7px; padding-top:5px " class="style4"><strong>Property
+                        Guide </strong></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div style="padding-left:10px; padding-top:7px; line-height:17px "><img src="<?php echo $config[template_url] ?>/images/sym.jpg" align="absmiddle" style="margin-right:6px "><a href="http://www.brittanyrealestatellc.com" class="style5">Residential
+                Property </a></div>
+            <div style="padding-left:10px; padding-top:6px; line-height:17px "><img src="<?php echo $config[template_url] ?>/images/sym.jpg" align="absmiddle" style="margin-right:6px "><a href="<?php echo $config[baseurl]; ?>/buyers.php" class="style5">Buyer
+                Resources </a></div>
+            <div style="padding-left:10px; padding-top:6px; line-height:17px "><img src="<?php echo $config[template_url] ?>/images/sym.jpg" align="absmiddle" style="margin-right:6px "><a href="<?php echo $config[baseurl]; ?>/sellers.php" class="style5">Seller
+                Resources </a></div>
+            <div style="padding-left:10px; padding-top:6px; line-height:17px "><img src="<?php echo $config[template_url] ?>/images/sym.jpg" align="absmiddle" style="margin-right:6px "><a href="<?php echo $config[baseurl]; ?>/calc.php" class="style5">Morgage
+                Calculator </a></div>
+            <div style="padding-left:10px; padding-top:6px; line-height:17px "><img src="<?php echo $config[template_url] ?>/images/sym.jpg" align="absmiddle" style="margin-right:6px "><a href="<?php echo $config[baseurl]; ?>/banking.php?" class="style5">Banking
+                Resources </a></div>
+            <div style="padding-left:10px; padding-top:6px; line-height:17px "><img src="<?php echo $config[template_url] ?>/images/sym.jpg" align="absmiddle" style="margin-right:6px "><a href="<?php echo $config[baseurl]; ?>/legalres.php" class="style5">Legal
+                Resources </a></div>
+            <div style="padding-left:10px; padding-top:6px; line-height:17px "><img src="<?php echo $config[template_url] ?>/images/sym.jpg" align="absmiddle" style="margin-right:6px "><a href="<?php echo $config[baseurl]; ?>/downloads.php" class="style5">Document
+                Downloads </a></div>
+            <div style="padding-top:5px ">
+              <table width="182" height="131" border="0" cellspacing="0" cellpadding="0" background="<?php echo $config[template_url] ?>/images/log.jpg">
+                <tr> 
+                  <td valign="top"> 
+                    <div style="padding-left:8px; padding-top:12px "><img src="<?php echo $config[template_url] ?>/images/1txt.jpg"></div>
+                    <div style="padding-left:8px; padding-top:14px; line-height:12px; padding-right:72px; color: #FFFFFF;"><strong>We 
+                      are here to help. We make it easy to sell your property.</strong></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <br /><br />
+          </TD>
+          <TD width="10"> <IMG SRC="<?php echo $config[template_url] ?>/images/spacer.gif" WIDTH=5 HEIGHT=373 ALT=""></TD>
+          <TD WIDTH=557 HEIGHT=373 ALT="" valign="top"> 
+            <div>
+              <table border="0" cellspacing="0" cellpadding="1" bgcolor="#999999" width="100%">
+                <tr>
+                  <td valign="top"> 
+                    <table width="100%" height="22" border="0" cellspacing="0" cellpadding="0" bgcolor="#667C99">
+                      <tr> 
+                        <td valign="top" style="padding-left:10px; padding-top:5px; padding-right:9px "> 
+                          <div style="color:#FFFFFF "><strong>Let us help you
+                              find a new business opportunity or sell your exisitng
+                              business. </strong></div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div style="padding-top:1px ">
+              <table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor="#999999">
+                <tr>
+                  <td valign="top"> 
+                    <table width="100%" height="211" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+                      <tr> 
+                        <td valign="top" style="padding-left:9px; padding-top:9px; padding-right:15px "> 
+                          <div style="color:#505050 ">
+                            <!--start -->
+                            

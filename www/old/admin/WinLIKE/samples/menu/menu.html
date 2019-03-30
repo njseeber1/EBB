@@ -1,0 +1,35 @@
+<SCRIPT>
+	function setHeight(myheight)
+	{
+		
+		if (document.body.offsetHeight==0) // this is necessary for Mozilla because the onLoad event comes to early for offsetHeight...
+		{
+			setTimeout("setHeight("+myheight+")",100); // call this procedure later again
+			return; // exit for now
+		}
+
+		var NNoffset=16 // really don't know why (default skin use 16; for white skin 8 ...)
+		var myoffset=
+			parent.WinLIKE.ie?
+				document.body.scrollHeight+18+13+2+2:          // IE: scrollHeight + SkinTop + SkinBottom + SkinBorderTop + SkinBorderBottom         (see wm-window.html of the skin for correct values)
+				document.body.offsetHeight+18+13+2+2+NNoffset; // NN: scrollHeight + SkinTop + SkinBottom + SkinBorderTop + SkinBorderBottom + ????? (see wm-window.html of the skin for correct values)
+
+		// set Height to the minimum without scrollbars
+		if (myheight==-1) myheight=myoffset;
+			
+		number=parent.WinLIKE.searchwindow('myMenu') // find Menu window
+		parent.WinLIKE.windows[number].Height=myheight; // set Height
+		parent.WinLIKE.windows[number].draw(); // lets happen
+	}
+</SCRIPT>
+
+<BODY onLoad=setHeight(-1)>
+	<FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+		<BR><BR>
+		<!-- dynamic height -->
+		<A HREF="javascript:setHeight(-1)">set Height to minimum</A><BR>
+		<BR>
+		<!-- fixed heights -->
+		<A HREF="javascript:setHeight(100)">set Height to 100px</A><BR>
+		<A HREF="javascript:setHeight(300)">set Height to 300px</A><BR>
+	

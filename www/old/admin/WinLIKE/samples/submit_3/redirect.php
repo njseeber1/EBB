@@ -1,0 +1,3 @@
+<?
+	header("Location:result.html");
+?>

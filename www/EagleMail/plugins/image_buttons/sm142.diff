@@ -1,0 +1,36 @@
+*** page_header.php.orig	2003-10-01 11:34:20.000000000 -0600
+--- page_header.php	2003-10-16 13:40:18.000000000 -0600
+***************
+*** 74,79 ****
+--- 74,87 ----
+      if ($target != '') {
+          $target = " target=\"$target\"";
+      }
++ 
++     $tpinfo = array();
++     $tpinfo[0] = $text;
++     $tpinfo[1] = $path;
++     $hooktext = do_hook_function('internal_link', $tpinfo);
++     if ($hooktext != '')
++        $text = $hooktext;
++ 
+      return '<a href="'.$base_uri.$path.'"'.$target.'>'.$text.'</a>';
+  }
+  
+*** strings.php.orig	2003-10-01 13:16:53.000000000 -0600
+--- strings.php	2003-10-16 13:40:18.000000000 -0600
+***************
+*** 454,459 ****
+--- 454,465 ----
+      /* if we can use JS, use the fancy window, else just open a new one HTML-style */
+      if($javascript_on) {
+          sqgetGlobalVar('base_uri', $base_uri, SQ_SESSION);
++         $tpinfo = array();
++         $tpinfo[0] = $text;
++         $tpinfo[1] = $base_uri.$url;
++         $hooktext = do_hook_function('internal_link', $tpinfo);
++         if ($hooktext != '')
++             $text = $hooktext;
+          return '<a href="javascript:void(0)" onclick="comp_in_new(\''.$base_uri.$url.'\')">'. $text.'</a>';
+      }
+  

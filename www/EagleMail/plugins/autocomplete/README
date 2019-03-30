@@ -1,0 +1,82 @@
+Autocomplete -- Version 2.0
+
+If you hate looking up people from your address book and would rather have
+your browser try to perform some sort of autocomplete, this script is for
+you.  It only works with IE, since IE is the only browser that lets you
+select parts of text in a text-entry form field, but that's at least
+something.
+
+
+Features
+========
+
+* Lets you look up just nicknames, nicknames and email, email, or none.
+* Since SquirrelMail 1.0.x and 0.x both do not support nicknames only in 
+  the To/CC/BCC fields, nickname autocompletion is disabled.
+* It even supports multiple names on one line, but you must use a space
+  to separate the addresses/nicknames.
+
+
+Description
+===========
+
+Simply use IE 4 or better (and not the Mac version of IE 4) and start to
+type in something on the Compose screen.  If you type in the To/CC/BCC
+fields, you will notice that autocomplete has tried to fill in the rest of
+the name for you.
+
+As a warning, when you are using case insensitive searches and you are 
+typing in a foreign address (one not in your address book), this plugin will 
+try to complete it for you.  This process might change the case of what you
+were typing.  This is the reason the case insensitive searches are disabled
+by default.
+
+
+Special Thanks
+==============
+Matt Kruse <mkruse@netexpress.net> - http://www.mattkruse.com
+   Used a little javascript code from here
+Scott Isaacs - http://www.insidedhtml.com/tips/elements/ts23/page2.asp
+   Used more code from here
+Martin Honnen - http://www.faqts.com/knowledge_base/view.phtml/aid/1174
+   Reference material
+http://msdn.microsoft.com/workshop/author/dhtml/reference/events/onkeyup.asp
+   <script FOR=object EVENT=onkeyup>
+
+
+Future Work
+===========
+
+* Maybe find a weird way for Netscape or Opera to do the same?
+* Fix case change problem?
+* Find cursor position and only search if it is at the end of a name or
+  at the end of the text box
+
+
+Installation
+============
+
+As with other plugins, just uncompress the archive in the plugins
+directory, go back to the main directory, run configure and add the plugin.
+
+Questions/comments/flames/etc can be sent to the SquirrelMail plugins list.
+
+
+Changes
+=======
+2.0 - Now returns addresses in the format "nickname <email@address>"
+      or "Full Name <email@address", depending on which option is set.
+      Having typed a partial name or nickname, you can use the up and down
+      arrow keys to cycle through the entries that match what you have
+      typed.
+      Compatible with SquirrelMail 1.4 (as well as older versions)
+      New setup.php format for better overall SquirrelMail performance.
+      Makes use of new Compatibility plugin (this is a requirement).
+      Internationalized all plugin output.
+
+1.3 - Updated to work with register_globals = Off
+      Updated for compatibility with "Plugin Updates" plugin
+
+1.2 - No longer uses 'undefined' -- IE 5.0 didn't like that.  :-)
+
+1.1 - Felt like making some code changes, removed an update bug

@@ -1,0 +1,28 @@
+				</td>
+				</tr>
+				</table>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td align="left" background="<?php echo $config[template_url] ?>/images/navbg.gif">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" background="<?php echo "$config[template_url]"; ?>/images/bottom.gif"> 
+      <p class="small">Company name<br>
+        <a href="http://open-realty.org" target="author">Powered By Open Realty</a><br>
+        ©2002 Open-Realty&nbsp; All Rights Reserved<br>
+        Use of this website and information available from it is subject to our 
+        <a href="<?php echo $config[baseurl]; ?>/legal.php">Legal Notice and Disclaimer</a> 
+        <br>
+      </p>
+      <p class="small" align="left"> </p></td>
+  </tr>
+</table>
+</center>
+<?php
+		$end_time = getmicrotime();
+		$render_time = sprintf('%.16f', $end_time - $start_time);
+		echo "<!-- This page was generated in $render_time seconds -->";
+
+	?>
+</body>
+</html>

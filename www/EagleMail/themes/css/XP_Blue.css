@@ -1,0 +1,520 @@
+td, th, dd, dt, tt, h1, h2, h3, h4, h5, h6, p, ol, ul, li {
+  font-family: verdana;
+  font-size: 10pt;
+  text-decoration: none;
+}
+body, small {
+  font-size: 8pt;
+}
+td, th {
+  font-size: 10pt;
+}
+pre {
+  font-family: verdana;
+  font-size: 9px;
+}
+BODY{
+	font-family: verdana;
+   background-image: url(../../skins/XP_Blue/xpblue_back.gif);
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-arrow-color: #234F9C;
+	scrollbar-darkshadow-color: #DED6BD;
+	scrollbar-face-color: #DDE6F5;
+	scrollbar-highlight-color: #F7F7EF;
+	scrollbar-shadow-color: #FFFFFF;
+	scrollbar-track-color : #EFEEE7;
+	font-size: 9px;
+	background-repeat: repeat-x;
+}
+
+a:link, a:visited, a:active {
+        font-family: verdana;
+        font-size: 10px;
+		  text-decoration: none;
+}
+a:hover {
+        font-family: verdana;
+        font-size: 10px;
+        text-decoration: none;
+}
+textarea {
+                BACKGROUND-COLOR: #FDFCFA;
+                COLOR: #000000;
+                FONT-FAMILY: verdana;
+                FONT-SIZE: 9pt;
+                BORDER: 1 double #aaaaaa;
+}
+select {
+                FONT-FAMILY: verdana;
+                FONT-SIZE: 7pt;
+                                                                                                                                                }
+.titletext {
+	font-family: Verdana;
+	font-size: 10px;
+	font-weight: bold;
+}
+td {
+	font-family: verdana;
+	font-size: 9px;
+}
+.top_bar_header {
+	font: normal 14px;
+	padding: 1 1;
+	background: url(../../skins/XP_Blue/XP_Blue_topheader.gif);
+	background-repeat: repeat-x;
+}
+.read_icon_bar {
+	background: url(../../skins/XP_Blue/xpblue_readbar_Silver.gif);
+	background-repeat: repeat-x;
+}
+.topbar {
+	border: 1px none #66CDAA;
+}
+.message_header {
+	border: 1px solid #4A8FEE;
+	background-color: #C3D2EB;
+	color: black;
+}
+.attach_box_top {
+	background-color: #C1D8FF;
+}
+.attach_box_bottom {
+	background-color: #ECF0F4;
+}
+frame { border: thick solid #6B91C3; }
+#f1 { border-right-width: thick;      border-right-color: #6B91C3;  border-right: thick solid #6B91C3;  }
+#f2 {  }
+#f3 { border-top-width: thick;      border-top-color: #6B91C3;  border-top: thick solid #6B91C3;     }
+.mail_display_header {
+	background: White;
+	border-bottom: 1px solid #ABABAB;
+	border-top: 1px solid #ABABAB;
+}
+.message_toggle_bar {
+
+
+	background: url(../../skins/XP_Blue/xpblue_message_toggle_bar.gif);
+	background-repeat: repeat-x;	
+
+}
+
+.blank_bar {
+ background-color: white;
+}
+
+#right_logo {
+	background: url(../../skins/XP_Blue/logo.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding: 0px 60px 60px 60px;
+	float: right;
+	margin: 0px 0px 0px -3px;
+	cursor: hand;
+}
+#inbox_button {
+	background: url(../../skins/XP_Blue/inbox.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding: 0px 15px 5px 0px;
+	float: left;
+	margin: 2px 0px 0px -3px;
+	cursor: hand;
+	Color: #FFFFFF;
+}
+p.button_text { 
+margin: 40px 0px 0px 10px; 
+font-size: 9px;
+text-decoration: none;
+}
+#compose_button {
+	background-image: url(../../skins/XP_Blue/compose.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding: 0px 15px 5px 0px;
+	float: left;
+	margin: 2px 0px 0px -3px;
+	cursor: hand;
+	Color: #FFFFFF;
+}
+#addresses_button {
+	background-image: url(../../skins/XP_Blue/address_book.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding: 0px 15px 5px 0px;
+	float: left;
+	margin: 2px 0px 0px -3px;
+	cursor: hand;
+	Color: #FFFFFF;
+}
+#folders_button {
+	background-image: url(../../skins/XP_Blue/folders.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding: 0px 15px 5px 0px;
+	float: left;
+	margin: 2px 0px 0px -3px;
+	cursor: hand;
+	Color: #FFFFFF;
+}
+#calendar_button {
+	background-image: url(../../skins/XP_Blue/todo.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding: 0px 15px 5px 0px;
+	float: left;
+	margin: 2px 0px 0px 3px;
+	cursor: hand;
+	Color: #FFFFFF;
+}
+#bookmark_button {
+	background-image: url(../../skins/XP_Blue/bookmarks.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding: 0px 15px 5px 0px;
+	float: left;
+	margin: 2px 0px 0px -3px;
+	cursor: hand;
+	Color: #FFFFFF;
+}
+#fetchmail_button {
+	background-image: url(../../skins/XP_Blue/fetchmail.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding: 0px 15px 5px 0px;
+	float: left;
+	margin: -10px 0px 0px 0px;
+	cursor: hand;
+	Color: #FFFFFF;
+}
+#file_manager {
+	background-image: url(../../skins/XP_Blue/file_manager.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding: 0px 15px 5px 0px;
+	float: left;
+	margin: -10px 0px 0px 0px;
+	cursor: hand;
+	Color: #FFFFFF;
+}
+#options_button {
+	background-image: url(../../skins/XP_Blue/settings.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding: 0px 22px 22px 0px;
+	float: right;
+	margin: 5px 0px 0px 0px;
+	cursor: hand;
+}
+#help_button {
+	background-image: url(../../skins/XP_Blue/help.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding: 0px 22px 22px 0px;
+	float: right;
+	margin: 5px 0px 0px 0px;
+	cursor: hand;
+}
+#search_button {
+	background-image: url(../../skins/XP_Blue/search.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding: 0px 22px 22px 0px;
+	float: right;
+	margin: 5px 0px 0px 0px;
+	cursor: hand;
+}
+.inbox_dropdown {
+	background-color: transparent;
+}
+.move_button {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	Color: #FFFFFF;
+	border: 0px none;
+	background-image: url(../../skins/Outlook/);
+	background-repeat: no-repeat;
+	margin: 4px;
+	padding: 1px
+	border: 0px solid #9FA0FF;
+	background-color: transparent;
+}
+.forward_button {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	Color: #FFFFFF;
+	border: 0px none;
+	background-image: url(../../skins/Outlook/);
+	background-repeat: no-repeat;
+	margin: 4px;
+	padding: 1px
+	border: 0px solid #9FA0FF;
+	background-color: transparent;
+}
+.read_button {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	Color: #FFFFFF;
+	border: 0px none;
+	background-image: url(../../skins/Outlook/);
+	background-repeat: no-repeat;
+	margin: 4px;
+	padding: 1px
+	border: 0px solid #9FA0FF;
+	background-color: transparent;
+}
+.unread_button {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	Color: #FFFFFF;
+	border: 0px none;
+	background-image: url(../../skins/Outlook/);
+	background-repeat: no-repeat;
+	margin: 4px;
+	padding: 1px
+	border: 0px solid #9FA0FF;
+	background-color: transparent;
+}
+.delete_button {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	Color: #FFFFFF;
+	border: 0px none;
+	background-image: url(../../skins/Outlook/);
+	background-repeat: no-repeat;
+	margin: 4px;
+	padding: 1px
+	border: 0px solid #9FA0FF;
+	background-color: transparent;
+}
+.unflag_button {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	Color: #FFFFFF;
+	border: 0px none;
+	background-image: url(../../skins/Outlook/);
+	background-repeat: no-repeat;
+	margin: 4px;
+	padding: 1px
+	border: 0px solid #0099FF;
+	background-color: transparent;
+}
+.flag_button {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	Color: #FFFFFF;
+	border: 0px none;
+	background-image: url(../../skins/Outlook/);
+	background-repeat: no-repeat;
+	margin: 4px;
+	padding: 1px;
+	border: 0px solid #0099FF;
+	background-color: transparent;
+}
+.savedraft_button {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	border: 0px none;
+	background-image: url(../../skins/XP_Blue/save_draft.png);
+	background-repeat: no-repeat;
+	margin: 3px;
+	height: 20px;
+	border: 1px solid #9FA0FF;
+	background-color: #D4E3F0;
+}
+.send_button {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	border: 0px none;
+	background-image: url(../../skins/XP_Blue/send_button.png);
+	background-repeat: no-repeat;
+	margin: 3px;
+	height: 20px;
+	border: 1px solid #9FA0FF;
+	background-color: #D4E3F0;
+}
+.encrypt_button {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	border: 0px none;
+	background-image: url(../../skins/XP_Blue/encrypt.png);
+	background-repeat: no-repeat;
+	margin: 3px;
+	height: 20px;
+	border: 1px solid #9FA0FF;
+	background-color: #D4E3F0;
+}
+.decrypt_button {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	border: 0px none;
+	background-image: url(../../skins/XP_Blue/decrypt.png);
+	background-repeat: no-repeat;
+	margin: 3px;
+	height: 24px;
+	border: 1px solid #9FA0FF;
+	background-color: #D4E3F0;
+}
+.address_button {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	border: 0px none;
+	background-image: url(../../skins/XP_Blue/address.png);
+	background-repeat: no-repeat;
+	margin: 3px;
+	height: 20px;
+	border: 1px solid #9FA0FF;
+	background-color: #D4E3F0;
+}
+.signature_button {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	border: 0px none;
+	background-image: url(../../skins/XP_Blue/signature.png);
+	background-repeat: no-repeat;
+	margin: 3px;
+	height: 20px;
+	border: 1px solid #9FA0FF;
+	background-color: #D4E3F0;
+}
+.spellcheck_button {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	border: 0px none;
+	background-image: url(../../skins/XP_Blue/spellcheck.png);
+	background-repeat: no-repeat;
+	margin: 3px;
+	height: 20px;
+	border: 1px solid #9FA0FF;
+	background-color: #D4E3F0;
+}
+.top_msg_bar {
+	border: 1px solid #DFFFDF;
+	background-color: #DAE3ED;
+}
+.main_header_bar {
+	background-repeat: repeat-x;
+	background-image: url(../../skins/Outlook/);
+	}
+.small_header_bar {
+	background-color: White;
+}
+.left_main {
+	border: thin dashed #DCDCDC;
+}
+.left_mailbox {
+	border: 0px solid #DCDCDC;
+	background: white;
+	background-image: url(../../skins/XP_Blue/left_mailbox_table.gif);
+	background-repeat: repeat-y;
+	background-position: left;
+	position: absolute;
+	top: 130px;
+	height: auto;
+	width: auto;
+	left: auto;
+}
+.left_mailbox_top {
+	background: white;
+	border: 0px solid #696969;
+	background-image: url(../../skins/XP_Blue/mailboxes.png);
+	background-repeat: repeat-x;
+	background-position: left;
+
+}
+#left_inbox_button {
+	background-image: url(../../skins/XP_Blue/xpblue_inbox_left.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+	position: absolute;
+	padding: 4px 15px 5px 30px;
+	float: none;
+	margin: -5px 0px 0px 0px;
+	cursor: hand;
+}
+#left_drafts_button {
+	background-image: url(../../skins/XP_Blue/xpblue_drafts_left.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+	position: absolute;
+	padding: 4px 15px 5px 30px;
+	float: none;
+	margin: -5px 0px 0px 0px;
+	cursor: hand;
+}
+#left_sent_button {
+	background-image: url(../../skins/XP_Blue/xpblue_sent_left.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+	position: absolute;
+	padding: 4px 15px 5px 30px;
+	float: none;
+	margin: -5px 0px 0px 0px;
+	cursor: hand;
+}	
+#left_trash_button {
+	background-image: url(../../skins/XP_Blue/xpblue_trash_left.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+	position: absolute;
+	padding: 4px 15px 5px 30px;
+	float: none;
+	margin: -5px 0px 0px 0px;
+	cursor: hand;
+}	
+#left_folder_button {
+	background-image: url(../../skins/XP_Blue/xpblue_folder_left.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+	position: absolute;
+	padding: 4px 15px 5px 30px;
+	float: none;
+	margin: -5px 0px 0px 0px;
+	cursor: hand;
+}
+	
+#left_logo{
+	background-image: url(../../skins/XP_Blue/);
+	background-repeat: no-repeat;
+	background-position: top left;
+	float: none;
+	left: -5px;
+	top: -5px;
+}	
+
+.left_button_text { 
+	margin: -5px 0px 0px 0px;
+	font: 9px;
+}
+#left_hook {
+	padding: 0px 30px 60px 40px;
+	float: none;
+	margin: 20px 0px 0px 40px;
+}

@@ -1,0 +1,51 @@
+<!-- WinLIKE - Copyright (c) 1998-2003 by CEITON technologies GmbH - www.winlike.net -->
+<SCRIPT>WinLIKEerrorpage='winlike/winman/hlp-error.html';</SCRIPT>
+<SCRIPT SRC="winlike/winman/wininit.js"></SCRIPT><SCRIPT SRC="winlike/winman/winman.js"></SCRIPT>
+<!-- Delete the following line, if the editor should not be used anymore. -->
+<SCRIPT SRC="winlike/winedit/winedit.js"></SCRIPT>
+
+<SCRIPT>
+  WinLIKE.definewindows=mydefs;
+  function mydefs() {
+  	var j=new WinLIKE.window('',200,200,490,500);
+  	j.Adr="samples/links/links.html";
+  	j.Nam="links";
+  	WinLIKE.addwindow(j);
+  	
+  	var j=new WinLIKE.window('',324,307,300,300);
+  	j.Vis=false;
+  	j.Nam="new";
+  	j.Ski="light";
+  	WinLIKE.addwindow(j);
+  }
+</SCRIPT>
+
+
+<BODY onResize=WinLIKE.resizewindows() onload=WinLIKE.init()>
+	<!-- Don't remove this line! --><IMG ID=ih_ SRC="skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+	<!-- You can change this loading picture! --><IMG ID=ig_ SRC="winlike/winman/load.gif" STYLE="position:absolute;left:35%;top:40%;z-Index:4001">
+
+	<!-- Insert your page-content here! -->
+	
+	<DIV STYLE="position:absolute;left:110;top:15">
+		<FONT FACE="Verdana, Arial, Helvetica" SIZE=2>
+			This page explains the different link scenarios:
+			<BR><BR>
+			<A HREF="http://www.google.com">HREF=http://google.com</A>
+			<BR>
+			<A HREF="http://www.google.com" TARGET="dingsda">HREF=http://google.com TARGET=dingsda</A>
+			<BR>
+			<A HREF="http://www.google.com" TARGET="_blank">HREF=http://google.com TARGET=_blank</A>
+			<BR><BR>
+			<A HREF="samples/history/1.html">HREF=samples/history/1.html</A>
+			<BR>
+			<A HREF="samples/history/1.html" TARGET="dingsda">HREF=samples/history/1.html TARGET=dingsda</A>
+			<BR>
+			<A HREF="samples/history/1.html" TARGET="_top">HREF=samples/history/1.html TARGET=_top</A>
+			<BR><BR>
+			<A HREF="javascript:alert('hallo')">HREF="javascript:alert('hallo')"</A>
+		</FONT>
+		<BR><BR><BR><BR><BR>
+		<IFRAME NAME=myframe SRC=winlike/winman/empty.html></IFRAME>
+	</DIV>
+</BODY>

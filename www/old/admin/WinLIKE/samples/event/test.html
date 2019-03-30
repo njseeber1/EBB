@@ -1,0 +1,17 @@
+<A HREF=../test.html TARGET=xyz>open window xyz</A>
+
+<DIV id=hallo STYLE="position:absolute;left:10;top:50;width:80%;height:50%;background-color:red;"> </DIV>
+
+<SCRIPT>
+
+	function test(e) {
+		if (top.WinLIKE.ie)
+			document.getElementById('hallo').innerHTML+=event.srcElement.tagName+' ';
+		else
+			document.getElementById('hallo').innerHTML+=e.target.tagName+' ';
+	}
+
+	
+	document.onmouseup=test;
+
+</SCRIPT>

@@ -1,0 +1,64 @@
+
+
+ 	Open-Realty Web site Statistics Module (English)`		
+ 	tested with Open-Realty (OR) versions 1.13 and 1.14		
+ 	Oct-2003 (C) the_sandking@hotmail.com
+	
+	Free for use with Open-Realty (OR)						
+	http://www.open-realty.org)								
+															
+ 	Any Political uses of this script are prohibited.			 
+															
+ 	Based in part on original GPL code (AudiStat v1.3)			
+ 	by Alexandre Dubus) http://adubus.free.fr/audistat		
+															
+ 	Parameters :												
+ 	year=YYYY													
+ 	month=MM												
+ 	mday=dd													
+ 	phpinfo <- to debug										
+															
+ 	QUICK SETUP INSTRUCTIONS								
+															
+ 	Create stats directory beneath the /admin section of OR	
+ 	/admin/stats  											
+	Extract all the files contained in the .zip archive to  
+ 	the new stats directory.								
+ 	Copy the file "stat_func.inc" to OR's main include dir
+	at /include.
+	
+	Open the included file "new_styles.css"					
+	Open your template's "style.css" file.
+	
+	Paste the contents of "new_styles.css" into your		 
+	template's "style.css" stylesheet file and save			
+															
+ 	Add ONE (1) of the following code snippets to your 		
+	template's "user_bottom.html"
+	
+	-----------------------------------------------------  
+
+
+   	 //Statistics for PHP section of page
+ 	require($config[basepath] . "/include/stat_func.inc");
+ 	logstats(); 
+	
+	(OR) 
+	
+	
+	<?php 
+	 //Statistics for HTML section of page
+	require($config[basepath] . "/include/stat_func.inc");
+ 	logstats(); 
+	?>
+	
+	----------------------------------------------------- 
+	
+	Optionally, create a link to the stats viewing page		
+	"/admin/stats/index.php" in your "admin_top.php" file. 	
+ 	Or access the stats directly by using 					
+	http://www.yoursite.com/admin/stats/index.php			
+															
+ 	The script will automatically create the new DB tables 	
+ 	the first time a page is hit, after the installation.	
+															
